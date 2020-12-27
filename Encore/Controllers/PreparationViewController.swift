@@ -28,12 +28,14 @@ class PreparationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateUIElements(isModeChosen: false)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateUIElements(isModeChosen: false)
+        clearButtonsSelection()
+        
         buttons = [firstModeButton, secondModeButton, thirdModeButton]
         
         tableView.dataSource = self

@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,6 +32,9 @@
                                 <state key="normal" title="Let's go!">
                                     <color key="titleColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="xEX-7F-KT2" kind="presentation" modalPresentationStyle="fullScreen" id="Lrb-lp-YLy"/>
                                 </connections>
@@ -90,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSG-es-SdE">
-                                <rect key="frame" x="24" y="25" width="30" height="22"/>
+                                <rect key="frame" x="25" y="25" width="30" height="22"/>
                                 <state key="normal" image="BackArrow"/>
                                 <connections>
                                     <action selector="backPressed:" destination="xEX-7F-KT2" eventType="touchUpInside" id="JIj-dh-1fc"/>
@@ -199,6 +201,12 @@
                                 <state key="normal" title="Let's go!">
                                     <color key="titleColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="sb2-fc-zvv" kind="presentation" modalPresentationStyle="fullScreen" id="h2P-Cp-eDh"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="0Wt-Rz-EJd">
                                 <rect key="frame" x="67" y="230" width="240" height="128"/>
@@ -222,7 +230,7 @@
                         <viewLayoutGuide key="safeArea" id="nZO-J0-HcL"/>
                         <color key="backgroundColor" red="0.95939487219999997" green="0.96202927829999996" blue="0.92764025930000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZSG-es-SdE" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" constant="24" id="2Wu-xQ-3VO"/>
+                            <constraint firstItem="ZSG-es-SdE" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" constant="25" id="2Wu-xQ-3VO"/>
                             <constraint firstItem="Wq6-tm-VOb" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" id="5hU-SL-OCI"/>
                             <constraint firstItem="6sp-De-Jr8" firstAttribute="centerX" secondItem="eto-vc-TMA" secondAttribute="centerX" id="S4m-zu-a4w"/>
                             <constraint firstItem="Kvq-FR-BNY" firstAttribute="top" secondItem="Wq6-tm-VOb" secondAttribute="bottom" constant="25" id="VBw-Zg-5SZ"/>
@@ -251,16 +259,103 @@
             </objects>
             <point key="canvasLocation" x="1880.8" y="92.203898050974516"/>
         </scene>
-        <!--View Controller-->
+        <!--Input Goals View Controller-->
         <scene sceneID="iPC-gr-KxZ">
             <objects>
-                <viewController id="sb2-fc-zvv" sceneMemberID="viewController">
+                <viewController id="sb2-fc-zvv" customClass="InputGoalsViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1gQ-xI-Mjd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFO-ht-NvC">
+                                <rect key="frame" x="25" y="25" width="30" height="22"/>
+                                <state key="normal" image="BackArrow"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="sb2-fc-zvv" eventType="touchUpInside" id="1iq-1d-TvW"/>
+                                    <action selector="backPressed:" destination="xEX-7F-KT2" eventType="touchUpInside" id="MHV-2R-R2s"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to achieve today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh6-Ro-Ivb">
+                                <rect key="frame" x="25" y="57" width="325" height="88.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="34"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.34901960780000002" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="X5b-4r-unM">
+                                <rect key="frame" x="24" y="590" width="327" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LB-O3-jsx" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="EdX-7u-E7l"/>
+                                            <constraint firstAttribute="width" constant="150" id="XiJ-zK-N1x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryButton" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addGoalPressed:" destination="sb2-fc-zvv" eventType="touchUpInside" id="nEr-uB-Hij"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L11-TY-dJn" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
+                                        <rect key="frame" x="177" y="0.0" width="150" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="LsM-Zf-MDk"/>
+                                            <constraint firstAttribute="width" constant="150" id="Vba-Wr-f0U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                        <state key="normal" title="Skip">
+                                            <color key="titleColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="sb2-fc-zvv" eventType="touchUpInside" id="Ij5-Pz-yVh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SP1-eC-f2r">
+                                <rect key="frame" x="42" y="170.5" width="291" height="394.5"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.87843137250000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0Qk-b6-VMK">
+                                        <rect key="frame" x="0.0" y="28" width="291" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Qk-b6-VMK" id="p3d-2I-dzb">
+                                            <rect key="frame" x="0.0" y="0.0" width="291" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SOR-Ob-l1c"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96042054889999995" green="0.96151894329999998" blue="0.92940837139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="SOR-Ob-l1c" firstAttribute="bottom" secondItem="X5b-4r-unM" secondAttribute="bottom" constant="32" id="5CZ-VC-fht"/>
+                            <constraint firstItem="SOR-Ob-l1c" firstAttribute="trailing" secondItem="SP1-eC-f2r" secondAttribute="trailing" constant="42" id="RwQ-db-uZ0"/>
+                            <constraint firstAttribute="trailing" secondItem="Bh6-Ro-Ivb" secondAttribute="trailing" constant="25" id="ZMA-9l-hSd"/>
+                            <constraint firstItem="SOR-Ob-l1c" firstAttribute="trailing" secondItem="X5b-4r-unM" secondAttribute="trailing" constant="24" id="ZVG-7M-Dqr"/>
+                            <constraint firstItem="SP1-eC-f2r" firstAttribute="leading" secondItem="SOR-Ob-l1c" secondAttribute="leading" constant="42" id="dIm-6Q-bK8"/>
+                            <constraint firstItem="X5b-4r-unM" firstAttribute="top" secondItem="SP1-eC-f2r" secondAttribute="bottom" constant="25" id="ifm-nq-a4N"/>
+                            <constraint firstItem="X5b-4r-unM" firstAttribute="leading" secondItem="SOR-Ob-l1c" secondAttribute="leading" constant="24" id="nd6-5V-okS"/>
+                            <constraint firstItem="Bh6-Ro-Ivb" firstAttribute="leading" secondItem="SOR-Ob-l1c" secondAttribute="leading" constant="25" id="ov0-UI-TLy"/>
+                            <constraint firstItem="SP1-eC-f2r" firstAttribute="top" secondItem="Bh6-Ro-Ivb" secondAttribute="bottom" constant="25" id="pM5-xG-YLB"/>
+                            <constraint firstItem="Bh6-Ro-Ivb" firstAttribute="top" secondItem="MFO-ht-NvC" secondAttribute="bottom" constant="10" id="pYx-NF-z5s"/>
+                            <constraint firstItem="MFO-ht-NvC" firstAttribute="top" secondItem="SOR-Ob-l1c" secondAttribute="top" constant="25" id="tVU-0B-Gqk"/>
+                            <constraint firstItem="MFO-ht-NvC" firstAttribute="leading" secondItem="SOR-Ob-l1c" secondAttribute="leading" constant="25" id="uvI-Oi-zGp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="L11-TY-dJn" id="Sbf-NP-iJs"/>
+                        <outlet property="tableView" destination="SP1-eC-f2r" id="QHj-N1-xUz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Anm-E1-bpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -268,8 +363,14 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="6LB-O3-jsx">
+            <size key="intrinsicContentSize" width="45" height="42"/>
+        </designable>
         <designable name="Kvq-FR-BNY">
             <size key="intrinsicContentSize" width="87" height="42"/>
+        </designable>
+        <designable name="L11-TY-dJn">
+            <size key="intrinsicContentSize" width="45" height="42"/>
         </designable>
         <designable name="UjS-EU-KAb">
             <size key="intrinsicContentSize" width="220" height="168"/>
@@ -288,8 +389,5 @@
         <image name="BackArrow" width="30" height="21"/>
         <image name="Cat" width="269" height="408"/>
         <image name="PreparationEllipse" width="166" height="168"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
