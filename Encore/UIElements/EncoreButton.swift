@@ -10,7 +10,10 @@ import UIKit
 @IBDesignable
 class EncoreButton: UIButton {
 
-    // TOOD: Need gradient
+    // TODO: Need gradient for button - think
+    // TODO: Maybe on goal screen you need to make skip button white?
+    @IBInspectable
+    var isPrimaryButton: Bool = true
     
     let defaultButtonHeight: Int = 45
     private var shadowLayer: CAShapeLayer!
@@ -21,7 +24,12 @@ class EncoreButton: UIButton {
         if shadowLayer == nil {
             shadowLayer = CAShapeLayer()
             shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
-            shadowLayer.fillColor = UIColor(hexString: "#F9E06A").cgColor
+            
+            if isPrimaryButton {
+                shadowLayer.fillColor = UIColor(hexString: "#F9E06A").cgColor
+            } else {
+                shadowLayer.fillColor = UIColor(hexString: "#545D9E").cgColor
+            }
             
             shadowLayer.shadowColor = UIColor.darkGray.cgColor
             shadowLayer.shadowPath = shadowLayer.path
