@@ -8,10 +8,11 @@
 import Foundation
 
 struct K {
-    
     // Cell Names
     static let scheduleCellNibName = "ScheduleCell"
+    static let goalCellNibName = "GoalCell"
     
     // Cell Identifiers
     static let scheduleCellIdentifier = "ScheduleCell"
+    static let goalCellIdentifier = "GoalCell"
 }
