@@ -2,7 +2,7 @@
 //  ScheduleViewCell.swift
 //  Encore
 //
-//  Created by Katselenbogen, Igor | Rogi | MESD on 2020/12/26.
+//  Created by Katselenbogen, Igor on 2020/12/26.
 //
 
 import UIKit
@@ -24,7 +24,6 @@ class ScheduleCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
