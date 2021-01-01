@@ -54,6 +54,9 @@ class SessionViewController: UIViewController {
         }
     }
     
+    private var timer: Timer?
+    var counter = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         model.startSession()
@@ -66,7 +69,10 @@ class SessionViewController: UIViewController {
         
         if let stage = model.getCurrentStage() {
             stageTitle.text = stage.name
-            timerTitle.text = stage.durationStringFormat
+            counter = Double(stage.durationInSeconds)
+            timerTitle.text = stage.durationInSeconds.stringTimeFormat()
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimerLabel), userInfo: nil, repeats: true)
         }
         
         if let nextStage = model.getNextStage() {
@@ -85,7 +91,17 @@ class SessionViewController: UIViewController {
         afterStageInformationStack.isHidden = false
         
         stageTitle.text = "Stage Finished"
+        
         nextStageButton.setTitle("Let's go!", for: .normal)
+    }
+    
+    @objc private func updateTimerLabel() {
+        counter -= 1
+        let timerLabelText = Int(counter).stringTimeFormat()
+        timerTitle.text = timerLabelText
+        if counter == 0 {
+            currentStageLifecycle?.next()
+        }
     }
     
     @IBAction func closePressed(_ sender: UIButton) {
