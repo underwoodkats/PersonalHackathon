@@ -476,7 +476,7 @@
                                             <action selector="schedulePressed:" destination="kcy-Vz-MFC" eventType="touchUpInside" id="Hxs-sg-Zbv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVL-fe-ZxD" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVL-fe-ZxD" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
                                         <rect key="frame" x="90" y="0.0" width="150" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="PmG-6M-fno"/>
