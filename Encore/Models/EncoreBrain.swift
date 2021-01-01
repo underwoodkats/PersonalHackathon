@@ -14,6 +14,9 @@ class EncoreBrain {
     private(set) var currentSession: Session?
     private(set) var goals: [Goal] = []
     
+    // MARK: - Session Screen
+    private var currentStageIndex: Int = 0
+    
     var stagesCount: Int {
         return currentSession?.stages.count ?? 0
     }
@@ -28,5 +31,34 @@ class EncoreBrain {
     
     func addGoal(goal: Goal) {
         goals.append(goal)
+    }
+    
+    func startSession() {
+        currentStageIndex = 0
+    }
+    
+    func getCurrentStage() -> Stage? {
+        if let session = currentSession {
+            return session.stages[currentStageIndex]
+        }
+        return nil
+    }
+    
+    func getNextStage() -> Stage? {
+        if let session = currentSession {
+            if currentStageIndex + 1 < stagesCount {
+                return session.stages[currentStageIndex + 1]
+            }
+        }
+        return nil
+    }
+    
+    func goToNextStageIfPossible() -> Bool {
+        if currentStageIndex < stagesCount - 1 {
+            currentStageIndex += 1
+            return true
+        } else {
+            return false
+        }
     }
 }

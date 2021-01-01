@@ -69,7 +69,8 @@ class InputGoalsViewController: UIViewController {
         }
     }
     
-    @IBAction func nextButtonPressed(_ sender: EncoreButton) {
+    @IBAction func nextPressed(_ sender: EncoreButton) {
+        self.performSegue(withIdentifier: K.goalsSegue, sender: self)
     }
     
     @IBAction func backPressed(_ sender: UIButton) {

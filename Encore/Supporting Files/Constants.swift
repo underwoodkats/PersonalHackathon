@@ -15,4 +15,8 @@ struct K {
     // Cell Identifiers
     static let scheduleCellIdentifier = "ScheduleCell"
     static let goalCellIdentifier = "GoalCell"
+    
+    // Segue Names
+    static let goalsSegue = "GoalsToSession"
+    static let sessionSegue = "SessionToReview"
 }
