@@ -50,7 +50,7 @@
                                 <rect key="frame" x="0.0" y="134" width="375" height="438"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="hjR-68-d8N">
-                                        <rect key="frame" x="87.5" y="69" width="200" height="300"/>
+                                        <rect key="frame" x="112.5" y="69" width="200" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="TwU-o0-co0"/>
                                             <constraint firstAttribute="width" constant="200" id="wvp-SV-Xxd"/>
@@ -58,7 +58,7 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="hjR-68-d8N" firstAttribute="centerX" secondItem="DI9-dZ-yXT" secondAttribute="centerX" id="BT2-9Y-pZ8"/>
+                                    <constraint firstItem="hjR-68-d8N" firstAttribute="centerX" secondItem="DI9-dZ-yXT" secondAttribute="centerX" constant="25" id="BT2-9Y-pZ8"/>
                                     <constraint firstItem="hjR-68-d8N" firstAttribute="centerY" secondItem="DI9-dZ-yXT" secondAttribute="centerY" id="nb8-mF-lh5"/>
                                 </constraints>
                             </view>
@@ -221,7 +221,7 @@
                                 <rect key="frame" x="0.0" y="124.5" width="375" height="297.5"/>
                                 <color key="backgroundColor" red="0.95939487219999997" green="0.96202927829999996" blue="0.92764025930000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mae-hl-RU0" customClass="ScheduleCell" customModule="Encore" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mae-hl-RU0" customClass="ScheduleCell" customModule="Encore" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mae-hl-RU0" id="Kba-u2-0m6">
@@ -394,7 +394,7 @@
                                 <rect key="frame" x="0.0" y="128.5" width="375" height="288.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="RO6-yu-fY9">
-                                        <rect key="frame" x="53" y="29" width="269" height="230.5"/>
+                                        <rect key="frame" x="-303" y="29" width="981" height="230.5"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.87843137250000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -474,6 +474,7 @@
                                         <state key="normal" image="Schedule"/>
                                         <connections>
                                             <action selector="schedulePressed:" destination="kcy-Vz-MFC" eventType="touchUpInside" id="Hxs-sg-Zbv"/>
+                                            <segue destination="nnf-Ey-5RE" kind="presentation" modalPresentationStyle="fullScreen" id="k4k-MA-g9g"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVL-fe-ZxD" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
@@ -541,6 +542,67 @@
             </objects>
             <point key="canvasLocation" x="3557.5999999999999" y="91.304347826086968"/>
         </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="TY5-al-tTe">
+            <objects>
+                <viewController id="nnf-Ey-5RE" customClass="ScheduleViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I6j-L8-sP2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsx-QS-3wF">
+                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="App-Hz-ojz"/>
+                                    <constraint firstAttribute="width" constant="24" id="hwM-1c-GO3"/>
+                                </constraints>
+                                <state key="normal" image="BackArrow"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="nnf-Ey-5RE" eventType="touchUpInside" id="Goc-1w-5iC"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aEy-R2-xYm">
+                                <rect key="frame" x="0.0" y="164" width="375" height="503"/>
+                                <color key="backgroundColor" red="0.96042054889999995" green="0.96151894329999998" blue="0.92940837139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FRQ-L0-vQE">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FRQ-L0-vQE" id="aR2-WW-yJB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsz-j7-ATg">
+                                <rect key="frame" x="64" y="59" width="247" height="50"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="38"/>
+                                <color key="textColor" red="0.33836960789999998" green="0.36438676710000001" blue="0.60394877199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zg0-ce-0oF"/>
+                        <color key="backgroundColor" red="0.96042054889999995" green="0.96151894329999998" blue="0.92940837139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="bsx-QS-3wF" firstAttribute="top" secondItem="Zg0-ce-0oF" secondAttribute="top" constant="25" id="1g2-ON-Pax"/>
+                            <constraint firstItem="Zg0-ce-0oF" firstAttribute="bottom" secondItem="aEy-R2-xYm" secondAttribute="bottom" id="4dB-3D-BRb"/>
+                            <constraint firstItem="Tsz-j7-ATg" firstAttribute="top" secondItem="bsx-QS-3wF" secondAttribute="bottom" constant="10" id="CEF-yV-eB5"/>
+                            <constraint firstItem="aEy-R2-xYm" firstAttribute="leading" secondItem="Zg0-ce-0oF" secondAttribute="leading" id="Vgu-1d-06Z"/>
+                            <constraint firstItem="Tsz-j7-ATg" firstAttribute="centerX" secondItem="I6j-L8-sP2" secondAttribute="centerX" id="aeE-vd-C0b"/>
+                            <constraint firstItem="bsx-QS-3wF" firstAttribute="leading" secondItem="Zg0-ce-0oF" secondAttribute="leading" constant="25" id="jfq-q2-HNF"/>
+                            <constraint firstItem="Zg0-ce-0oF" firstAttribute="trailing" secondItem="aEy-R2-xYm" secondAttribute="trailing" id="ori-Ya-dJL"/>
+                            <constraint firstItem="aEy-R2-xYm" firstAttribute="top" secondItem="Tsz-j7-ATg" secondAttribute="bottom" constant="55" id="vRf-C3-vea"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aEy-R2-xYm" id="pBN-PE-1Mb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbW-4y-dg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3558" y="896"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="f09-AM-vUo">
             <objects>
@@ -585,7 +647,7 @@
     </designables>
     <resources>
         <image name="BackArrow" width="30" height="21"/>
-        <image name="Cat" width="269" height="408"/>
+        <image name="Cat" width="980.5" height="1749.5"/>
         <image name="GoalsList" width="76" height="76"/>
         <image name="PreparationEllipse" width="166" height="168"/>
         <image name="Schedule" width="82" height="86"/>

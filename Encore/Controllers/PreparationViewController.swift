@@ -101,12 +101,10 @@ extension PreparationViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.scheduleCellIdentifier, for: indexPath) as! ScheduleCell
         let currentStage = model.currentSession?.stages[indexPath.row]
         
-        
         cell.stageLabel.text = currentStage?.name
         
-        if let duration = currentStage?.durationInSeconds {
-            let durationInMin = duration / 60
-            cell.timeLabel.text = "\(durationInMin) minutes"
+        if let duration = currentStage?.durationInMinutes {
+            cell.timeLabel.text = "\(duration) minutes"
         }
         
         return cell
