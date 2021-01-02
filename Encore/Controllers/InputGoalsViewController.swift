@@ -2,7 +2,7 @@
 //  InputGoalsViewController.swift
 //  Encore
 //
-//  Created by Katselenbogen, Igor | Rogi | MESD on 2020/12/26.
+//  Created by Katselenbogen, Igor on 2020/12/26.
 //
 
 import UIKit
@@ -12,10 +12,16 @@ class InputGoalsViewController: UIViewController {
     // TODO - Make round corners for the first cell
     // TODO - Think better about cutting the string - no spaces around
 
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: EncoreButton!
     
+    // MARK: - Private Variables
+    
     private let model = EncoreBrain.shared
+    
+    // MARK: - Life Cycles
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,15 +30,25 @@ class InputGoalsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.alwaysBounceVertical = false
         tableView.register(UINib(nibName: K.goalCellNibName, bundle: nil), forCellReuseIdentifier: K.goalCellIdentifier)
     }
+    
+    // MARK: - Private Methods
     
     private func setTableViewUI() {
         tableView.clipsToBounds = true
         tableView.layer.cornerRadius = 40 // Set As you want
         tableView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
     }
-   
+    
+    private func updateUIIfGoalsAreSet() {
+        if model.goalsCount > 0 {
+            nextButton.setTitle("Let's go!", for: .normal)
+        }
+    }
+    
+    // MARK: - IBActions
     
     @IBAction func addGoalPressed(_ sender: EncoreButton) {
         var textField = UITextField()
@@ -63,12 +79,6 @@ class InputGoalsViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func updateUIIfGoalsAreSet() {
-        if model.goalsCount > 0 {
-            nextButton.setTitle("Let's go!", for: .normal)
-        }
-    }
-    
     @IBAction func nextPressed(_ sender: EncoreButton) {
         self.performSegue(withIdentifier: K.goalsSegue, sender: self)
     }
@@ -78,17 +88,22 @@ class InputGoalsViewController: UIViewController {
     }
 }
 
+// MARK: - Table View Data Source
 
 extension InputGoalsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         updateUIIfGoalsAreSet()
-        return model.goalsCount
+        return max(model.goalsCount, 6)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.goalCellIdentifier, for: indexPath) as! GoalCell
-        let currentGoal = model.goals[indexPath.row]
-        cell.goalLabel.text = currentGoal.name
+        if indexPath.row < model.goalsCount {
+            let currentGoal = model.goals[indexPath.row]
+            cell.goalLabel.text = currentGoal.name
+        } else {
+            cell.goalLabel.text = " "
+        }
         cell.selectionStyle = .none
         return cell
     }
