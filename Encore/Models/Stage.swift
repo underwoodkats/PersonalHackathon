@@ -10,4 +10,7 @@ import Foundation
 struct Stage {
     var name: String
     var durationInSeconds: Int
+    var durationInMinutes: Int {
+        return durationInSeconds / 60
+    }
 }
