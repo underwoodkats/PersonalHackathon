@@ -105,17 +105,8 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func closePressed(_ sender: UIButton) {
-    
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
-    
-    @IBAction func schedulePressed(_ sender: Any) {
-    
-    }
-    
-    @IBAction func goalsPressed(_ sender: Any) {
-    
-    }
-    
     
     @IBAction func nextStageButtonPressed(_ sender: Any) {
         
