@@ -60,7 +60,9 @@ extension GoalsReviewViewController: UITableViewDataSource {
 // MARK: - Table View Delegate
 extension GoalsReviewViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        // TODO: Make limits for the words
+        // TODO: Make it all be aligned in a special way.
+        return 70
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
