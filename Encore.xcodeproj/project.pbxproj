@@ -22,6 +22,7 @@
 		7D68A728259728230073E5EE /* GoalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D68A726259728230073E5EE /* GoalCell.xib */; };
 		7D68A72F25972F830073E5EE /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A72E25972F830073E5EE /* Goal.swift */; };
 		7D68A73225987EA90073E5EE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A73125987EA80073E5EE /* String+Extension.swift */; };
+		7DA4F81C25A49C6100FE8537 /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */; };
 		7DAD5B4C2594CF6300C902EE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B4B2594CF6300C902EE /* Session.swift */; };
 		7DAD5B4F2594CF8E00C902EE /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B4E2594CF8E00C902EE /* Stage.swift */; };
 		7DAD5B522594D04D00C902EE /* EncoreBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B512594D04D00C902EE /* EncoreBrain.swift */; };
@@ -52,6 +53,7 @@
 		7D68A726259728230073E5EE /* GoalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalCell.xib; sourceTree = "<group>"; };
 		7D68A72E25972F830073E5EE /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		7D68A73125987EA80073E5EE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		7DAD5B4B2594CF6300C902EE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		7DAD5B4E2594CF8E00C902EE /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		7DAD5B512594D04D00C902EE /* EncoreBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoreBrain.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				7DCF0CDC259F0D1700FC25CB /* SessionViewController.swift */,
 				7DCF0CE225A040B500FC25CB /* ScheduleViewController.swift */,
 				7DCF0CE625A04FFB00FC25CB /* GoalsReviewViewController.swift */,
+				7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				7D00DC90259474AF006965A8 /* AppDelegate.swift in Sources */,
 				7D00DC92259474AF006965A8 /* SceneDelegate.swift in Sources */,
 				7D00DCAD259483FD006965A8 /* UIColor+Extension.swift in Sources */,
+				7DA4F81C25A49C6100FE8537 /* CongratulationsViewController.swift in Sources */,
 				7D68A72F25972F830073E5EE /* Goal.swift in Sources */,
 				7D68A727259728230073E5EE /* GoalCell.swift in Sources */,
 			);
