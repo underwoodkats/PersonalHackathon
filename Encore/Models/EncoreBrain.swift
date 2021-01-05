@@ -12,26 +12,41 @@ class EncoreBrain {
     private init() {}
     
     private(set) var currentSession: Session?
+    
     private(set) var goals: [Goal] = []
     
-    // MARK: - Session Screen
     private var currentStageIndex: Int = 0
     
     var stagesCount: Int {
         return currentSession?.stages.count ?? 0
     }
-    
-    var goalsCount: Int {
-        return goals.count
-    }
-    
+   
     func setSession(_ session: Session) {
         currentSession = session
+    }
+}
+
+// MARK: - Goals
+
+extension EncoreBrain {
+    var goalsCount: Int {
+        return goals.count
     }
     
     func addGoal(goal: Goal) {
         goals.append(goal)
     }
+    
+    func changeGoalStatus(goalIndex: Int) {
+        if goalIndex < goalsCount {
+            goals[goalIndex].isAchieved = !goals[goalIndex].isAchieved
+        }
+    }
+}
+
+// MARK: - Session
+
+extension EncoreBrain {
     
     func startSession() {
         currentStageIndex = 0

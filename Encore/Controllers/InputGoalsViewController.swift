@@ -22,14 +22,11 @@ class InputGoalsViewController: UIViewController {
     private let model = EncoreBrain.shared
     
     // MARK: - Life Cycles
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.alwaysBounceVertical = false
         tableView.register(UINib(nibName: K.goalCellNibName, bundle: nil), forCellReuseIdentifier: K.goalCellIdentifier)
     }
@@ -58,7 +55,7 @@ class InputGoalsViewController: UIViewController {
         
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
             if let newGoalName = textField.text {
-                let goalName = "— " + newGoalName.capitalizingFirstLetter()
+                let goalName = newGoalName.capitalizingFirstLetter()
                 
                 let newGoal = Goal(name: goalName, isAchieved: false)
                 self.model.addGoal(goal: newGoal)
@@ -93,6 +90,7 @@ class InputGoalsViewController: UIViewController {
 extension InputGoalsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         updateUIIfGoalsAreSet()
+        // TODO: Create constant struct
         return max(model.goalsCount, 6)
     }
     
@@ -100,7 +98,7 @@ extension InputGoalsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.goalCellIdentifier, for: indexPath) as! GoalCell
         if indexPath.row < model.goalsCount {
             let currentGoal = model.goals[indexPath.row]
-            cell.goalLabel.text = currentGoal.name
+            cell.goalLabel.text = "\(indexPath.row + 1). \(currentGoal.name)"
         } else {
             cell.goalLabel.text = " "
         }
@@ -109,4 +107,10 @@ extension InputGoalsViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - TableView Delegate
 
+extension InputGoalsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+}

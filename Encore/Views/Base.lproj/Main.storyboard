@@ -310,7 +310,7 @@
                                             <action selector="addGoalPressed:" destination="sb2-fc-zvv" eventType="touchUpInside" id="nEr-uB-Hij"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L11-TY-dJn" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L11-TY-dJn" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
                                         <rect key="frame" x="177" y="0.0" width="150" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="LsM-Zf-MDk"/>
@@ -371,6 +371,57 @@
             </objects>
             <point key="canvasLocation" x="2715" y="92"/>
         </scene>
+        <!--Goals Review View Controller-->
+        <scene sceneID="j8L-W5-OXq">
+            <objects>
+                <viewController id="yUM-LZ-LGk" customClass="GoalsReviewViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n3X-oJ-IRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M9-aS-5Fr">
+                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="NIa-vg-AFm"/>
+                                    <constraint firstAttribute="width" constant="24" id="YgG-ib-aiH"/>
+                                </constraints>
+                                <state key="normal" image="BackArrow"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="yUM-LZ-LGk" eventType="touchUpInside" id="0aC-zw-fot"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goals For Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zS-Le-cfb">
+                                <rect key="frame" x="43.5" y="59" width="288.5" height="49.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="38"/>
+                                <color key="textColor" red="0.33836960789999998" green="0.36438676710000001" blue="0.60394877199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gPV-JL-hqm">
+                                <rect key="frame" x="42" y="168.5" width="291" height="498.5"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.87843137250000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RpC-As-KIC"/>
+                        <color key="backgroundColor" red="0.96042054889999995" green="0.96151894329999998" blue="0.92940837139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="0M9-aS-5Fr" firstAttribute="leading" secondItem="RpC-As-KIC" secondAttribute="leading" constant="25" id="2ii-JP-1uu"/>
+                            <constraint firstItem="RpC-As-KIC" firstAttribute="trailing" secondItem="gPV-JL-hqm" secondAttribute="trailing" constant="42" id="702-Ho-DrW"/>
+                            <constraint firstItem="9zS-Le-cfb" firstAttribute="centerX" secondItem="n3X-oJ-IRZ" secondAttribute="centerX" id="FUQ-u4-Lcx"/>
+                            <constraint firstItem="RpC-As-KIC" firstAttribute="bottom" secondItem="gPV-JL-hqm" secondAttribute="bottom" id="M6o-6d-ROT"/>
+                            <constraint firstItem="gPV-JL-hqm" firstAttribute="leading" secondItem="RpC-As-KIC" secondAttribute="leading" constant="42" id="f2T-Vy-tLw"/>
+                            <constraint firstItem="0M9-aS-5Fr" firstAttribute="top" secondItem="RpC-As-KIC" secondAttribute="top" constant="25" id="haZ-wg-Jes"/>
+                            <constraint firstItem="gPV-JL-hqm" firstAttribute="top" secondItem="9zS-Le-cfb" secondAttribute="bottom" constant="60" id="oLQ-XU-nQX"/>
+                            <constraint firstItem="9zS-Le-cfb" firstAttribute="top" secondItem="0M9-aS-5Fr" secondAttribute="bottom" constant="10" id="wKj-zM-F3k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="gPV-JL-hqm" id="KWv-pb-yPU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Apg-X1-RCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4438" y="-663"/>
+        </scene>
         <!--Session View Controller-->
         <scene sceneID="0xw-NF-iJ2">
             <objects>
@@ -397,7 +448,7 @@
                                         <rect key="frame" x="-303" y="29" width="981" height="230.5"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.87843137250000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.90196078431372551" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="RO6-yu-fY9" firstAttribute="height" secondItem="Ilw-ZL-efS" secondAttribute="height" multiplier="0.8" id="NLN-5Y-Xm7"/>
                                     <constraint firstItem="RO6-yu-fY9" firstAttribute="centerX" secondItem="Ilw-ZL-efS" secondAttribute="centerX" id="brm-gj-aj6"/>
@@ -503,6 +554,7 @@
                                         <state key="normal" image="GoalsList"/>
                                         <connections>
                                             <action selector="goalsPressed:" destination="kcy-Vz-MFC" eventType="touchUpInside" id="PVx-98-W9j"/>
+                                            <segue destination="yUM-LZ-LGk" kind="presentation" modalPresentationStyle="fullScreen" id="7W6-wQ-Obk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -601,7 +653,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbW-4y-dg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3558" y="896"/>
+            <point key="canvasLocation" x="4438" y="845"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f09-AM-vUo">

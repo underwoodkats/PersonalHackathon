@@ -31,6 +31,7 @@
 		7DCF0CDD259F0D1700FC25CB /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0CDC259F0D1700FC25CB /* SessionViewController.swift */; };
 		7DCF0CE0259F391000FC25CB /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0CDF259F391000FC25CB /* Int+Extension.swift */; };
 		7DCF0CE325A040B500FC25CB /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0CE225A040B500FC25CB /* ScheduleViewController.swift */; };
+		7DCF0CE725A04FFB00FC25CB /* GoalsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0CE625A04FFB00FC25CB /* GoalsReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		7DCF0CDC259F0D1700FC25CB /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		7DCF0CDF259F391000FC25CB /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		7DCF0CE225A040B500FC25CB /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		7DCF0CE625A04FFB00FC25CB /* GoalsReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				7D68A71E259725AE0073E5EE /* InputGoalsViewController.swift */,
 				7DCF0CDC259F0D1700FC25CB /* SessionViewController.swift */,
 				7DCF0CE225A040B500FC25CB /* ScheduleViewController.swift */,
+				7DCF0CE625A04FFB00FC25CB /* GoalsReviewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				7DCF0CDD259F0D1700FC25CB /* SessionViewController.swift in Sources */,
 				7DAD5B4F2594CF8E00C902EE /* Stage.swift in Sources */,
 				7D68A71F259725AE0073E5EE /* InputGoalsViewController.swift in Sources */,
+				7DCF0CE725A04FFB00FC25CB /* GoalsReviewViewController.swift in Sources */,
 				7D00DC94259474AF006965A8 /* HomeViewController.swift in Sources */,
 				7DAD5B582596E56E00C902EE /* Constants.swift in Sources */,
 				7DCF0CE325A040B500FC25CB /* ScheduleViewController.swift in Sources */,
