@@ -29,7 +29,7 @@ class CongratulationsViewController: UIViewController {
     
     // MARK: - IBActions
     
-    @IBAction func finishPressed(_ sender: EncoreButton) {
+     @IBAction func finishPressed(_ sender: EncoreButton) {
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
 }

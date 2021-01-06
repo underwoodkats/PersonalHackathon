@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // TODO: Think about presentation new screens options! Why it is from the bottom?
+    // TODO: Update the design
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

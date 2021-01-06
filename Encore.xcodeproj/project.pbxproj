@@ -23,6 +23,7 @@
 		7D68A72F25972F830073E5EE /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A72E25972F830073E5EE /* Goal.swift */; };
 		7D68A73225987EA90073E5EE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A73125987EA80073E5EE /* String+Extension.swift */; };
 		7DA4F81C25A49C6100FE8537 /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */; };
+		7DA4F82025A4B40000FE8537 /* GoalsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4F81F25A4B40000FE8537 /* GoalsReviewViewController.swift */; };
 		7DAD5B4C2594CF6300C902EE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B4B2594CF6300C902EE /* Session.swift */; };
 		7DAD5B4F2594CF8E00C902EE /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B4E2594CF8E00C902EE /* Stage.swift */; };
 		7DAD5B522594D04D00C902EE /* EncoreBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B512594D04D00C902EE /* EncoreBrain.swift */; };
@@ -32,7 +33,7 @@
 		7DCF0CDD259F0D1700FC25CB /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0CDC259F0D1700FC25CB /* SessionViewController.swift */; };
 		7DCF0CE0259F391000FC25CB /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0CDF259F391000FC25CB /* Int+Extension.swift */; };
 		7DCF0CE325A040B500FC25CB /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0CE225A040B500FC25CB /* ScheduleViewController.swift */; };
-		7DCF0CE725A04FFB00FC25CB /* GoalsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0CE625A04FFB00FC25CB /* GoalsReviewViewController.swift */; };
+		7DCF0CE725A04FFB00FC25CB /* GoalsForDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0CE625A04FFB00FC25CB /* GoalsForDayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		7D68A72E25972F830073E5EE /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		7D68A73125987EA80073E5EE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
+		7DA4F81F25A4B40000FE8537 /* GoalsReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsReviewViewController.swift; sourceTree = "<group>"; };
 		7DAD5B4B2594CF6300C902EE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		7DAD5B4E2594CF8E00C902EE /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		7DAD5B512594D04D00C902EE /* EncoreBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoreBrain.swift; sourceTree = "<group>"; };
@@ -63,7 +65,7 @@
 		7DCF0CDC259F0D1700FC25CB /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		7DCF0CDF259F391000FC25CB /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		7DCF0CE225A040B500FC25CB /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
-		7DCF0CE625A04FFB00FC25CB /* GoalsReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsReviewViewController.swift; sourceTree = "<group>"; };
+		7DCF0CE625A04FFB00FC25CB /* GoalsForDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsForDayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +140,9 @@
 				7D68A71E259725AE0073E5EE /* InputGoalsViewController.swift */,
 				7DCF0CDC259F0D1700FC25CB /* SessionViewController.swift */,
 				7DCF0CE225A040B500FC25CB /* ScheduleViewController.swift */,
-				7DCF0CE625A04FFB00FC25CB /* GoalsReviewViewController.swift */,
+				7DCF0CE625A04FFB00FC25CB /* GoalsForDayViewController.swift */,
 				7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */,
+				7DA4F81F25A4B40000FE8537 /* GoalsReviewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -272,7 +275,7 @@
 				7DCF0CDD259F0D1700FC25CB /* SessionViewController.swift in Sources */,
 				7DAD5B4F2594CF8E00C902EE /* Stage.swift in Sources */,
 				7D68A71F259725AE0073E5EE /* InputGoalsViewController.swift in Sources */,
-				7DCF0CE725A04FFB00FC25CB /* GoalsReviewViewController.swift in Sources */,
+				7DCF0CE725A04FFB00FC25CB /* GoalsForDayViewController.swift in Sources */,
 				7D00DC94259474AF006965A8 /* HomeViewController.swift in Sources */,
 				7DAD5B582596E56E00C902EE /* Constants.swift in Sources */,
 				7DCF0CE325A040B500FC25CB /* ScheduleViewController.swift in Sources */,
@@ -282,6 +285,7 @@
 				7D00DC92259474AF006965A8 /* SceneDelegate.swift in Sources */,
 				7D00DCAD259483FD006965A8 /* UIColor+Extension.swift in Sources */,
 				7DA4F81C25A49C6100FE8537 /* CongratulationsViewController.swift in Sources */,
+				7DA4F82025A4B40000FE8537 /* GoalsReviewViewController.swift in Sources */,
 				7D68A72F25972F830073E5EE /* Goal.swift in Sources */,
 				7D68A727259728230073E5EE /* GoalCell.swift in Sources */,
 			);
