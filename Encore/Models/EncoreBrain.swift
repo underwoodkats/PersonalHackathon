@@ -16,14 +16,6 @@ class EncoreBrain {
     private(set) var goals: [Goal] = []
     
     private var currentStageIndex: Int = 0
-    
-    var stagesCount: Int {
-        return currentSession?.stages.count ?? 0
-    }
-   
-    func setSession(_ session: Session) {
-        currentSession = session
-    }
 }
 
 // MARK: - Goals
@@ -51,6 +43,14 @@ extension EncoreBrain {
 // MARK: - Session
 
 extension EncoreBrain {
+    
+    var stagesCount: Int {
+        return currentSession?.stages.count ?? 0
+    }
+    
+    func setSession(_ session: Session) {
+        currentSession = session
+    }
     
     func startSession() {
         currentStageIndex = 0
