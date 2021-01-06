@@ -2,19 +2,19 @@
 //  SessionViewController.swift
 //  Encore
 //
-//  Created by Katselenbogen, Igor | Rogi | MESD on 2021/01/01.
+//  Created by Katselenbogen, Igor on 2021/01/01.
 //
 
 import UIKit
 
 class SessionViewController: UIViewController {
     
-    // TODO: Implement INFO button
-    // TODO: Also changing background color
-    // TODO: Also changing cat
-    // TODO: Add push notifications when stage is finished
-    // TODO: Add tips for closing the session
-    // TODO: Exctract all texts strings. At least withing this file
+    // TODO: Level 1 - Implement INFO button
+    // TODO: Level 1 - Also changing background color
+    // TODO: Level 1 - Also changing cat
+    // TODO: Level 1 - Add push notifications when stage is finished
+    // TODO: Level 1 - Add tips for closing the session
+    // TODO: Level 2 -Exctract all texts strings. At least withing this file
     
     enum StageLifecycle: Int {
         case stageInProcess
@@ -57,13 +57,17 @@ class SessionViewController: UIViewController {
     private var timer: Timer?
     var counter = 0.0
     
+    // MARK: - Life Cycles
+
     override func viewDidLoad() {
         super.viewDidLoad()
         model.startSession()
         currentStageLifecycle = .stageInProcess
     }
     
-    func setStageInProcess() {
+    // MARK: - Private Methods
+    
+    private func setStageInProcess() {
         afterStageInformationStack.isHidden = true
         stageInformationStack.isHidden = false
         
@@ -86,7 +90,7 @@ class SessionViewController: UIViewController {
         nextStageButton.setTitle("I am done", for: .normal)
     }
     
-    func setStageFinished() {
+    private func setStageFinished() {
         stageInformationStack.isHidden = true
         afterStageInformationStack.isHidden = false
         
@@ -104,6 +108,9 @@ class SessionViewController: UIViewController {
         }
     }
     
+    // MARK: - IBActions
+
+    
     @IBAction func closePressed(_ sender: UIButton) {
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
@@ -116,6 +123,7 @@ class SessionViewController: UIViewController {
                 return
             }
         }
+        
         currentStageLifecycle?.next()
     }
 }

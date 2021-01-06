@@ -212,11 +212,10 @@
                                     <segue destination="sb2-fc-zvv" kind="presentation" modalPresentationStyle="fullScreen" id="h2P-Cp-eDh"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="0Wt-Rz-EJd">
-                                <rect key="frame" x="67" y="230" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="0Wt-Rz-EJd">
+                                <rect key="frame" x="50" y="129.5" width="275" height="287.5"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wq6-tm-VOb">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wq6-tm-VOb">
                                 <rect key="frame" x="0.0" y="124.5" width="375" height="297.5"/>
                                 <color key="backgroundColor" red="0.95939487219999997" green="0.96202927829999996" blue="0.92764025930000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -236,16 +235,20 @@
                         <constraints>
                             <constraint firstItem="ZSG-es-SdE" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" constant="25" id="2Wu-xQ-3VO"/>
                             <constraint firstItem="Wq6-tm-VOb" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" id="5hU-SL-OCI"/>
+                            <constraint firstItem="0Wt-Rz-EJd" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" constant="50" id="EOH-Vb-Z4t"/>
                             <constraint firstItem="6sp-De-Jr8" firstAttribute="centerX" secondItem="eto-vc-TMA" secondAttribute="centerX" id="S4m-zu-a4w"/>
                             <constraint firstItem="Kvq-FR-BNY" firstAttribute="top" secondItem="Wq6-tm-VOb" secondAttribute="bottom" constant="25" id="VBw-Zg-5SZ"/>
                             <constraint firstItem="nZO-J0-HcL" firstAttribute="trailing" secondItem="9Pz-4U-ozn" secondAttribute="trailing" id="W54-8T-iFc"/>
                             <constraint firstItem="Kvq-FR-BNY" firstAttribute="centerX" secondItem="eto-vc-TMA" secondAttribute="centerX" id="e5d-Xn-T1H"/>
                             <constraint firstItem="6sp-De-Jr8" firstAttribute="top" secondItem="ZSG-es-SdE" secondAttribute="bottom" constant="10" id="gKd-gM-BEm"/>
+                            <constraint firstItem="Kvq-FR-BNY" firstAttribute="top" secondItem="0Wt-Rz-EJd" secondAttribute="bottom" constant="30" id="lRF-Ot-eJ8"/>
                             <constraint firstItem="Wq6-tm-VOb" firstAttribute="trailing" secondItem="nZO-J0-HcL" secondAttribute="trailing" id="mTP-tC-vam"/>
                             <constraint firstItem="9Pz-4U-ozn" firstAttribute="bottom" secondItem="nZO-J0-HcL" secondAttribute="bottom" id="tmc-IP-HvM"/>
                             <constraint firstItem="9Pz-4U-ozn" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" id="u6q-zG-3LN"/>
+                            <constraint firstItem="0Wt-Rz-EJd" firstAttribute="top" secondItem="6sp-De-Jr8" secondAttribute="bottom" constant="30" id="uMm-Bp-pmz"/>
                             <constraint firstItem="9Pz-4U-ozn" firstAttribute="top" secondItem="Kvq-FR-BNY" secondAttribute="bottom" constant="25" id="vOC-eT-fp4"/>
                             <constraint firstItem="ZSG-es-SdE" firstAttribute="top" secondItem="nZO-J0-HcL" secondAttribute="top" constant="25" id="vzD-Ww-hwZ"/>
+                            <constraint firstItem="nZO-J0-HcL" firstAttribute="trailing" secondItem="0Wt-Rz-EJd" secondAttribute="trailing" constant="50" id="wHF-tV-A1h"/>
                             <constraint firstItem="Wq6-tm-VOb" firstAttribute="top" secondItem="6sp-De-Jr8" secondAttribute="bottom" constant="25" id="wzr-PV-eTG"/>
                         </constraints>
                     </view>

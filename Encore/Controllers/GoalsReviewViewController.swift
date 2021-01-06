@@ -27,7 +27,7 @@ class GoalsReviewViewController: UIViewController {
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
     @IBAction func backPressed(_ sender: UIButton) {
-        // TODO: Need to not copy the button, but create an instance for all screen.
+        // TODO: Level 2 - Need to not copy the button, but create an instance for all screen.
         // See the outlets for the button
         dismiss(animated: true, completion: nil)
     }
@@ -35,7 +35,7 @@ class GoalsReviewViewController: UIViewController {
 
 extension GoalsReviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: Create constant struct
+        // TODO: Level 2 - Create constant struct
         return max(model.goalsCount, 6)
     }
     

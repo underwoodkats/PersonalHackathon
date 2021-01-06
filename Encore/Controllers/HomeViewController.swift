@@ -9,9 +9,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    // TODO: Think about presentation new screens options! Why it is from the bottom?
-    // TODO: Update the design
+    // TODO: Level 1 - Think about presentation new screens options! Why it is from the bottom?
+    // TODO: Level 1 - Update the design
     
+    // MARK: - Life Cycles
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

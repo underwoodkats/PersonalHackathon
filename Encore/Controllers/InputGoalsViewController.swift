@@ -9,8 +9,8 @@ import UIKit
 
 class InputGoalsViewController: UIViewController {
     
-    // TODO - Make round corners for the first cell
-    // TODO - Think better about cutting the string - no spaces around
+    // TODO: Level 2 - Make round corners for the first cell
+    // TODO: Level 1 - Think better about cutting the string - no spaces around
 
     // MARK: - IBOutlets
     
@@ -90,7 +90,7 @@ class InputGoalsViewController: UIViewController {
 extension InputGoalsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         updateUIIfGoalsAreSet()
-        // TODO: Create constant struct
+        // TODO: Level 2 -Create constant struct
         return max(model.goalsCount, 6)
     }
     

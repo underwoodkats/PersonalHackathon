@@ -7,15 +7,26 @@
 
 import UIKit
 
+// TODO: Level 2 - Export all colors to some constant file
+// TODO: Level 2 - We need to apply gradient for the button
+
 @IBDesignable
 class EncoreButton: UIButton {
+    
+    
+    // MARK: - Initializers
 
-    // TODO: Need gradient for button - think
-    // TODO: Maybe on goal screen you need to make skip button white?
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     @IBInspectable
     var isPrimaryButton: Bool = true
     
-    let defaultButtonHeight: Int = 45
     private var shadowLayer: CAShapeLayer!
     
     override func layoutSubviews() {
@@ -39,13 +50,5 @@ class EncoreButton: UIButton {
             
             layer.insertSublayer(shadowLayer, at: 0)
         }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
 }

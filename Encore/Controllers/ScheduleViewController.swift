@@ -2,7 +2,7 @@
 //  ScheduleViewController.swift
 //  Encore
 //
-//  Created by Katselenbogen, Igor | Rogi | MESD on 2021/01/02.
+//  Created by Katselenbogen, Igor on 2021/01/02.
 //
 
 import UIKit
