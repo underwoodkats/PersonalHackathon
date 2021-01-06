@@ -2,7 +2,7 @@
 //  String+Extension.swift
 //  Encore
 //
-//  Created by Katselenbogen, Igor | Rogi | MESD on 2020/12/27.
+//  Created by Katselenbogen, Igor on 2020/12/27.
 //
 
 import UIKit

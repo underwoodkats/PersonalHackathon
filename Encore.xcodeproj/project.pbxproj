@@ -178,9 +178,9 @@
 		7DAD5B4A2594CF1E00C902EE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7DAD5B512594D04D00C902EE /* EncoreBrain.swift */,
 				7DAD5B4B2594CF6300C902EE /* Session.swift */,
 				7DAD5B4E2594CF8E00C902EE /* Stage.swift */,
-				7DAD5B512594D04D00C902EE /* EncoreBrain.swift */,
 				7D68A72E25972F830073E5EE /* Goal.swift */,
 			);
 			path = Models;
