@@ -42,6 +42,10 @@ extension EncoreBrain {
             goals[goalIndex].isAchieved = !goals[goalIndex].isAchieved
         }
     }
+    
+    func sortGoals() {
+        goals.sort(by: { $0.isAchieved && !$1.isAchieved})
+    }
 }
 
 // MARK: - Session
