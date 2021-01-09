@@ -23,8 +23,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func helpPressed(_ sender: EncoreButton) {
-        
-        
         let transition = CATransition()
         transition.duration = 0.30
 //        transition.type = CATransitionType.reveal

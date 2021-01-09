@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -251,19 +252,26 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ru6-1Z-C4I">
                                 <rect key="frame" x="0.0" y="247" width="375" height="150"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="I encountered a problem with..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DN2-BX-Ep5">
-                                        <rect key="frame" x="25" y="15" width="325" height="120"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I encountered a problem with..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4YN-eR-SYC" customClass="FeedbackTextView" customModule="Encore" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="10" width="325" height="130"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" red="0.74501234289999996" green="0.73724091049999996" blue="0.73725575210000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94526678320000002" green="0.91845238210000002" blue="0.41160178180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="4YN-eR-SYC" firstAttribute="leading" secondItem="ru6-1Z-C4I" secondAttribute="leading" constant="25" id="7ww-Xm-yvx"/>
+                                    <constraint firstAttribute="bottom" secondItem="4YN-eR-SYC" secondAttribute="bottom" constant="10" id="FaW-8l-rWG"/>
                                     <constraint firstAttribute="height" constant="150" id="Jcy-Xr-OAW"/>
-                                    <constraint firstItem="DN2-BX-Ep5" firstAttribute="leading" secondItem="ru6-1Z-C4I" secondAttribute="leading" constant="25" id="Kxi-rs-dqu"/>
-                                    <constraint firstAttribute="bottom" secondItem="DN2-BX-Ep5" secondAttribute="bottom" constant="15" id="Nde-5C-t3k"/>
-                                    <constraint firstItem="DN2-BX-Ep5" firstAttribute="top" secondItem="ru6-1Z-C4I" secondAttribute="top" constant="15" id="TtM-a7-jjZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="DN2-BX-Ep5" secondAttribute="trailing" constant="25" id="a6C-jo-8Xa"/>
+                                    <constraint firstAttribute="trailing" secondItem="4YN-eR-SYC" secondAttribute="trailing" constant="25" id="u1H-81-Zjy"/>
+                                    <constraint firstItem="4YN-eR-SYC" firstAttribute="top" secondItem="ru6-1Z-C4I" secondAttribute="top" constant="10" id="zOX-X2-wv7"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-zX-ZCF" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
@@ -311,7 +319,8 @@ encore.cat.app@gmail.com</string>
                     </view>
                     <navigationItem key="navigationItem" id="Xw2-ou-wbg"/>
                     <connections>
-                        <outlet property="textField" destination="DN2-BX-Ep5" id="uW0-06-XzY"/>
+                        <outlet property="sendButton" destination="eHG-zX-ZCF" id="1VA-db-jr7"/>
+                        <outlet property="textView" destination="4YN-eR-SYC" id="D3e-We-wM7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRy-cj-13Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1125,5 +1134,8 @@ encore.cat.app@gmail.com</string>
         <image name="Schedule" width="82" height="86"/>
         <image name="encore_06" width="1916" height="346"/>
         <image name="Сross" width="54" height="54"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

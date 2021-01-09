@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AC76EE2186506BB97550A34 /* Pods_Encore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4564A3F33594FEA54CB312BE /* Pods_Encore.framework */; };
 		7D00DC90259474AF006965A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DC8F259474AF006965A8 /* AppDelegate.swift */; };
 		7D00DC92259474AF006965A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DC91259474AF006965A8 /* SceneDelegate.swift */; };
 		7D00DC94259474AF006965A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DC93259474AF006965A8 /* HomeViewController.swift */; };
@@ -18,6 +19,7 @@
 		7D00DCB32594BDDB006965A8 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DCB22594BDDB006965A8 /* PreparationViewController.swift */; };
 		7D0D5DE525A9707300A5E004 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D5DE425A9707300A5E004 /* UIViewController+Extension.swift */; };
 		7D0D5DE825A977C300A5E004 /* SendFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D5DE725A977C300A5E004 /* SendFeedbackViewController.swift */; };
+		7D0D5DEE25A9886B00A5E004 /* FeedbackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D5DED25A9886B00A5E004 /* FeedbackTextView.swift */; };
 		7D68A71425970EA90073E5EE /* ModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A71325970EA90073E5EE /* ModeButton.swift */; };
 		7D68A71F259725AE0073E5EE /* InputGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A71E259725AE0073E5EE /* InputGoalsViewController.swift */; };
 		7D68A727259728230073E5EE /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A725259728230073E5EE /* GoalCell.swift */; };
@@ -40,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4564A3F33594FEA54CB312BE /* Pods_Encore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Encore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A51103068078B69D5B768D7 /* Pods-Encore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encore.release.xcconfig"; path = "Target Support Files/Pods-Encore/Pods-Encore.release.xcconfig"; sourceTree = "<group>"; };
+		70BA6D38B51870E966035059 /* Pods-Encore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encore.debug.xcconfig"; path = "Target Support Files/Pods-Encore/Pods-Encore.debug.xcconfig"; sourceTree = "<group>"; };
 		7D00DC8C259474AF006965A8 /* Encore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D00DC8F259474AF006965A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D00DC91259474AF006965A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +58,7 @@
 		7D00DCB22594BDDB006965A8 /* PreparationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationViewController.swift; sourceTree = "<group>"; };
 		7D0D5DE425A9707300A5E004 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		7D0D5DE725A977C300A5E004 /* SendFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackViewController.swift; sourceTree = "<group>"; };
+		7D0D5DED25A9886B00A5E004 /* FeedbackTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTextView.swift; sourceTree = "<group>"; };
 		7D68A71325970EA90073E5EE /* ModeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeButton.swift; sourceTree = "<group>"; };
 		7D68A71E259725AE0073E5EE /* InputGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGoalsViewController.swift; sourceTree = "<group>"; };
 		7D68A725259728230073E5EE /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
@@ -79,17 +85,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC76EE2186506BB97550A34 /* Pods_Encore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56330397F4476D0A94D588F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70BA6D38B51870E966035059 /* Pods-Encore.debug.xcconfig */,
+				6A51103068078B69D5B768D7 /* Pods-Encore.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7D00DC83259474AF006965A8 = {
 			isa = PBXGroup;
 			children = (
 				7D00DC8E259474AF006965A8 /* Encore */,
 				7D00DC8D259474AF006965A8 /* Products */,
+				56330397F4476D0A94D588F3 /* Pods */,
+				8BB43487DC43FA3AEEF4BDE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +142,7 @@
 			children = (
 				7D00DCA725948057006965A8 /* EncoreButton.swift */,
 				7D68A71325970EA90073E5EE /* ModeButton.swift */,
+				7D0D5DED25A9886B00A5E004 /* FeedbackTextView.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -203,6 +222,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8BB43487DC43FA3AEEF4BDE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4564A3F33594FEA54CB312BE /* Pods_Encore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D00DCA0259474B1006965A8 /* Build configuration list for PBXNativeTarget "Encore" */;
 			buildPhases = (
+				A80F095EBF4D0939B6D273EE /* [CP] Check Pods Manifest.lock */,
 				7D00DC88259474AF006965A8 /* Sources */,
 				7D00DC89259474AF006965A8 /* Frameworks */,
 				7D00DC8A259474AF006965A8 /* Resources */,
+				8C8FE99D36C33227CB566092 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,6 +299,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8C8FE99D36C33227CB566092 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Encore/Pods-Encore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Encore/Pods-Encore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Encore/Pods-Encore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A80F095EBF4D0939B6D273EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Encore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D00DC88259474AF006965A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -295,6 +366,7 @@
 				7D00DC90259474AF006965A8 /* AppDelegate.swift in Sources */,
 				7D00DC92259474AF006965A8 /* SceneDelegate.swift in Sources */,
 				7D00DCAD259483FD006965A8 /* UIColor+Extension.swift in Sources */,
+				7D0D5DEE25A9886B00A5E004 /* FeedbackTextView.swift in Sources */,
 				7DA4F81C25A49C6100FE8537 /* CongratulationsViewController.swift in Sources */,
 				7DA4F82025A4B40000FE8537 /* GoalsReviewViewController.swift in Sources */,
 				7D68A72F25972F830073E5EE /* Goal.swift in Sources */,
@@ -443,6 +515,7 @@
 		};
 		7D00DCA1259474B1006965A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BA6D38B51870E966035059 /* Pods-Encore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,6 +536,7 @@
 		};
 		7D00DCA2259474B1006965A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A51103068078B69D5B768D7 /* Pods-Encore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
