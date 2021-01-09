@@ -21,5 +21,25 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func helpPressed(_ sender: EncoreButton) {
+        
+        
+        let transition = CATransition()
+        transition.duration = 0.30
+//        transition.type = CATransitionType.reveal
+//        transition.type = CATransitionType.push
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype.fromRight
+        view.window!.layer.add(transition, forKey: kCATransition)
+        
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: false)
+        
+    }
 }
 

@@ -184,7 +184,7 @@
                                                     <color key="titleColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="dx6-Le-pNn" kind="presentation" modalPresentationStyle="fullScreen" id="LTl-cw-EAE"/>
+                                                    <segue destination="dx6-Le-pNn" kind="presentation" modalPresentationStyle="fullScreen" id="IYb-QI-As8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -217,21 +217,106 @@
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="1016.9415292353824"/>
         </scene>
-        <!--View Controller-->
+        <!--Send Feedback View Controller-->
         <scene sceneID="c5b-T4-sie">
             <objects>
-                <viewController id="dx6-Le-pNn" sceneMemberID="viewController">
+                <viewController id="dx6-Le-pNn" customClass="SendFeedbackViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z62-Ui-naz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNh-PQ-DqQ">
+                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="P8K-KU-obr"/>
+                                    <constraint firstAttribute="width" constant="24" id="x5n-Tc-57E"/>
+                                </constraints>
+                                <state key="normal" image="BackArrow"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="dx6-Le-pNn" eventType="touchUpInside" id="D7W-OR-flk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiM-8z-rLW">
+                                <rect key="frame" x="61.5" y="60" width="252" height="47"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <color key="textColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know what’s on your mind and a member of the team will reach to you as soon as possible!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cog-5T-7YR">
+                                <rect key="frame" x="25" y="149" width="315" height="78"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ru6-1Z-C4I">
+                                <rect key="frame" x="0.0" y="247" width="375" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="I encountered a problem with..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DN2-BX-Ep5">
+                                        <rect key="frame" x="25" y="15" width="325" height="120"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94526678320000002" green="0.91845238210000002" blue="0.41160178180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Jcy-Xr-OAW"/>
+                                    <constraint firstItem="DN2-BX-Ep5" firstAttribute="leading" secondItem="ru6-1Z-C4I" secondAttribute="leading" constant="25" id="Kxi-rs-dqu"/>
+                                    <constraint firstAttribute="bottom" secondItem="DN2-BX-Ep5" secondAttribute="bottom" constant="15" id="Nde-5C-t3k"/>
+                                    <constraint firstItem="DN2-BX-Ep5" firstAttribute="top" secondItem="ru6-1Z-C4I" secondAttribute="top" constant="15" id="TtM-a7-jjZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="DN2-BX-Ep5" secondAttribute="trailing" constant="25" id="a6C-jo-8Xa"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-zX-ZCF" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="590" width="150" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="InF-Og-nXW"/>
+                                    <constraint firstAttribute="width" constant="150" id="f32-Mu-Glb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendFeedbackPressed:" destination="dx6-Le-pNn" eventType="touchUpInside" id="26Y-JZ-2Ps"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl0-PM-AfX">
+                                <rect key="frame" x="25" y="412" width="315" height="62.5"/>
+                                <string key="text">Please, for urgent matters contact us directly to our email account:
+encore.cat.app@gmail.com</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="textColor" red="0.49019607843137253" green="0.51372549019607838" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ig3-U4-2td"/>
                         <color key="backgroundColor" red="0.96755856279999997" green="0.96958023309999997" blue="0.94374758010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eNh-PQ-DqQ" firstAttribute="top" secondItem="ig3-U4-2td" secondAttribute="top" constant="25" id="15w-CP-OWo"/>
+                            <constraint firstItem="fl0-PM-AfX" firstAttribute="leading" secondItem="ig3-U4-2td" secondAttribute="leading" constant="25" id="1Vz-CV-CrX"/>
+                            <constraint firstItem="eNh-PQ-DqQ" firstAttribute="leading" secondItem="ig3-U4-2td" secondAttribute="leading" constant="25" id="5Zn-Ie-KIo"/>
+                            <constraint firstItem="Cog-5T-7YR" firstAttribute="top" secondItem="tiM-8z-rLW" secondAttribute="bottom" constant="42" id="7x6-CB-AzP"/>
+                            <constraint firstItem="ig3-U4-2td" firstAttribute="bottom" secondItem="eHG-zX-ZCF" secondAttribute="bottom" constant="32" id="AZR-Sz-gqR"/>
+                            <constraint firstItem="fl0-PM-AfX" firstAttribute="top" secondItem="ru6-1Z-C4I" secondAttribute="bottom" constant="15" id="Ds9-P9-Sh8"/>
+                            <constraint firstAttribute="trailing" secondItem="fl0-PM-AfX" secondAttribute="trailing" constant="35" id="DvE-B8-z9a"/>
+                            <constraint firstItem="tiM-8z-rLW" firstAttribute="top" secondItem="eNh-PQ-DqQ" secondAttribute="bottom" constant="11" id="FmO-Om-Aqe"/>
+                            <constraint firstItem="Cog-5T-7YR" firstAttribute="leading" secondItem="ig3-U4-2td" secondAttribute="leading" constant="25" id="Kqi-V6-DP6"/>
+                            <constraint firstItem="ig3-U4-2td" firstAttribute="trailing" secondItem="ru6-1Z-C4I" secondAttribute="trailing" id="Ylz-99-jzA"/>
+                            <constraint firstItem="ig3-U4-2td" firstAttribute="trailing" secondItem="Cog-5T-7YR" secondAttribute="trailing" constant="35" id="hSs-Px-4p0"/>
+                            <constraint firstItem="ru6-1Z-C4I" firstAttribute="leading" secondItem="ig3-U4-2td" secondAttribute="leading" id="hWN-MX-BbC"/>
+                            <constraint firstItem="tiM-8z-rLW" firstAttribute="centerX" secondItem="Z62-Ui-naz" secondAttribute="centerX" id="qQT-Dl-Z8C"/>
+                            <constraint firstItem="ru6-1Z-C4I" firstAttribute="top" secondItem="Cog-5T-7YR" secondAttribute="bottom" constant="20" id="rQF-6h-DhF"/>
+                            <constraint firstItem="eHG-zX-ZCF" firstAttribute="centerX" secondItem="Z62-Ui-naz" secondAttribute="centerX" id="vaO-WM-Qq2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xw2-ou-wbg"/>
+                    <connections>
+                        <outlet property="textField" destination="DN2-BX-Ep5" id="uW0-06-XzY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRy-cj-13Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881" y="1017"/>
+            <point key="canvasLocation" x="1880.8" y="1016.9415292353824"/>
         </scene>
         <!--Preparation-->
         <scene sceneID="MR4-ia-MqF">
@@ -1009,6 +1094,9 @@
         </designable>
         <designable name="aCg-zv-Wc9">
             <size key="intrinsicContentSize" width="58" height="42"/>
+        </designable>
+        <designable name="eHG-zX-ZCF">
+            <size key="intrinsicContentSize" width="53" height="42"/>
         </designable>
         <designable name="rMK-da-8C1">
             <size key="intrinsicContentSize" width="58" height="42"/>
