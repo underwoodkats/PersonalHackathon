@@ -38,7 +38,7 @@ class GoalsReviewViewController: UIViewController {
     @IBAction func backPressed(_ sender: UIButton) {
         // TODO: Level 2 - Need to not copy the button, but create an instance for all screen.
         // See the outlets for the button
-        dismiss(animated: true, completion: nil)
+        goToPreviousScreen()
     }
 }
 

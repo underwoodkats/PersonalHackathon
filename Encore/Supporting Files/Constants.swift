@@ -8,6 +8,22 @@
 import Foundation
 
 struct K {
+    
+    struct StoryBoard {
+        static let mainStoryBoardName = "Main"
+        
+        static let preparationViewController = "PreparationViewController"
+        static let inputGoalsViewController = "InputGoalsViewController"
+        static let sessionViewController = "SessionViewController"
+        static let scheduleViewController = "ScheduleViewController"
+        static let goalsForDayViewController = "GoalsForDayViewController"
+        static let congratulationsViewController = "CongratulationsViewController"
+        static let goalsReviewViewController = "GoalsReviewViewController"
+        static let helpViewController = "HelpViewController"
+        static let sendFeedbackViewController = "SendFeedbackViewController"
+    }
+    
+    
     // Cell Names
     static let scheduleCellNibName = "ScheduleCell"
     static let goalCellNibName = "GoalCell"

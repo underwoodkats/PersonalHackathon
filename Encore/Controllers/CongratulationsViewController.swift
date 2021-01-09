@@ -30,6 +30,10 @@ class CongratulationsViewController: UIViewController {
     // MARK: - IBActions
     
      @IBAction func finishPressed(_ sender: EncoreButton) {
-        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+        goToHomeScreen()
+    }
+    
+    @IBAction func reviewPressed(_ sender: EncoreButton) {
+        goTo(screen: K.StoryBoard.goalsReviewViewController)
     }
 }

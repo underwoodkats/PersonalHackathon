@@ -30,7 +30,7 @@ class GoalsForDayViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func backPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        goToPreviousScreen()
     }
 }
 

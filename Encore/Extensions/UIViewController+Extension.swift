@@ -17,6 +17,39 @@ extension UIViewController {
       @objc func dismissKeyboard() {
           view.endEditing(true)
       }
+   
+    func goTo(screen name: String) {
+        let transition = CATransition()
+        transition.duration = 0.30
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype.fromRight
+        view.window!.layer.add(transition, forKey: kCATransition)
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: K.StoryBoard.mainStoryBoardName, bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: name)
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false)
+    }
+    
+    func goToPreviousScreen() {
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = CATransitionType.reveal
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+        
+        dismiss(animated: false)
+    }
+    
+    
+    
+    func goToHomeScreen() {
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = CATransitionType.reveal
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+        
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+    }
   }
-
-

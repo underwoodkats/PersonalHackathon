@@ -86,7 +86,11 @@ class PreparationViewController: UIViewController {
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        goToPreviousScreen()
+    }
+    
+    @IBAction func nextPressed(_ sender: EncoreButton) {
+        goTo(screen: K.StoryBoard.inputGoalsViewController)
     }
 }
 

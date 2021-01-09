@@ -8,8 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    // TODO: Level 1 - Think about presentation new screens options! Why it is from the bottom?
     // TODO: Level 1 - Update the design
     
     // MARK: - Life Cycles
@@ -22,22 +20,14 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - IBActions
+
+    @IBAction func startPressed(_ sender: EncoreButton) {
+        goTo(screen: K.StoryBoard.preparationViewController)
+    }
+    
     @IBAction func helpPressed(_ sender: EncoreButton) {
-        let transition = CATransition()
-        transition.duration = 0.30
-//        transition.type = CATransitionType.reveal
-//        transition.type = CATransitionType.push
-        transition.type = CATransitionType.moveIn
-        transition.subtype = CATransitionSubtype.fromRight
-        view.window!.layer.add(transition, forKey: kCATransition)
-        
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
-        newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: false)
-        
+        goTo(screen: K.StoryBoard.helpViewController)
     }
 }
 

@@ -49,7 +49,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryButton" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="xEX-7F-KT2" kind="presentation" modalPresentationStyle="fullScreen" id="Lrb-lp-YLy"/>
+                                            <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ogM-sU-Tqo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -185,7 +185,7 @@
                                                     <color key="titleColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="dx6-Le-pNn" kind="presentation" modalPresentationStyle="fullScreen" id="IYb-QI-As8"/>
+                                                    <action selector="giveUsFeedbackPressed:" destination="2G0-u8-v0B" eventType="touchUpInside" id="2Uz-t6-kP5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -216,12 +216,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOP-4D-3nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029.5999999999999" y="1016.9415292353824"/>
+            <point key="canvasLocation" x="1030" y="844"/>
         </scene>
         <!--Send Feedback View Controller-->
         <scene sceneID="c5b-T4-sie">
             <objects>
-                <viewController id="dx6-Le-pNn" customClass="SendFeedbackViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SendFeedbackViewController" id="dx6-Le-pNn" customClass="SendFeedbackViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z62-Ui-naz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,12 +325,12 @@ encore.cat.app@gmail.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRy-cj-13Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1880.8" y="1016.9415292353824"/>
+            <point key="canvasLocation" x="1881" y="844"/>
         </scene>
         <!--Preparation-->
         <scene sceneID="MR4-ia-MqF">
             <objects>
-                <viewController id="xEX-7F-KT2" userLabel="Preparation" customClass="PreparationViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PreparationViewController" id="xEX-7F-KT2" userLabel="Preparation" customClass="PreparationViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eto-vc-TMA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -453,7 +453,7 @@ encore.cat.app@gmail.com</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="sb2-fc-zvv" kind="presentation" modalPresentationStyle="fullScreen" id="h2P-Cp-eDh"/>
+                                    <action selector="nextPressed:" destination="xEX-7F-KT2" eventType="touchUpInside" id="88P-3o-enG"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="0Wt-Rz-EJd">
@@ -513,7 +513,7 @@ encore.cat.app@gmail.com</string>
         <!--Input Goals View Controller-->
         <scene sceneID="iPC-gr-KxZ">
             <objects>
-                <viewController id="sb2-fc-zvv" customClass="InputGoalsViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InputGoalsViewController" id="sb2-fc-zvv" customClass="InputGoalsViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1gQ-xI-Mjd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -610,17 +610,16 @@ encore.cat.app@gmail.com</string>
                     <connections>
                         <outlet property="nextButton" destination="L11-TY-dJn" id="Sbf-NP-iJs"/>
                         <outlet property="tableView" destination="SP1-eC-f2r" id="QHj-N1-xUz"/>
-                        <segue destination="kcy-Vz-MFC" kind="presentation" identifier="GoalsToSession" modalPresentationStyle="fullScreen" id="cr3-8C-AVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Anm-E1-bpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2715" y="92"/>
         </scene>
-        <!--Goals For Day-->
+        <!--Goals For Day View Controller-->
         <scene sceneID="j8L-W5-OXq">
             <objects>
-                <viewController id="yUM-LZ-LGk" customClass="GoalsForDay" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoalsForDayViewController" id="yUM-LZ-LGk" customClass="GoalsForDayViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n3X-oJ-IRZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -671,7 +670,7 @@ encore.cat.app@gmail.com</string>
         <!--Session View Controller-->
         <scene sceneID="0xw-NF-iJ2">
             <objects>
-                <viewController id="kcy-Vz-MFC" customClass="SessionViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SessionViewController" id="kcy-Vz-MFC" customClass="SessionViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kcV-7C-viq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -770,7 +769,7 @@ encore.cat.app@gmail.com</string>
                                         </constraints>
                                         <state key="normal" image="Schedule"/>
                                         <connections>
-                                            <segue destination="nnf-Ey-5RE" kind="presentation" modalPresentationStyle="fullScreen" id="k4k-MA-g9g"/>
+                                            <action selector="schedulePressed:" destination="kcy-Vz-MFC" eventType="touchUpInside" id="eym-0x-NZj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVL-fe-ZxD" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
@@ -798,7 +797,7 @@ encore.cat.app@gmail.com</string>
                                         </constraints>
                                         <state key="normal" image="GoalsList"/>
                                         <connections>
-                                            <segue destination="yUM-LZ-LGk" kind="presentation" modalPresentationStyle="fullScreen" id="7W6-wQ-Obk"/>
+                                            <action selector="goalsPressed:" destination="kcy-Vz-MFC" eventType="touchUpInside" id="Hy3-0E-MTL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -831,7 +830,6 @@ encore.cat.app@gmail.com</string>
                         <outlet property="stageInformationStack" destination="qqb-ej-mXH" id="fi9-HT-WA7"/>
                         <outlet property="stageTitle" destination="6E1-gS-oif" id="mCX-Ln-OUE"/>
                         <outlet property="timerTitle" destination="b1H-jV-Xx6" id="05T-kW-oKt"/>
-                        <segue destination="cdH-8J-M86" kind="presentation" identifier="SessionToReview" modalPresentationStyle="fullScreen" id="tFc-IT-Ikr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TiP-YF-KQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -841,7 +839,7 @@ encore.cat.app@gmail.com</string>
         <!--Schedule View Controller-->
         <scene sceneID="TY5-al-tTe">
             <objects>
-                <viewController id="nnf-Ey-5RE" customClass="ScheduleViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScheduleViewController" id="nnf-Ey-5RE" customClass="ScheduleViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6j-L8-sP2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -902,7 +900,7 @@ encore.cat.app@gmail.com</string>
         <!--Congratulations View Controller-->
         <scene sceneID="f09-AM-vUo">
             <objects>
-                <viewController id="cdH-8J-M86" customClass="CongratulationsViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CongratulationsViewController" id="cdH-8J-M86" customClass="CongratulationsViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7b-Q3-zSh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -956,6 +954,7 @@ encore.cat.app@gmail.com</string>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryButton" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="reviewPressed:" destination="cdH-8J-M86" eventType="touchUpInside" id="74g-yu-MSm"/>
                                             <segue destination="UPw-kL-gJk" kind="presentation" modalPresentationStyle="fullScreen" id="IYn-g1-gRi"/>
                                         </connections>
                                     </button>
@@ -1013,7 +1012,7 @@ encore.cat.app@gmail.com</string>
         <!--Goals Review View Controller-->
         <scene sceneID="ful-o3-19P">
             <objects>
-                <viewController id="UPw-kL-gJk" customClass="GoalsReviewViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoalsReviewViewController" id="UPw-kL-gJk" customClass="GoalsReviewViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xhc-mI-jgf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

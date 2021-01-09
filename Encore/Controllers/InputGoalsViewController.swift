@@ -77,11 +77,11 @@ class InputGoalsViewController: UIViewController {
     }
     
     @IBAction func nextPressed(_ sender: EncoreButton) {
-        self.performSegue(withIdentifier: K.goalsSegue, sender: self)
+        goTo(screen: K.StoryBoard.sessionViewController)
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        goToPreviousScreen()
     }
 }
 

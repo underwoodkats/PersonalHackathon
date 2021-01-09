@@ -112,18 +112,25 @@ class SessionViewController: UIViewController {
 
     
     @IBAction func closePressed(_ sender: UIButton) {
-        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+        goToHomeScreen()
     }
     
     @IBAction func nextStageButtonPressed(_ sender: Any) {
         
         if let cycle = currentStageLifecycle, cycle == .stageFinished {
             if !model.goToNextStageIfPossible() {
-                self.performSegue(withIdentifier: K.sessionSegue, sender: self)
+                goTo(screen: K.StoryBoard.congratulationsViewController)
                 return
             }
         }
         
         currentStageLifecycle?.next()
+    }
+    
+    @IBAction func schedulePressed(_ sender: UIButton) {
+        goTo(screen: K.StoryBoard.scheduleViewController)
+    }
+    @IBAction func goalsPressed(_ sender: UIButton) {
+        goTo(screen: K.StoryBoard.goalsForDayViewController)
     }
 }

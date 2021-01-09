@@ -26,13 +26,13 @@ class SendFeedbackViewController: UIViewController {
     }
 
     @IBAction func backPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        goToPreviousScreen()
     }
     
     @IBAction func sendFeedbackPressed(_ sender: EncoreButton) {
         if let message = textView.text {
             Bugfender.sendUserFeedbackReturningUrl(withSubject: "Feedback", message: message)
-            self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+            goToHomeScreen()
         }
     }
 }
