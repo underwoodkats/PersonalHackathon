@@ -16,6 +16,7 @@
 		7D00DCA825948057006965A8 /* EncoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DCA725948057006965A8 /* EncoreButton.swift */; };
 		7D00DCAD259483FD006965A8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DCAC259483FD006965A8 /* UIColor+Extension.swift */; };
 		7D00DCB32594BDDB006965A8 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DCB22594BDDB006965A8 /* PreparationViewController.swift */; };
+		7D0D5DE525A9707300A5E004 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D5DE425A9707300A5E004 /* UIViewController+Extension.swift */; };
 		7D68A71425970EA90073E5EE /* ModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A71325970EA90073E5EE /* ModeButton.swift */; };
 		7D68A71F259725AE0073E5EE /* InputGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A71E259725AE0073E5EE /* InputGoalsViewController.swift */; };
 		7D68A727259728230073E5EE /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A725259728230073E5EE /* GoalCell.swift */; };
@@ -24,6 +25,7 @@
 		7D68A73225987EA90073E5EE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68A73125987EA80073E5EE /* String+Extension.swift */; };
 		7DA4F81C25A49C6100FE8537 /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */; };
 		7DA4F82025A4B40000FE8537 /* GoalsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4F81F25A4B40000FE8537 /* GoalsReviewViewController.swift */; };
+		7DA4F82425A5FC4100FE8537 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4F82325A5FC4100FE8537 /* HelpViewController.swift */; };
 		7DAD5B4C2594CF6300C902EE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B4B2594CF6300C902EE /* Session.swift */; };
 		7DAD5B4F2594CF8E00C902EE /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B4E2594CF8E00C902EE /* Stage.swift */; };
 		7DAD5B522594D04D00C902EE /* EncoreBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B512594D04D00C902EE /* EncoreBrain.swift */; };
@@ -48,6 +50,7 @@
 		7D00DCA725948057006965A8 /* EncoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoreButton.swift; sourceTree = "<group>"; };
 		7D00DCAC259483FD006965A8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7D00DCB22594BDDB006965A8 /* PreparationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationViewController.swift; sourceTree = "<group>"; };
+		7D0D5DE425A9707300A5E004 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		7D68A71325970EA90073E5EE /* ModeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeButton.swift; sourceTree = "<group>"; };
 		7D68A71E259725AE0073E5EE /* InputGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGoalsViewController.swift; sourceTree = "<group>"; };
 		7D68A725259728230073E5EE /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		7D68A73125987EA80073E5EE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		7DA4F81F25A4B40000FE8537 /* GoalsReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsReviewViewController.swift; sourceTree = "<group>"; };
+		7DA4F82325A5FC4100FE8537 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		7DAD5B4B2594CF6300C902EE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		7DAD5B4E2594CF8E00C902EE /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		7DAD5B512594D04D00C902EE /* EncoreBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoreBrain.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				7D00DCAC259483FD006965A8 /* UIColor+Extension.swift */,
 				7D68A73125987EA80073E5EE /* String+Extension.swift */,
 				7DCF0CDF259F391000FC25CB /* Int+Extension.swift */,
+				7D0D5DE425A9707300A5E004 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				7DCF0CE625A04FFB00FC25CB /* GoalsForDayViewController.swift */,
 				7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */,
 				7DA4F81F25A4B40000FE8537 /* GoalsReviewViewController.swift */,
+				7DA4F82325A5FC4100FE8537 /* HelpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0D5DE525A9707300A5E004 /* UIViewController+Extension.swift in Sources */,
 				7D68A73225987EA90073E5EE /* String+Extension.swift in Sources */,
 				7D68A71425970EA90073E5EE /* ModeButton.swift in Sources */,
 				7DAD5B4C2594CF6300C902EE /* Session.swift in Sources */,
@@ -287,6 +294,7 @@
 				7DA4F81C25A49C6100FE8537 /* CongratulationsViewController.swift in Sources */,
 				7DA4F82025A4B40000FE8537 /* GoalsReviewViewController.swift in Sources */,
 				7D68A72F25972F830073E5EE /* Goal.swift in Sources */,
+				7DA4F82425A5FC4100FE8537 /* HelpViewController.swift in Sources */,
 				7D68A727259728230073E5EE /* GoalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
