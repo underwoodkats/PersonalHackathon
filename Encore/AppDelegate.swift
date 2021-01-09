@@ -6,6 +6,7 @@
 //
 
 import UIKit
+@_exported import BugfenderSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,8 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        setBugfender()
         return true
+    }
+    
+    private func setBugfender() {
+        Bugfender.activateLogger("BUGDENDER_KEY")
+        Bugfender.enableCrashReporting()
+        Bugfender.enableUIEventLogging()
     }
 
     // MARK: UISceneSession Lifecycle
