@@ -19,12 +19,7 @@ class ScheduleCell: UITableViewCell {
     }
 
     func setGradientView() {
-        // TODO: Implement gradient
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
+        // TODO: Level 1 - Implement gradient
     }
     
 }
