@@ -21,12 +21,11 @@ class GoalsReviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        model.sortGoals()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.alwaysBounceVertical = false
         tableView.register(UINib(nibName: K.goalCellNibName, bundle: nil), forCellReuseIdentifier: K.goalCellIdentifier)
-        
-        model.sortGoals()
     }
     
     // MARK: - IBActions
@@ -47,16 +46,21 @@ class GoalsReviewViewController: UIViewController {
 extension GoalsReviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Level 2 - Create constant struct
-        return max(model.goalsCount, 6)
+        let possibleRowsWithoutScrolling = Int((tableView.frame.height / 50))
+        return max(model.totalGoalsPartsCount, possibleRowsWithoutScrolling)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        model.sortGoals()
         let cell = tableView.dequeueReusableCell(withIdentifier: K.goalCellIdentifier, for: indexPath) as! GoalCell
-        if indexPath.row < model.goalsCount {
-            let currentGoal = model.goals[indexPath.row]
-            cell.goalLabel.text = currentGoal.name
-            cell.goalCompletedImage.isHidden = !currentGoal.isAchieved
-            cell.goalInProcessImage.isHidden = currentGoal.isAchieved
+        if indexPath.row < model.totalGoalsPartsCount {
+            if let currentPart = model.getGoalPart(index: indexPath.row) {
+                cell.goalLabel.text = currentPart.text
+                if currentPart.isFirstPart, let relatedGoal = model.getGoal(by: currentPart.goalId) {
+                    cell.goalCompletedImage.isHidden = !relatedGoal.isAchieved
+                    cell.goalInProcessImage.isHidden = relatedGoal.isAchieved
+                }
+            }
         } else {
             cell.goalLabel.text = " "
         }
@@ -69,6 +73,6 @@ extension GoalsReviewViewController: UITableViewDataSource {
 
 extension GoalsReviewViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 50
     }
 }

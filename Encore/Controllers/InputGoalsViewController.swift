@@ -56,8 +56,8 @@ class InputGoalsViewController: UIViewController {
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
             if let newGoalName = textField.text {
                 let goalName = newGoalName.capitalizingFirstLetter()
-                
-                let newGoal = Goal(name: goalName, isAchieved: false)
+                let goalId = self.model.generateGoalId()
+                let newGoal = Goal(goalId: goalId, name: goalName, isAchieved: false)
                 self.model.addGoal(goal: newGoal)
                 
                 DispatchQueue.main.async {
@@ -91,14 +91,20 @@ extension InputGoalsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         updateUIIfGoalsAreSet()
         // TODO: Level 2 -Create constant struct
-        return max(model.goalsCount, 6)
+        let possibleRowsWithoutScrolling = Int((tableView.frame.height / 50))
+        return max(model.totalGoalsPartsCount, possibleRowsWithoutScrolling)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.goalCellIdentifier, for: indexPath) as! GoalCell
-        if indexPath.row < model.goalsCount {
-            let currentGoal = model.goals[indexPath.row]
-            cell.goalLabel.text = "\(indexPath.row + 1). \(currentGoal.name)"
+        if indexPath.row < model.totalGoalsPartsCount {
+            if let currentPart = model.getGoalPart(index: indexPath.row) {
+                if currentPart.isFirstPart {
+                    cell.goalLabel.text = "\(currentPart.goalId + 1). \(currentPart.text)"
+                } else {
+                    cell.goalLabel.text = "\(currentPart.text)"
+                }
+            }
         } else {
             cell.goalLabel.text = " "
         }
@@ -111,6 +117,6 @@ extension InputGoalsViewController: UITableViewDataSource {
 
 extension InputGoalsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 50
     }
 }

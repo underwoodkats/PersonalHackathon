@@ -25,14 +25,47 @@ extension EncoreBrain {
         return goals.count
     }
     
+    func getGoal(by id: Int) -> Goal? {
+        return goals.filter{ $0.goalId == id }.first
+    }
+    
+    func generateGoalId() -> Int {
+        // Since we just incrementing the id from zero,
+        // goals count could work just fine
+        return goals.count
+    }
+    
+    // In order to acheive correct representation on Goals Screens
+    // We introduce new object - Goal Part. Each goal is splitted in a few (or only one)
+    // parts with some maximum length. Each part is related to only one goal.
+    private var goalsParts: [GoalPart] {
+        var result = [GoalPart]()
+        goals.forEach { goal in
+            let substrings = goal.name.split(by: 20)
+            for (index, substring) in substrings.enumerated() {
+                result.append(GoalPart(goalId: goal.goalId, text: substring, isFirstPart: index == 0))
+            }
+        }
+        return result
+    }
+    
+    func getGoalPart(index: Int) -> GoalPart? {
+        if index < totalGoalsPartsCount {
+            return goalsParts[index]
+        }
+        return nil
+    }
+    
+    var totalGoalsPartsCount: Int {
+        return goalsParts.count
+    }
+    
     func addGoal(goal: Goal) {
         goals.append(goal)
     }
     
-    func changeGoalStatus(goalIndex: Int) {
-        if goalIndex < goalsCount {
-            goals[goalIndex].isAchieved = !goals[goalIndex].isAchieved
-        }
+    func changeGoalStatus(id: Int) {
+        goals.filter{ $0.goalId == id }.first?.changeStatus()
     }
     
     func sortGoals() {

@@ -39,16 +39,20 @@ class GoalsForDayViewController: UIViewController {
 extension GoalsForDayViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Create constant struct
-        return max(model.goalsCount, 6)
+        let possibleRowsWithoutScrolling = Int((tableView.frame.height / 50))
+        return max(model.totalGoalsPartsCount, possibleRowsWithoutScrolling)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.goalCellIdentifier, for: indexPath) as! GoalCell
-        if indexPath.row < model.goalsCount {
-            let currentGoal = model.goals[indexPath.row]
-            cell.goalLabel.text = currentGoal.name
-            cell.goalCompletedImage.isHidden = !currentGoal.isAchieved
-            cell.goalInProcessImage.isHidden = currentGoal.isAchieved
+        if indexPath.row < model.totalGoalsPartsCount {
+            if let currentPart = model.getGoalPart(index: indexPath.row) {
+                cell.goalLabel.text = currentPart.text
+                if currentPart.isFirstPart, let relatedGoal = model.getGoal(by: currentPart.goalId) {
+                    cell.goalCompletedImage.isHidden = !relatedGoal.isAchieved
+                    cell.goalInProcessImage.isHidden = relatedGoal.isAchieved
+                }
+            }
         } else {
             cell.goalLabel.text = " "
         }
@@ -62,13 +66,15 @@ extension GoalsForDayViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // TODO: Level 2 - Make limits for the words
         // TODO: Level 2 - Make it all be aligned in a special way.
-        return 70
+        return 50
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO: Level 2 -Make the text be crossed
-        model.changeGoalStatus(goalIndex: indexPath.row)
-        tableView.reloadData()
+        if let goalPart = model.getGoalPart(index: indexPath.row) {
+            model.changeGoalStatus(id: goalPart.goalId)
+            tableView.reloadData()
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
