@@ -5,7 +5,7 @@
 //  Created by Katselenbogen, Igor on 2020/12/26.
 //
 
-import Foundation
+import UIKit
 
 struct K {
     
@@ -13,6 +13,7 @@ struct K {
         // Walkthrough
         static let walkthroughStoryBoardName = "Walkthrough"
         
+        static let walkthroughViewController = "WalkthroughViewController"
         static let walkthroughFirstContentViewController = "WalkthroughFirstContentViewController"
         static let walkthroughSecondContentViewController = "WalkthroughSecondContentViewController"
         static let walkthroughThirdContentViewController = "WalkthroughThirdContentViewController"
@@ -33,6 +34,17 @@ struct K {
         static let sendFeedbackViewController = "SendFeedbackViewController"
     }
     
+    struct Colors {
+        static let mainPurpleColor = UIColor(hexString: "#545D9E")
+        static let warningRedColor = UIColor(hexString: "#FA6060")
+    }
+    
+    struct ToolTips {
+        static let insertGoalsScreenInfoTips =  ["We advice you to set achievable goals.",
+                                                 "We recommend splitting goals into smaller ones in order to achieve results."]
+        
+        static let insertGoalScreenWarningTip = ["Are you sure? You won’t be able to change them later"]
+    }
     
     // Cell Names
     static let scheduleCellNibName = "ScheduleCell"
@@ -42,9 +54,9 @@ struct K {
     static let scheduleCellIdentifier = "ScheduleCell"
     static let goalCellIdentifier = "GoalCell"
     
-    // Segue Names
-    static let goalsSegue = "GoalsToSession"
-    static let sessionSegue = "SessionToReview"
+    struct Placeholders {
+        static let addingGoalPlaceholder = "I want to achieve..."
+    }
     
     struct UserDefaultsKey {
         static let hasViewedWalkthrough = "hasViewedWalkthrough"

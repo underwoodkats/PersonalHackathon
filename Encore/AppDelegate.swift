@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let loginViewController = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.homeViewController)
             initialViewController = loginViewController
         } else {
-            let storyboard = UIStoryboard(name: "Walkthrough", bundle: nil)
-            let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController")
+            let storyboard = UIStoryboard(name: K.StoryBoard.walkthroughStoryBoardName, bundle: nil)
+            let onboardingViewController = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.walkthroughViewController)
             initialViewController = onboardingViewController
         }
         

@@ -31,6 +31,8 @@
 		7DA4F81C25A49C6100FE8537 /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */; };
 		7DA4F82025A4B40000FE8537 /* GoalsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4F81F25A4B40000FE8537 /* GoalsReviewViewController.swift */; };
 		7DA4F82425A5FC4100FE8537 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4F82325A5FC4100FE8537 /* HelpViewController.swift */; };
+		7DA7860725AEAE6C0008DE05 /* ToolTipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7860625AEAE6C0008DE05 /* ToolTipManager.swift */; };
+		7DA7860A25AECA520008DE05 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7860925AECA520008DE05 /* Metrics.swift */; };
 		7DAD5B4C2594CF6300C902EE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B4B2594CF6300C902EE /* Session.swift */; };
 		7DAD5B4F2594CF8E00C902EE /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B4E2594CF8E00C902EE /* Stage.swift */; };
 		7DAD5B522594D04D00C902EE /* EncoreBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD5B512594D04D00C902EE /* EncoreBrain.swift */; };
@@ -77,6 +79,8 @@
 		7DA4F81B25A49C6100FE8537 /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		7DA4F81F25A4B40000FE8537 /* GoalsReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsReviewViewController.swift; sourceTree = "<group>"; };
 		7DA4F82325A5FC4100FE8537 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		7DA7860625AEAE6C0008DE05 /* ToolTipManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTipManager.swift; sourceTree = "<group>"; };
+		7DA7860925AECA520008DE05 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		7DAD5B4B2594CF6300C902EE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		7DAD5B4E2594CF8E00C902EE /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		7DAD5B512594D04D00C902EE /* EncoreBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoreBrain.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				7DAD5B4B2594CF6300C902EE /* Session.swift */,
 				7DAD5B4E2594CF8E00C902EE /* Stage.swift */,
 				7D68A72E25972F830073E5EE /* Goal.swift */,
+				7DA7860625AEAE6C0008DE05 /* ToolTipManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				7DAD5B572596E56E00C902EE /* Constants.swift */,
+				7DA7860925AECA520008DE05 /* Metrics.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -392,10 +398,12 @@
 				7D0D5DE825A977C300A5E004 /* SendFeedbackViewController.swift in Sources */,
 				7DBC31D925AB202100C9F75B /* WalkthroughPageViewController.swift in Sources */,
 				7DCF0CE0259F391000FC25CB /* Int+Extension.swift in Sources */,
+				7DA7860725AEAE6C0008DE05 /* ToolTipManager.swift in Sources */,
 				7DBC31EB25AB5BEE00C9F75B /* WalkthroughFourthContentViewController.swift in Sources */,
 				7D00DCB32594BDDB006965A8 /* PreparationViewController.swift in Sources */,
 				7DAD5B522594D04D00C902EE /* EncoreBrain.swift in Sources */,
 				7DCF0CDD259F0D1700FC25CB /* SessionViewController.swift in Sources */,
+				7DA7860A25AECA520008DE05 /* Metrics.swift in Sources */,
 				7DBC31DC25AB298400C9F75B /* WalkthroughViewController.swift in Sources */,
 				7DAD5B4F2594CF8E00C902EE /* Stage.swift in Sources */,
 				7D68A71F259725AE0073E5EE /* InputGoalsViewController.swift in Sources */,
