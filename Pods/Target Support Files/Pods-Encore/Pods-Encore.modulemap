@@ -1,6 +1,0 @@
-framework module Pods_Encore {
-  umbrella header "Pods-Encore-umbrella.h"
-
-  export *
-  module * { export * }
-}
