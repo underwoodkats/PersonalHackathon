@@ -11,13 +11,14 @@ class HomeViewController: UIViewController {
     // TODO: Level 1 - Update the design
     
     // MARK: - Life Cycles
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        prepareModelForNewSession()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private func prepareModelForNewSession() {
+        EncoreBrain.shared.prepareNewBrain()
     }
     
     // MARK: - IBActions

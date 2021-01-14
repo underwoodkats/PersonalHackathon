@@ -16,6 +16,12 @@ class EncoreBrain {
     private(set) var goals: [Goal] = []
     
     private var currentStageIndex: Int = 0
+    
+    func prepareNewBrain() {
+        currentSession = nil
+        goals = []
+        currentStageIndex = 0
+    }
 }
 
 // MARK: - Goals
