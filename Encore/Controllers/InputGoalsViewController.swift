@@ -6,20 +6,33 @@
 //
 
 import UIKit
+import TipSee
 
 class InputGoalsViewController: UIViewController {
     
+    // TODO: Level 1 - Update the design
     // TODO: Level 2 - Make round corners for the first cell
-    // TODO: Level 1 - Think better about cutting the string - no spaces around
+    // TOOD: Level 3 - Figure out how to make arrows only for the correct messages.
+    // TODO: Level 2 - Don't save empty goal
 
     // MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: EncoreButton!
+    @IBOutlet weak var infoButton: UIButton!
     
     // MARK: - Private Variables
     
     private let model = EncoreBrain.shared
+    private var toolTipManager: ToolTipManager?
+    private var hasPressedNext = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let window = self.view.window {
+            toolTipManager = ToolTipManager(on: window)
+        }
+    }
     
     // MARK: - Life Cycles
 
@@ -37,12 +50,6 @@ class InputGoalsViewController: UIViewController {
         tableView.clipsToBounds = true
         tableView.layer.cornerRadius = 40 // Set As you want
         tableView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-    }
-    
-    private func updateUIIfGoalsAreSet() {
-        if model.goalsCount > 0 {
-            nextButton.setTitle("Let's go!", for: .normal)
-        }
     }
     
     // MARK: - IBActions
@@ -67,7 +74,7 @@ class InputGoalsViewController: UIViewController {
         }
         
         alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "I want to achieve..."
+            alertTextField.placeholder = K.Placeholders.addingGoalPlaceholder
             textField = alertTextField
         }
         
@@ -76,8 +83,17 @@ class InputGoalsViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func infoPressed(_ sender: UIButton) {
+        toolTipManager?.showToolTip(attachTo: self.infoButton, textArray: K.ToolTips.insertGoalsScreenInfoTips, toolTipType: .Info)
+    }
+    
     @IBAction func nextPressed(_ sender: EncoreButton) {
-        goTo(screen: K.StoryBoard.sessionViewController)
+        if model.goalsCount > 0 || hasPressedNext {
+            goTo(screen: K.StoryBoard.sessionViewController)
+        } else {
+            hasPressedNext = true
+            toolTipManager?.showToolTip(attachTo: sender, textArray: K.ToolTips.insertGoalScreenWarningTip, toolTipType: .Warning)
+        }
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
