@@ -1,16 +1,20 @@
 PODS:
   - BugfenderSDK (1.10.0)
+  - TipSee (1.4.0)
 
 DEPENDENCIES:
   - BugfenderSDK (~> 1.10)
+  - TipSee
 
 SPEC REPOS:
   trunk:
     - BugfenderSDK
+    - TipSee
 
 SPEC CHECKSUMS:
   BugfenderSDK: 2cbdbc72b28b73732a4c281194367b0756ad4bc3
+  TipSee: 3b3a31aaff5edd47bc6e2c5099a1cfab6ec4a920
 
-PODFILE CHECKSUM: 65172cfa4db055d98b2d62eeafac83ec0ca275a8
+PODFILE CHECKSUM: a949b0012f38ecd3ba82f8a192355d87bac3c71b
 
 COCOAPODS: 1.10.0
