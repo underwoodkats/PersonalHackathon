@@ -9,6 +9,8 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
     
+    // TODO: Level 1 - Update design
+    
     // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!

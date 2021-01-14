@@ -65,6 +65,12 @@ class WalkthroughViewController: UIViewController {
     }
     
     private func openHomeScreen() {
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = CATransitionType.reveal
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+        
         let storyboard = UIStoryboard(name: K.StoryBoard.mainStoryBoardName, bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.homeViewController)
         UIApplication.shared.windows.first?.rootViewController = viewController

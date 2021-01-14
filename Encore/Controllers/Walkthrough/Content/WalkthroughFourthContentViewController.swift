@@ -8,6 +8,8 @@
 import UIKit
 
 class WalkthroughFourthContentViewController: WalkthroughContentViewController {
+    
+    // TODO: Level 1 - Update the design
 
     override func viewDidLoad() {
         super.viewDidLoad()

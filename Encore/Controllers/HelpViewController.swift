@@ -9,7 +9,8 @@ import UIKit
 
 class HelpViewController: UIViewController {
     
-    // TODO: Level 1 - Make link to the onboarding
+    // TODO: Level 1 - Update the design
+
     // MARK: - Life Cycles
 
     override func viewDidLoad() {

@@ -8,6 +8,8 @@
 import UIKit
 
 class WalkthroughContentViewController: UIViewController {
+    
+    // TODO: Level 1 - Update the design
 
     var pageIndex: Int?
     

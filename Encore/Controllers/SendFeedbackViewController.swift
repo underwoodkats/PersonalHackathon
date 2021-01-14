@@ -9,6 +9,7 @@ import UIKit
 
 class SendFeedbackViewController: UIViewController {
     
+    // TODO: Level 1 - Update the design
     // TODO: Level 2 - Firslty disable send button if the text is empty
     // TODO: Level 2 - Fix the problem that a user can't edit the text, but unevitable remove it
     // TODO: Level 2 - Make the button be diasbled for the interaction if the text is not inputted.

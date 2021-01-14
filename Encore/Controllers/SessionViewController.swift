@@ -9,6 +9,7 @@ import UIKit
 
 class SessionViewController: UIViewController {
     
+    // TODO: Level 1 - Update the design
     // TODO: Level 1 - Implement INFO button
     // TODO: Level 1 - Also changing background color
     // TODO: Level 1 - Also changing cat
