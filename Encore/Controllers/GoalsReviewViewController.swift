@@ -48,7 +48,7 @@ class GoalsReviewViewController: UIViewController {
 extension GoalsReviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Level 2 - Create constant struct
-        let possibleRowsWithoutScrolling = Int((tableView.frame.height / 50))
+        let possibleRowsWithoutScrolling = Int((tableView.frame.height / Metrics.goalsTableViewRowHeight))
         return max(model.totalGoalsPartsCount, possibleRowsWithoutScrolling)
     }
     
@@ -75,6 +75,6 @@ extension GoalsReviewViewController: UITableViewDataSource {
 
 extension GoalsReviewViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return Metrics.goalsTableViewRowHeight
     }
 }

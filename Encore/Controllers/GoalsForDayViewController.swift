@@ -40,8 +40,7 @@ class GoalsForDayViewController: UIViewController {
 
 extension GoalsForDayViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: Create constant struct
-        let possibleRowsWithoutScrolling = Int((tableView.frame.height / 50))
+        let possibleRowsWithoutScrolling = Int((tableView.frame.height / Metrics.goalsTableViewRowHeight))
         return max(model.totalGoalsPartsCount, possibleRowsWithoutScrolling)
     }
     
