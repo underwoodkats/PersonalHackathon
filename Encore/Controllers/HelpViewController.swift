@@ -23,6 +23,19 @@ class HelpViewController: UIViewController {
         goToPreviousScreen()
     }
     
+    @IBAction func openTutorialPressed(_ sender: UIButton) {
+        let transition = CATransition()
+        transition.duration = 0.30
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype.fromRight
+        view.window!.layer.add(transition, forKey: kCATransition)
+        
+        let storyboard = UIStoryboard(name: K.StoryBoard.walkthroughStoryBoardName, bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.walkthroughViewController)
+        UIApplication.shared.windows.first?.rootViewController = viewController
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    
     @IBAction func giveUsFeedbackPressed(_ sender: UIButton) {
         goTo(screen: K.StoryBoard.sendFeedbackViewController)
     }
