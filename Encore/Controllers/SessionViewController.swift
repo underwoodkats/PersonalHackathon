@@ -84,8 +84,8 @@ class SessionViewController: UIViewController {
             nextStageTitle.text = nextStage.name
             nextStageSubtitle.text = "Next session: \(nextStage.name)"
         } else {
-            nextStageTitle.text = "Review of accomplishments"
-            nextStageSubtitle.text = "Next session: Review of accomplishments"
+            nextStageTitle.text = "Review"
+            nextStageSubtitle.text = "Next session: Review"
         }
 
         nextStageButton.setTitle("I am done", for: .normal)
