@@ -55,38 +55,37 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get productive!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2Y-ZH-W4M">
-                                <rect key="frame" x="43" y="85" width="289.5" height="42"/>
+                                <rect key="frame" x="43" y="90" width="289.5" height="42"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-dZ-yXT">
-                                <rect key="frame" x="0.0" y="127" width="375" height="463"/>
+                                <rect key="frame" x="0.0" y="132" width="375" height="458"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="hjR-68-d8N">
-                                        <rect key="frame" x="112.5" y="81.5" width="200" height="300"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="TwU-o0-co0"/>
-                                            <constraint firstAttribute="width" constant="200" id="wvp-SV-Xxd"/>
-                                        </constraints>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" image="WelcomingCat" translatesAutoresizingMaskIntoConstraints="NO" id="hjR-68-d8N">
+                                        <rect key="frame" x="20" y="20" width="335" height="418"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="hjR-68-d8N" firstAttribute="centerX" secondItem="DI9-dZ-yXT" secondAttribute="centerX" constant="25" id="BT2-9Y-pZ8"/>
-                                    <constraint firstItem="hjR-68-d8N" firstAttribute="centerY" secondItem="DI9-dZ-yXT" secondAttribute="centerY" id="nb8-mF-lh5"/>
+                                    <constraint firstAttribute="bottom" secondItem="hjR-68-d8N" secondAttribute="bottom" constant="20" id="Mep-PI-B0U"/>
+                                    <constraint firstItem="hjR-68-d8N" firstAttribute="top" secondItem="DI9-dZ-yXT" secondAttribute="top" constant="20" id="OYV-Yv-18U"/>
+                                    <constraint firstAttribute="trailing" secondItem="hjR-68-d8N" secondAttribute="trailing" constant="20" id="bMP-Gn-fPt"/>
+                                    <constraint firstItem="hjR-68-d8N" firstAttribute="leading" secondItem="DI9-dZ-yXT" secondAttribute="leading" constant="20" id="g6n-DJ-0qi"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="encore_06" translatesAutoresizingMaskIntoConstraints="NO" id="e8m-gp-JG7">
-                                <rect key="frame" x="-770.5" y="45" width="1916" height="35"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="e8m-gp-JG7">
+                                <rect key="frame" x="79" y="45" width="217" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="c4b-qr-s2l"/>
+                                    <constraint firstAttribute="height" constant="37" id="BB6-xF-9E6"/>
+                                    <constraint firstAttribute="width" constant="217" id="mX9-9c-bi3"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="v2Y-ZH-W4M" firstAttribute="top" secondItem="e8m-gp-JG7" secondAttribute="bottom" constant="5" id="2Sn-JQ-Ksw"/>
+                            <constraint firstItem="v2Y-ZH-W4M" firstAttribute="top" secondItem="e8m-gp-JG7" secondAttribute="bottom" constant="8" id="2Sn-JQ-Ksw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PYg-ZT-MTf" secondAttribute="bottom" constant="32" id="8D2-Ml-wle"/>
                             <constraint firstItem="DI9-dZ-yXT" firstAttribute="top" secondItem="v2Y-ZH-W4M" secondAttribute="bottom" id="H9i-ly-7B9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DI9-dZ-yXT" secondAttribute="trailing" id="PiG-nI-Jl5"/>
@@ -129,7 +128,7 @@
                                 <color key="textColor" red="0.35294117650000001" green="0.34901960780000002" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="encore_06" translatesAutoresizingMaskIntoConstraints="NO" id="coD-77-RuB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="coD-77-RuB">
                                 <rect key="frame" x="37.5" y="462" width="300" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="6Ke-lC-kNW"/>
@@ -219,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOP-4D-3nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="844"/>
+            <point key="canvasLocation" x="1029.5999999999999" y="843.32833583208401"/>
         </scene>
         <!--Send Feedback View Controller-->
         <scene sceneID="c5b-T4-sie">
@@ -349,8 +348,8 @@ encore.cat.app@gmail.com</string>
                                     <action selector="backPressed:" destination="xEX-7F-KT2" eventType="touchUpInside" id="JIj-dh-1fc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sp-De-Jr8">
-                                <rect key="frame" x="51" y="59" width="273" height="40.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sp-De-Jr8">
+                                <rect key="frame" x="44.5" y="59" width="286.5" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="31"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -358,19 +357,19 @@ encore.cat.app@gmail.com</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Pz-4U-ozn">
                                 <rect key="frame" x="0.0" y="517" width="375" height="150"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-Gm-fcJ">
-                                        <rect key="frame" x="26.5" y="14" width="322" height="122.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-Gm-fcJ">
+                                        <rect key="frame" x="18" y="11.5" width="339" height="127"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Ns-0x-yTO">
-                                                <rect key="frame" x="0.0" y="0.0" width="84" height="122.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="127"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9P-Ht-Xvr" customClass="ModeButton" customModule="Encore" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="84" id="6Be-3B-dY2"/>
-                                                            <constraint firstAttribute="width" constant="84" id="CZJ-Kq-zkC"/>
+                                                            <constraint firstAttribute="height" constant="91" id="6Be-3B-dY2"/>
+                                                            <constraint firstAttribute="width" constant="91" id="CZJ-Kq-zkC"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button" image="PreparationEllipse"/>
+                                                        <state key="normal" title="Button" image="MiniEncore"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                 <real key="value" value="0.0"/>
@@ -380,8 +379,8 @@ encore.cat.app@gmail.com</string>
                                                             <action selector="sessionSelected:" destination="xEX-7F-KT2" eventType="touchUpInside" id="8NB-IY-FEU"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mini" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMa-gr-5iB">
-                                                        <rect key="frame" x="0.0" y="99" width="84" height="23.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mini Encore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMa-gr-5iB">
+                                                        <rect key="frame" x="0.0" y="106" width="91" height="21"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                         <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -389,44 +388,44 @@ encore.cat.app@gmail.com</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dxx-Ht-lp7">
-                                                <rect key="frame" x="119" y="0.0" width="84" height="122.5"/>
+                                                <rect key="frame" x="124" y="0.0" width="91" height="127"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tP0-Ut-gHQ" customClass="ModeButton" customModule="Encore" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="84" id="8is-DC-l07"/>
-                                                            <constraint firstAttribute="width" constant="84" id="ACr-1R-wXV"/>
+                                                            <constraint firstAttribute="height" constant="91" id="8is-DC-l07"/>
+                                                            <constraint firstAttribute="width" constant="91" id="ACr-1R-wXV"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button" image="PreparationEllipse"/>
+                                                        <state key="normal" title="Button" image="HalfEncore"/>
                                                         <connections>
                                                             <action selector="sessionSelected:" destination="xEX-7F-KT2" eventType="touchUpInside" id="L1i-X7-PST"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Half Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF5-6j-Mou">
-                                                        <rect key="frame" x="0.0" y="99" width="84" height="23.5"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Half Encore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF5-6j-Mou">
+                                                        <rect key="frame" x="0.0" y="106" width="91" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                         <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6B8-uZ-03V">
-                                                <rect key="frame" x="238" y="0.0" width="84" height="122.5"/>
+                                                <rect key="frame" x="248" y="0.0" width="91" height="127"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjS-EU-KAb" customClass="ModeButton" customModule="Encore" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="84" id="HPr-AL-IAP"/>
-                                                            <constraint firstAttribute="height" constant="84" id="HYt-kX-Mcw"/>
+                                                            <constraint firstAttribute="width" constant="91" id="HPr-AL-IAP"/>
+                                                            <constraint firstAttribute="height" constant="91" id="HYt-kX-Mcw"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button" image="PreparationEllipse"/>
+                                                        <state key="normal" title="Button" image="FullEncore"/>
                                                         <connections>
                                                             <action selector="sessionSelected:" destination="xEX-7F-KT2" eventType="touchUpInside" id="kkF-Fe-Wk3"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efs-9q-6gb">
-                                                        <rect key="frame" x="0.0" y="99" width="84" height="23.5"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Encore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efs-9q-6gb">
+                                                        <rect key="frame" x="0.0" y="106" width="91" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                         <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -442,7 +441,7 @@ encore.cat.app@gmail.com</string>
                                     <constraint firstItem="FHh-Gm-fcJ" firstAttribute="centerX" secondItem="9Pz-4U-ozn" secondAttribute="centerX" id="mlC-U1-Qpg"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvq-FR-BNY" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvq-FR-BNY" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
                                 <rect key="frame" x="112.5" y="447" width="150" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="4iK-R1-Gi8"/>
@@ -459,8 +458,8 @@ encore.cat.app@gmail.com</string>
                                     <action selector="nextPressed:" destination="xEX-7F-KT2" eventType="touchUpInside" id="88P-3o-enG"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="0Wt-Rz-EJd">
-                                <rect key="frame" x="50" y="129.5" width="275" height="287.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="DecidingCat" translatesAutoresizingMaskIntoConstraints="NO" id="0Wt-Rz-EJd">
+                                <rect key="frame" x="20" y="119.5" width="335" height="377.5"/>
                             </imageView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wq6-tm-VOb">
                                 <rect key="frame" x="0.0" y="124.5" width="375" height="297.5"/>
@@ -476,26 +475,35 @@ encore.cat.app@gmail.com</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hXx-ig-jNS">
+                                <rect key="frame" x="110" y="23" width="155" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="Sox-TL-brp"/>
+                                    <constraint firstAttribute="height" constant="28" id="gkn-rf-ay4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nZO-J0-HcL"/>
                         <color key="backgroundColor" red="0.95939487219999997" green="0.96202927829999996" blue="0.92764025930000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZSG-es-SdE" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" constant="25" id="2Wu-xQ-3VO"/>
                             <constraint firstItem="Wq6-tm-VOb" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" id="5hU-SL-OCI"/>
-                            <constraint firstItem="0Wt-Rz-EJd" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" constant="50" id="EOH-Vb-Z4t"/>
+                            <constraint firstItem="0Wt-Rz-EJd" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" constant="20" id="EOH-Vb-Z4t"/>
                             <constraint firstItem="6sp-De-Jr8" firstAttribute="centerX" secondItem="eto-vc-TMA" secondAttribute="centerX" id="S4m-zu-a4w"/>
                             <constraint firstItem="Kvq-FR-BNY" firstAttribute="top" secondItem="Wq6-tm-VOb" secondAttribute="bottom" constant="25" id="VBw-Zg-5SZ"/>
                             <constraint firstItem="nZO-J0-HcL" firstAttribute="trailing" secondItem="9Pz-4U-ozn" secondAttribute="trailing" id="W54-8T-iFc"/>
                             <constraint firstItem="Kvq-FR-BNY" firstAttribute="centerX" secondItem="eto-vc-TMA" secondAttribute="centerX" id="e5d-Xn-T1H"/>
+                            <constraint firstItem="hXx-ig-jNS" firstAttribute="centerY" secondItem="ZSG-es-SdE" secondAttribute="centerY" id="fGB-Jd-KbL"/>
                             <constraint firstItem="6sp-De-Jr8" firstAttribute="top" secondItem="ZSG-es-SdE" secondAttribute="bottom" constant="10" id="gKd-gM-BEm"/>
-                            <constraint firstItem="Kvq-FR-BNY" firstAttribute="top" secondItem="0Wt-Rz-EJd" secondAttribute="bottom" constant="30" id="lRF-Ot-eJ8"/>
+                            <constraint firstItem="9Pz-4U-ozn" firstAttribute="top" secondItem="0Wt-Rz-EJd" secondAttribute="bottom" constant="20" id="lRF-Ot-eJ8"/>
                             <constraint firstItem="Wq6-tm-VOb" firstAttribute="trailing" secondItem="nZO-J0-HcL" secondAttribute="trailing" id="mTP-tC-vam"/>
                             <constraint firstItem="9Pz-4U-ozn" firstAttribute="bottom" secondItem="nZO-J0-HcL" secondAttribute="bottom" id="tmc-IP-HvM"/>
                             <constraint firstItem="9Pz-4U-ozn" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" id="u6q-zG-3LN"/>
-                            <constraint firstItem="0Wt-Rz-EJd" firstAttribute="top" secondItem="6sp-De-Jr8" secondAttribute="bottom" constant="30" id="uMm-Bp-pmz"/>
+                            <constraint firstItem="0Wt-Rz-EJd" firstAttribute="top" secondItem="6sp-De-Jr8" secondAttribute="bottom" constant="20" id="uMm-Bp-pmz"/>
+                            <constraint firstItem="hXx-ig-jNS" firstAttribute="centerX" secondItem="eto-vc-TMA" secondAttribute="centerX" id="uQY-Vx-4Zc"/>
                             <constraint firstItem="9Pz-4U-ozn" firstAttribute="top" secondItem="Kvq-FR-BNY" secondAttribute="bottom" constant="25" id="vOC-eT-fp4"/>
                             <constraint firstItem="ZSG-es-SdE" firstAttribute="top" secondItem="nZO-J0-HcL" secondAttribute="top" constant="25" id="vzD-Ww-hwZ"/>
-                            <constraint firstItem="nZO-J0-HcL" firstAttribute="trailing" secondItem="0Wt-Rz-EJd" secondAttribute="trailing" constant="50" id="wHF-tV-A1h"/>
+                            <constraint firstItem="nZO-J0-HcL" firstAttribute="trailing" secondItem="0Wt-Rz-EJd" secondAttribute="trailing" constant="20" id="wHF-tV-A1h"/>
                             <constraint firstItem="Wq6-tm-VOb" firstAttribute="top" secondItem="6sp-De-Jr8" secondAttribute="bottom" constant="25" id="wzr-PV-eTG"/>
                         </constraints>
                     </view>
@@ -592,7 +600,7 @@ encore.cat.app@gmail.com</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="encore_06" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-ma-dWF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-ma-dWF">
                                 <rect key="frame" x="110" y="23" width="155" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="JNY-Z0-qmy"/>
@@ -755,8 +763,8 @@ encore.cat.app@gmail.com</string>
                                                 <color key="textColor" red="0.33836960789999998" green="0.36438676710000001" blue="0.60394877199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Next Session: Review of accmoplishments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-d9-cu1">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Next Session: Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-d9-cu1">
+                                                <rect key="frame" x="56" y="0.0" width="223" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="CZW-sm-DdQ"/>
                                                 </constraints>
@@ -1121,10 +1129,10 @@ encore.cat.app@gmail.com</string>
             <size key="intrinsicContentSize" width="52" height="42"/>
         </designable>
         <designable name="UjS-EU-KAb">
-            <size key="intrinsicContentSize" width="220" height="168"/>
+            <size key="intrinsicContentSize" width="144" height="90"/>
         </designable>
         <designable name="Z9P-Ht-Xvr">
-            <size key="intrinsicContentSize" width="220" height="168"/>
+            <size key="intrinsicContentSize" width="144" height="90"/>
         </designable>
         <designable name="aCg-zv-Wc9">
             <size key="intrinsicContentSize" width="58" height="42"/>
@@ -1136,7 +1144,7 @@ encore.cat.app@gmail.com</string>
             <size key="intrinsicContentSize" width="58" height="42"/>
         </designable>
         <designable name="tP0-Ut-gHQ">
-            <size key="intrinsicContentSize" width="220" height="168"/>
+            <size key="intrinsicContentSize" width="144" height="90"/>
         </designable>
         <designable name="uVL-fe-ZxD">
             <size key="intrinsicContentSize" width="106" height="42"/>
@@ -1154,11 +1162,15 @@ encore.cat.app@gmail.com</string>
     <resources>
         <image name="BackArrow" width="30" height="21"/>
         <image name="Cat" width="980.5" height="1749.5"/>
+        <image name="DecidingCat" width="172.5" height="233.5"/>
+        <image name="EncoreLogo" width="638.5" height="115"/>
+        <image name="FullEncore" width="90" height="90"/>
         <image name="GoalsList" width="76" height="76"/>
+        <image name="HalfEncore" width="90" height="90"/>
         <image name="Info" width="56" height="58"/>
-        <image name="PreparationEllipse" width="166" height="168"/>
+        <image name="MiniEncore" width="90" height="90"/>
         <image name="Schedule" width="82" height="86"/>
-        <image name="encore_06" width="1916" height="346"/>
+        <image name="WelcomingCat" width="213" height="256"/>
         <image name="Сross" width="54" height="54"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
