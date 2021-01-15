@@ -354,93 +354,6 @@ encore.cat.app@gmail.com</string>
                                 <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Pz-4U-ozn">
-                                <rect key="frame" x="0.0" y="517" width="375" height="150"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-Gm-fcJ">
-                                        <rect key="frame" x="18" y="11.5" width="339" height="127"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Ns-0x-yTO">
-                                                <rect key="frame" x="0.0" y="0.0" width="91" height="127"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9P-Ht-Xvr" customClass="ModeButton" customModule="Encore" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="91" id="6Be-3B-dY2"/>
-                                                            <constraint firstAttribute="width" constant="91" id="CZJ-Kq-zkC"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button" image="MiniEncore"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="sessionSelected:" destination="xEX-7F-KT2" eventType="touchUpInside" id="8NB-IY-FEU"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mini Encore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMa-gr-5iB">
-                                                        <rect key="frame" x="0.0" y="106" width="91" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                        <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dxx-Ht-lp7">
-                                                <rect key="frame" x="124" y="0.0" width="91" height="127"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tP0-Ut-gHQ" customClass="ModeButton" customModule="Encore" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="91" id="8is-DC-l07"/>
-                                                            <constraint firstAttribute="width" constant="91" id="ACr-1R-wXV"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button" image="HalfEncore"/>
-                                                        <connections>
-                                                            <action selector="sessionSelected:" destination="xEX-7F-KT2" eventType="touchUpInside" id="L1i-X7-PST"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Half Encore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF5-6j-Mou">
-                                                        <rect key="frame" x="0.0" y="106" width="91" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                        <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6B8-uZ-03V">
-                                                <rect key="frame" x="248" y="0.0" width="91" height="127"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjS-EU-KAb" customClass="ModeButton" customModule="Encore" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="91" id="HPr-AL-IAP"/>
-                                                            <constraint firstAttribute="height" constant="91" id="HYt-kX-Mcw"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button" image="FullEncore"/>
-                                                        <connections>
-                                                            <action selector="sessionSelected:" destination="xEX-7F-KT2" eventType="touchUpInside" id="kkF-Fe-Wk3"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Encore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efs-9q-6gb">
-                                                        <rect key="frame" x="0.0" y="106" width="91" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                        <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.87843137250000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="FHh-Gm-fcJ" firstAttribute="centerY" secondItem="9Pz-4U-ozn" secondAttribute="centerY" id="2TQ-54-FS0"/>
-                                    <constraint firstAttribute="height" constant="150" id="R6R-Zt-Kvt"/>
-                                    <constraint firstItem="FHh-Gm-fcJ" firstAttribute="centerX" secondItem="9Pz-4U-ozn" secondAttribute="centerX" id="mlC-U1-Qpg"/>
-                                </constraints>
-                            </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvq-FR-BNY" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
                                 <rect key="frame" x="112.5" y="447" width="150" height="45"/>
                                 <constraints>
@@ -482,6 +395,94 @@ encore.cat.app@gmail.com</string>
                                     <constraint firstAttribute="height" constant="28" id="gkn-rf-ay4"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Pz-4U-ozn">
+                                <rect key="frame" x="0.0" y="517" width="375" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-Gm-fcJ">
+                                        <rect key="frame" x="18" y="15" width="339" height="110"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Ns-0x-yTO">
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="110"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9P-Ht-Xvr" customClass="ModeButton" customModule="Encore" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="91" id="6Be-3B-dY2"/>
+                                                            <constraint firstAttribute="width" constant="91" id="CZJ-Kq-zkC"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="MiniEncore"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="sessionSelected:" destination="xEX-7F-KT2" eventType="touchUpInside" id="8NB-IY-FEU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mini Encore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMa-gr-5iB">
+                                                        <rect key="frame" x="0.0" y="94" width="91" height="16"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                        <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dxx-Ht-lp7">
+                                                <rect key="frame" x="124" y="0.0" width="91" height="110"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tP0-Ut-gHQ" customClass="ModeButton" customModule="Encore" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="91" id="8is-DC-l07"/>
+                                                            <constraint firstAttribute="width" constant="91" id="ACr-1R-wXV"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="HalfEncore"/>
+                                                        <connections>
+                                                            <action selector="sessionSelected:" destination="xEX-7F-KT2" eventType="touchUpInside" id="L1i-X7-PST"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Half Encore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF5-6j-Mou">
+                                                        <rect key="frame" x="0.0" y="94" width="91" height="16"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                        <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6B8-uZ-03V">
+                                                <rect key="frame" x="248" y="0.0" width="91" height="110"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjS-EU-KAb" customClass="ModeButton" customModule="Encore" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="91" id="HPr-AL-IAP"/>
+                                                            <constraint firstAttribute="height" constant="91" id="HYt-kX-Mcw"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="FullEncore"/>
+                                                        <connections>
+                                                            <action selector="sessionSelected:" destination="xEX-7F-KT2" eventType="touchUpInside" id="kkF-Fe-Wk3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Encore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efs-9q-6gb">
+                                                        <rect key="frame" x="0.0" y="94" width="91" height="16"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                        <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.87843137250000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FHh-Gm-fcJ" secondAttribute="bottom" constant="25" id="Ouv-ME-Pli"/>
+                                    <constraint firstAttribute="height" constant="150" id="R6R-Zt-Kvt"/>
+                                    <constraint firstItem="FHh-Gm-fcJ" firstAttribute="top" secondItem="9Pz-4U-ozn" secondAttribute="top" constant="15" id="Wcl-Q8-xIO"/>
+                                    <constraint firstItem="FHh-Gm-fcJ" firstAttribute="centerX" secondItem="9Pz-4U-ozn" secondAttribute="centerX" id="mlC-U1-Qpg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nZO-J0-HcL"/>
                         <color key="backgroundColor" red="0.95939487219999997" green="0.96202927829999996" blue="0.92764025930000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -489,6 +490,7 @@ encore.cat.app@gmail.com</string>
                             <constraint firstItem="ZSG-es-SdE" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" constant="25" id="2Wu-xQ-3VO"/>
                             <constraint firstItem="Wq6-tm-VOb" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" id="5hU-SL-OCI"/>
                             <constraint firstItem="0Wt-Rz-EJd" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" constant="20" id="EOH-Vb-Z4t"/>
+                            <constraint firstAttribute="bottom" secondItem="9Pz-4U-ozn" secondAttribute="bottom" id="MFf-Gy-LUi"/>
                             <constraint firstItem="6sp-De-Jr8" firstAttribute="centerX" secondItem="eto-vc-TMA" secondAttribute="centerX" id="S4m-zu-a4w"/>
                             <constraint firstItem="Kvq-FR-BNY" firstAttribute="top" secondItem="Wq6-tm-VOb" secondAttribute="bottom" constant="25" id="VBw-Zg-5SZ"/>
                             <constraint firstItem="nZO-J0-HcL" firstAttribute="trailing" secondItem="9Pz-4U-ozn" secondAttribute="trailing" id="W54-8T-iFc"/>
@@ -497,7 +499,6 @@ encore.cat.app@gmail.com</string>
                             <constraint firstItem="6sp-De-Jr8" firstAttribute="top" secondItem="ZSG-es-SdE" secondAttribute="bottom" constant="10" id="gKd-gM-BEm"/>
                             <constraint firstItem="9Pz-4U-ozn" firstAttribute="top" secondItem="0Wt-Rz-EJd" secondAttribute="bottom" constant="20" id="lRF-Ot-eJ8"/>
                             <constraint firstItem="Wq6-tm-VOb" firstAttribute="trailing" secondItem="nZO-J0-HcL" secondAttribute="trailing" id="mTP-tC-vam"/>
-                            <constraint firstItem="9Pz-4U-ozn" firstAttribute="bottom" secondItem="nZO-J0-HcL" secondAttribute="bottom" id="tmc-IP-HvM"/>
                             <constraint firstItem="9Pz-4U-ozn" firstAttribute="leading" secondItem="nZO-J0-HcL" secondAttribute="leading" id="u6q-zG-3LN"/>
                             <constraint firstItem="0Wt-Rz-EJd" firstAttribute="top" secondItem="6sp-De-Jr8" secondAttribute="bottom" constant="20" id="uMm-Bp-pmz"/>
                             <constraint firstItem="hXx-ig-jNS" firstAttribute="centerX" secondItem="eto-vc-TMA" secondAttribute="centerX" id="uQY-Vx-4Zc"/>
@@ -519,7 +520,7 @@ encore.cat.app@gmail.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTW-ZF-WVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1880.8" y="92.203898050974516"/>
+            <point key="canvasLocation" x="1880" y="91.706161137440759"/>
         </scene>
         <!--Input Goals View Controller-->
         <scene sceneID="iPC-gr-KxZ">
@@ -670,7 +671,7 @@ encore.cat.app@gmail.com</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goals For Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zS-Le-cfb">
-                                <rect key="frame" x="43.5" y="59" width="288.5" height="49.5"/>
+                                <rect key="frame" x="43" y="59" width="289" height="49.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="38"/>
                                 <color key="textColor" red="0.33836960789999998" green="0.36438676710000001" blue="0.60394877199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
