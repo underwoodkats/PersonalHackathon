@@ -11,8 +11,7 @@ class SessionViewController: UIViewController {
     
     // TODO: Level 1 - Update the design
     // TODO: Level 1 - Implement INFO button
-    // TODO: Level 1 - Also changing background color
-    // TODO: Level 1 - Also changing cat
+    
     // TODO: Level 1 - Add push notifications when stage is finished
     // TODO: Level 1 - Add tips for closing the session
     // TODO: Level 2 -Exctract all texts strings. At least withing this file
@@ -30,7 +29,6 @@ class SessionViewController: UIViewController {
     
     @IBOutlet weak var stageTitle: UILabel!
     
-    @IBOutlet weak var stageInformationStack: UIStackView!
     @IBOutlet weak var timerTitle: UILabel!
     // This label is on stageInProcess state
     @IBOutlet weak var nextStageSubtitle: UILabel!
@@ -40,6 +38,7 @@ class SessionViewController: UIViewController {
     @IBOutlet weak var nextStageTitle: UILabel!
     
     @IBOutlet weak var nextStageButton: EncoreButton!
+    @IBOutlet weak var infoButton: UIButton!
     
     // MARK: - Private Variable
     
@@ -70,7 +69,10 @@ class SessionViewController: UIViewController {
     
     private func setStageInProcess() {
         afterStageInformationStack.isHidden = true
-        stageInformationStack.isHidden = false
+        
+        timerTitle.isHidden = false
+        nextStageSubtitle.isHidden = false
+        infoButton.isHidden = false
         
         if let stage = model.getCurrentStage() {
             stageTitle.text = stage.name
@@ -88,12 +90,15 @@ class SessionViewController: UIViewController {
             nextStageSubtitle.text = "Next session: Review"
         }
 
-        nextStageButton.setTitle("I am done", for: .normal)
+        nextStageButton.setTitle("Done", for: .normal)
     }
     
     private func setStageFinished() {
-        stageInformationStack.isHidden = true
         afterStageInformationStack.isHidden = false
+        
+        timerTitle.isHidden = true
+        nextStageSubtitle.isHidden = true
+        infoButton.isHidden = true
         
         stageTitle.text = "Stage Finished"
         
