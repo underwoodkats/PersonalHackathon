@@ -46,6 +46,16 @@ struct K {
         static let meditationBackgroundColor = UIColor(hexString: "#BDA0E2")
     }
     
+    struct Images {
+        
+        // Images for Stages
+        static let focusedWorkCatImage = UIImage(named: "WorkingCat")!
+        static let activeBreakCatImage = UIImage(named: "DancingCat")!
+        static let mealBreakCatImage = UIImage(named: "EatingCat")!
+        static let stretchingCatImage = UIImage(named: "Cat")!
+        static let meditationCatImage = UIImage(named: "Cat")!
+    }
+    
     struct ToolTips {
         static let insertGoalsScreenInfoTips =  ["We advice you to set achievable goals.",
                                                  "We recommend splitting goals into smaller ones in order to achieve results."]

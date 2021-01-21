@@ -868,6 +868,7 @@ encore.cat.app@gmail.com</string>
                     <connections>
                         <outlet property="afterStageInformationStack" destination="s2W-6y-a68" id="PS7-1K-rKh"/>
                         <outlet property="backgroundView" destination="Ilw-ZL-efS" id="t90-fd-cYA"/>
+                        <outlet property="catImage" destination="RO6-yu-fY9" id="Q79-bY-ZBX"/>
                         <outlet property="infoButton" destination="Y0B-Y3-3xP" id="qa1-Lv-mcV"/>
                         <outlet property="nextStageButton" destination="uVL-fe-ZxD" id="4BA-0x-VnR"/>
                         <outlet property="nextStageSubtitle" destination="OBn-d9-cu1" id="XHJ-St-Gi3"/>

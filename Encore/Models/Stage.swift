@@ -17,6 +17,7 @@ struct Stage {
         return durationInSeconds / 60
     }
     
+    var catImage: UIImage
     var backgroundColor: UIColor
     
     init(name: String, durationInSeconds: Int, stageType: StageType) {
@@ -26,14 +27,19 @@ struct Stage {
         
         switch stageType {
         case .focusedWork:
+            catImage = K.Images.focusedWorkCatImage
             backgroundColor = K.Colors.focusedWorkBackgroundColor
         case .activeBreak:
+            catImage = K.Images.activeBreakCatImage
             backgroundColor = K.Colors.activeBreakBackgroundColor
         case .mealBreak:
+            catImage = K.Images.mealBreakCatImage
             backgroundColor = K.Colors.mealBreakBackgroundColor
         case .stretching:
+            catImage = K.Images.stretchingCatImage
             backgroundColor = K.Colors.stretchingBackgroundColor
         case .meditation:
+            catImage = K.Images.meditationCatImage
             backgroundColor = K.Colors.meditationBackgroundColor
         }
     }

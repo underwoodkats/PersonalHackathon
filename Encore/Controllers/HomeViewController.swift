@@ -8,7 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    // TODO: Level 1 - Update the design
     
     // MARK: - Life Cycles
     
