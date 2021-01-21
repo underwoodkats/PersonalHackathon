@@ -14,7 +14,10 @@ class SessionViewController: UIViewController {
     
     // TODO: Level 1 - Add push notifications when stage is finished
     // TODO: Level 1 - Add tips for closing the session
-    // TODO: Level 2 -Exctract all texts strings. At least withing this file
+    // TODO: Level 2 - Exctract all texts strings. At least withing this file
+    
+    // Right now list of todos:
+    // TODO: Level 1 - Also changing cat
     
     enum StageLifecycle: Int {
         case stageInProcess
@@ -40,6 +43,7 @@ class SessionViewController: UIViewController {
     @IBOutlet weak var nextStageButton: EncoreButton!
     @IBOutlet weak var infoButton: UIButton!
     
+    @IBOutlet weak var backgroundView: UIView!
     // MARK: - Private Variable
     
     private var model = EncoreBrain.shared
@@ -78,6 +82,7 @@ class SessionViewController: UIViewController {
             stageTitle.text = stage.name
             counter = Double(stage.durationInSeconds)
             timerTitle.text = stage.durationInSeconds.stringTimeFormat()
+            backgroundView.backgroundColor = stage.backgroundColor
             timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimerLabel), userInfo: nil, repeats: true)
         }

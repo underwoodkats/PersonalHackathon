@@ -37,6 +37,13 @@ struct K {
     struct Colors {
         static let mainPurpleColor = UIColor(hexString: "#545D9E")
         static let warningRedColor = UIColor(hexString: "#FA6060")
+        
+        // Colors for Stages
+        static let focusedWorkBackgroundColor = UIColor(hexString: "#FAE67D")
+        static let activeBreakBackgroundColor = UIColor(hexString: "#C3FDE3")
+        static let mealBreakBackgroundColor = UIColor(hexString: "#DBEBFF")
+        static let stretchingBackgroundColor = UIColor(hexString: "#FFBFBF")
+        static let meditationBackgroundColor = UIColor(hexString: "#BDA0E2")
     }
     
     struct ToolTips {
