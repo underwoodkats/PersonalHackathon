@@ -12,8 +12,7 @@ class InputGoalsViewController: UIViewController {
     
     // TODO: Level 1 - Update the design
     // TODO: Level 2 - Make round corners for the first cell
-    // TOOD: Level 3 - Figure out how to make arrows only for the correct messages.
-    // TODO: Level 2 - Don't save empty goal
+    // TODO: Level 1 - Make it possible to edit a goal
 
     // MARK: - IBOutlets
     
@@ -61,7 +60,7 @@ class InputGoalsViewController: UIViewController {
         let alert = UIAlertController(title: "Add a New Goal", message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
-            if let newGoalName = textField.text {
+            if let newGoalName = textField.text, !newGoalName.trimmingCharacters(in: .whitespaces).isEmpty {
                 let goalName = newGoalName.capitalizingFirstLetter()
                 let goalId = self.model.generateGoalId()
                 let newGoal = Goal(goalId: goalId, name: goalName, isAchieved: false)

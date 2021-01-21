@@ -66,7 +66,6 @@ extension GoalsForDayViewController: UITableViewDataSource {
 extension GoalsForDayViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // TODO: Level 2 - Make limits for the words
-        // TODO: Level 2 - Make it all be aligned in a special way.
         return Metrics.goalsTableViewRowHeight
     }
     
