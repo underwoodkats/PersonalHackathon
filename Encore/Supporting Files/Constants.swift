@@ -61,6 +61,13 @@ struct K {
                                                  "We recommend splitting goals into smaller ones in order to achieve results."]
         
         static let insertGoalScreenWarningTip = ["Are you sure? You won’t be able to change them later"]
+        
+        // Session Stages
+        static let focusedWorkHints = ["We strongly recommend to not move to another stage before the end of time.", "We advice you to split your big goals into small ones in order to finish everything!"]
+        static let activeBreakHints = ["There is nothing better than fresh air! Please, use this time for a walk!"]
+        static let mealBreakHints = ["Try to eat something light to work later at your best!"]
+        static let stretchingHints = ["Great time to remember your PE classes and shake your limbs! Don’t be shy!"]
+        static let meditationHints = ["Close your eyes, relax and concetrate on your exhales and inhales!"]
     }
     
     // Cell Names

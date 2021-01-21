@@ -9,9 +9,6 @@ import UIKit
 
 class SessionViewController: UIViewController {
     
-    // TODO: Level 1 - Update the design
-    // TODO: Level 1 - Implement INFO button
-    
     // TODO: Level 1 - Add push notifications when stage is finished
     // TODO: Level 1 - Add tips for closing the session
     // TODO: Level 2 - Exctract all texts strings. At least withing this file
@@ -42,9 +39,12 @@ class SessionViewController: UIViewController {
     
     @IBOutlet weak var catImage: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
-    // MARK: - Private Variable
+    
+    // MARK: - Private Variables
     
     private var model = EncoreBrain.shared
+    private var toolTipManager: ToolTipManager?
+    private var currentTipsArray: [String]?
     
     private var currentStageLifecycle: StageLifecycle? {
         didSet {
@@ -67,6 +67,13 @@ class SessionViewController: UIViewController {
         currentStageLifecycle = .stageInProcess
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let window = self.view.window {
+            toolTipManager = ToolTipManager(on: window)
+        }
+    }
+    
     // MARK: - Private Methods
     
     private func setStageInProcess() {
@@ -82,6 +89,7 @@ class SessionViewController: UIViewController {
             timerTitle.text = stage.durationInSeconds.stringTimeFormat()
             catImage.image = stage.catImage
             backgroundView.backgroundColor = stage.backgroundColor
+            currentTipsArray = stage.hintsArray
             timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimerLabel), userInfo: nil, repeats: true)
         }
@@ -145,5 +153,8 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func infoPressed(_ sender: Any) {
+        if let tips = currentTipsArray {
+            toolTipManager?.showToolTip(attachTo: self.infoButton, textArray: tips, toolTipType: .Info)
+        }
     }
 }
