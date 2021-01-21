@@ -42,6 +42,7 @@ class PreparationViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.register(UINib(nibName: K.scheduleCellNibName, bundle: nil), forCellReuseIdentifier: K.scheduleCellIdentifier)
+        tableView.showsVerticalScrollIndicator = false
     }
     
     // MARK: - Private Methods
@@ -64,6 +65,11 @@ class PreparationViewController: UIViewController {
         tableView.isHidden = !isModeChosen
     }
     
+    private func scrollToFirstRow() {
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+    }
+    
     // MARK: - IBActions
     
     @IBAction func sessionSelected(_ sender: ModeButton) {
@@ -81,9 +87,11 @@ class PreparationViewController: UIViewController {
                 default:
                     break
                 }
+        
                 updateUIElements(isModeChosen: true)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    self.scrollToFirstRow()
                 }
     }
     
