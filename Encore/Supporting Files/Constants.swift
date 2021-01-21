@@ -35,7 +35,8 @@ struct K {
     }
     
     struct Colors {
-        static let mainPurpleColor = UIColor(hexString: "#545D9E")
+        static let mainYellowColor = UIColor(hexString: "#F9E06A")
+        static let mainBlueColor = UIColor(hexString: "#545D9E")
         static let warningRedColor = UIColor(hexString: "#FA6060")
         
         // Colors for Stages

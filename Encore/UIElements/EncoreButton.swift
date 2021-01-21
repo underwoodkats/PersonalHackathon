@@ -7,7 +7,6 @@
 
 import UIKit
 
-// TODO: Level 2 - Export all colors to some constant file
 // TODO: Level 2 - We need to apply gradient for the button
 
 @IBDesignable
@@ -37,9 +36,9 @@ class EncoreButton: UIButton {
             shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
             
             if isPrimaryButton {
-                shadowLayer.fillColor = UIColor(hexString: "#F9E06A").cgColor
+                shadowLayer.fillColor = K.Colors.mainYellowColor.cgColor
             } else {
-                shadowLayer.fillColor = UIColor(hexString: "#545D9E").cgColor
+                shadowLayer.fillColor = K.Colors.mainBlueColor.cgColor
             }
             
             shadowLayer.shadowColor = UIColor.darkGray.cgColor

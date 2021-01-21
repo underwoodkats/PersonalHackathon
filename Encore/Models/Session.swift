@@ -7,7 +7,6 @@
 
 import Foundation
 
-// TODO: Level 1 - Make hints for each stages
 // TODO: Level 3 - Make Focused Work counter automatic 1/2, 1/3 etc.
 
 struct Session {
