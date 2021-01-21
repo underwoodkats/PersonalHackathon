@@ -37,8 +37,6 @@ class GoalsReviewViewController: UIViewController {
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
     @IBAction func backPressed(_ sender: UIButton) {
-        // TODO: Level 2 - Need to not copy the button, but create an instance for all screen.
-        // See the outlets for the button
         goToPreviousScreen()
     }
 }
@@ -47,7 +45,6 @@ class GoalsReviewViewController: UIViewController {
 
 extension GoalsReviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: Level 2 - Create constant struct
         let possibleRowsWithoutScrolling = Int((tableView.frame.height / Metrics.goalsTableViewRowHeight))
         return max(model.totalGoalsPartsCount, possibleRowsWithoutScrolling)
     }

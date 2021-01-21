@@ -540,7 +540,6 @@ encore.cat.app@gmail.com</string>
                                 <state key="normal" image="BackArrow"/>
                                 <connections>
                                     <action selector="backPressed:" destination="sb2-fc-zvv" eventType="touchUpInside" id="1iq-1d-TvW"/>
-                                    <action selector="backPressed:" destination="xEX-7F-KT2" eventType="touchUpInside" id="MHV-2R-R2s"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to achieve today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh6-Ro-Ivb">
@@ -1001,7 +1000,6 @@ encore.cat.app@gmail.com</string>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="reviewPressed:" destination="cdH-8J-M86" eventType="touchUpInside" id="74g-yu-MSm"/>
-                                            <segue destination="UPw-kL-gJk" kind="presentation" modalPresentationStyle="fullScreen" id="IYn-g1-gRi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1074,8 +1072,6 @@ encore.cat.app@gmail.com</string>
                                 <state key="normal" image="BackArrow"/>
                                 <connections>
                                     <action selector="backPressed:" destination="UPw-kL-gJk" eventType="touchUpInside" id="1JT-ZV-rud"/>
-                                    <action selector="backPressed:" destination="sb2-fc-zvv" eventType="touchUpInside" id="Ibh-Kq-che"/>
-                                    <action selector="backPressed:" destination="xEX-7F-KT2" eventType="touchUpInside" id="etS-vD-I4D"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-P1-jBL">
