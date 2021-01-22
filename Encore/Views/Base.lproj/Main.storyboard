@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="PYg-ZT-MTf">
-                                <rect key="frame" x="24" y="590" width="327" height="45"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="PYg-ZT-MTf">
+                                <rect key="frame" x="24" y="819" width="366" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMq-gq-Yq4" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="169" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="86e-oj-ALN"/>
                                             <constraint firstAttribute="width" constant="150" id="Omh-ta-4ej"/>
@@ -36,7 +36,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAQ-Tu-k6W" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
-                                        <rect key="frame" x="177" y="0.0" width="150" height="45"/>
+                                        <rect key="frame" x="197" y="0.0" width="169" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="C47-Wj-nVl"/>
                                             <constraint firstAttribute="width" constant="150" id="Zod-48-S2l"/>
@@ -55,16 +55,16 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get productive!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2Y-ZH-W4M">
-                                <rect key="frame" x="43" y="90" width="289.5" height="42"/>
+                                <rect key="frame" x="62.5" y="134" width="289.5" height="42"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-dZ-yXT">
-                                <rect key="frame" x="0.0" y="132" width="375" height="458"/>
+                                <rect key="frame" x="0.0" y="176" width="414" height="643"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" image="WelcomingCat" translatesAutoresizingMaskIntoConstraints="NO" id="hjR-68-d8N">
-                                        <rect key="frame" x="20" y="20" width="335" height="418"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="603"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -75,7 +75,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="e8m-gp-JG7">
-                                <rect key="frame" x="79" y="45" width="217" height="37"/>
+                                <rect key="frame" x="98.5" y="89" width="217" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="BB6-xF-9E6"/>
                                     <constraint firstAttribute="width" constant="217" id="mX9-9c-bi3"/>
@@ -109,11 +109,11 @@
             <objects>
                 <viewController storyboardIdentifier="HelpViewController" id="2G0-u8-v0B" customClass="HelpViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gdK-Sc-Tpf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86O-IQ-sNv">
-                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <rect key="frame" x="25" y="69" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="VoF-8E-eyu"/>
                                     <constraint firstAttribute="height" constant="24" id="uUU-qZ-R6h"/>
@@ -124,23 +124,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1e-Z5-YlV">
-                                <rect key="frame" x="149" y="59" width="77" height="47"/>
+                                <rect key="frame" x="168.5" y="103" width="77" height="47"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
                                 <color key="textColor" red="0.35294117650000001" green="0.34901960780000002" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="coD-77-RuB">
-                                <rect key="frame" x="37.5" y="462" width="300" height="55"/>
+                                <rect key="frame" x="57" y="657" width="300" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="6Ke-lC-kNW"/>
                                     <constraint firstAttribute="width" constant="300" id="zm0-s9-JzP"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-73-ODg">
-                                <rect key="frame" x="0.0" y="146" width="375" height="130"/>
+                                <rect key="frame" x="0.0" y="190" width="414" height="130"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Mj-63-wKA">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QP1-Mp-pk6">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="65"/>
@@ -151,7 +151,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiR-Uy-MXj">
-                                                <rect key="frame" x="25" y="0.0" width="350" height="65"/>
+                                                <rect key="frame" x="25" y="0.0" width="389" height="65"/>
                                                 <color key="backgroundColor" red="0.96272212270000002" green="0.90611851219999995" blue="0.4537651539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="Ss7-Ke-5kj"/>
@@ -167,7 +167,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6jW-L3-sCF">
-                                        <rect key="frame" x="0.0" y="65" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="65" width="414" height="65"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uM2-81-nGn">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="65"/>
@@ -178,7 +178,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZA-WL-dHp">
-                                                <rect key="frame" x="25" y="0.0" width="350" height="65"/>
+                                                <rect key="frame" x="25" y="0.0" width="389" height="65"/>
                                                 <color key="backgroundColor" red="0.96272212270000002" green="0.90611851219999995" blue="0.4537651539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="QGb-Sb-bi8"/>
@@ -226,11 +226,11 @@
             <objects>
                 <viewController storyboardIdentifier="SendFeedbackViewController" id="dx6-Le-pNn" customClass="SendFeedbackViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z62-Ui-naz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNh-PQ-DqQ">
-                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <rect key="frame" x="25" y="69" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="P8K-KU-obr"/>
                                     <constraint firstAttribute="width" constant="24" id="x5n-Tc-57E"/>
@@ -241,22 +241,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiM-8z-rLW">
-                                <rect key="frame" x="61.5" y="60" width="252" height="47"/>
+                                <rect key="frame" x="81" y="104" width="252" height="47"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
                                 <color key="textColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know what’s on your mind and a member of the team will reach to you as soon as possible!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cog-5T-7YR">
-                                <rect key="frame" x="25" y="149" width="315" height="78"/>
+                                <rect key="frame" x="25" y="193" width="354" height="78"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ru6-1Z-C4I">
-                                <rect key="frame" x="0.0" y="247" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="291" width="414" height="150"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I encountered a problem with..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4YN-eR-SYC" customClass="FeedbackTextView" customModule="Encore" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="10" width="325" height="130"/>
+                                        <rect key="frame" x="25" y="10" width="364" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" red="0.74501234289999996" green="0.73724091049999996" blue="0.73725575210000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -278,7 +278,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-zX-ZCF" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
-                                <rect key="frame" x="112.5" y="590" width="150" height="45"/>
+                                <rect key="frame" x="132" y="785" width="150" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="InF-Og-nXW"/>
                                     <constraint firstAttribute="width" constant="150" id="f32-Mu-Glb"/>
@@ -292,7 +292,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl0-PM-AfX">
-                                <rect key="frame" x="25" y="412" width="315" height="62.5"/>
+                                <rect key="frame" x="25" y="456" width="354" height="62.5"/>
                                 <string key="text">Please, for urgent matters contact us directly to our email account:
 encore.cat.app@gmail.com</string>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -335,11 +335,11 @@ encore.cat.app@gmail.com</string>
             <objects>
                 <viewController storyboardIdentifier="PreparationViewController" id="xEX-7F-KT2" userLabel="Preparation" customClass="PreparationViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eto-vc-TMA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSG-es-SdE">
-                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <rect key="frame" x="25" y="69" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="uGx-vN-p6j"/>
                                     <constraint firstAttribute="width" constant="24" id="wt8-na-jLe"/>
@@ -350,13 +350,13 @@ encore.cat.app@gmail.com</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sp-De-Jr8">
-                                <rect key="frame" x="44.5" y="59" width="286.5" height="40.5"/>
+                                <rect key="frame" x="64" y="103" width="286.5" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="31"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvq-FR-BNY" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
-                                <rect key="frame" x="112.5" y="447" width="150" height="45"/>
+                                <rect key="frame" x="132" y="676" width="150" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="4iK-R1-Gi8"/>
                                     <constraint firstAttribute="height" constant="45" id="flj-oQ-Fjm"/>
@@ -373,34 +373,34 @@ encore.cat.app@gmail.com</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="DecidingCat" translatesAutoresizingMaskIntoConstraints="NO" id="0Wt-Rz-EJd">
-                                <rect key="frame" x="20" y="119.5" width="335" height="377.5"/>
+                                <rect key="frame" x="20" y="163.5" width="374" height="562.5"/>
                             </imageView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wq6-tm-VOb">
-                                <rect key="frame" x="0.0" y="124.5" width="375" height="297.5"/>
+                                <rect key="frame" x="0.0" y="168.5" width="414" height="482.5"/>
                                 <color key="backgroundColor" red="0.95939487219999997" green="0.96202927829999996" blue="0.92764025930000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mae-hl-RU0" customClass="ScheduleCell" customModule="Encore" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mae-hl-RU0" id="Kba-u2-0m6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hXx-ig-jNS">
-                                <rect key="frame" x="110" y="23" width="155" height="28"/>
+                                <rect key="frame" x="129.5" y="67" width="155" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="Sox-TL-brp"/>
                                     <constraint firstAttribute="height" constant="28" id="gkn-rf-ay4"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Pz-4U-ozn">
-                                <rect key="frame" x="0.0" y="517" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="746" width="414" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-Gm-fcJ">
-                                        <rect key="frame" x="18" y="15" width="339" height="110"/>
+                                        <rect key="frame" x="37.5" y="15" width="339" height="110"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Ns-0x-yTO">
                                                 <rect key="frame" x="0.0" y="0.0" width="91" height="110"/>
@@ -528,11 +528,11 @@ encore.cat.app@gmail.com</string>
             <objects>
                 <viewController storyboardIdentifier="InputGoalsViewController" id="sb2-fc-zvv" customClass="InputGoalsViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1gQ-xI-Mjd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFO-ht-NvC">
-                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <rect key="frame" x="25" y="69" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="26W-jQ-gDX"/>
                                     <constraint firstAttribute="width" constant="24" id="cbW-UN-LVE"/>
@@ -543,13 +543,13 @@ encore.cat.app@gmail.com</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to achieve today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh6-Ro-Ivb">
-                                <rect key="frame" x="25" y="79" width="325" height="65"/>
+                                <rect key="frame" x="25" y="123" width="325" height="65"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.34901960780000002" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="X5b-4r-unM">
-                                <rect key="frame" x="24" y="590" width="327" height="45"/>
+                                <rect key="frame" x="24" y="819" width="327" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LB-O3-jsx" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
@@ -588,7 +588,7 @@ encore.cat.app@gmail.com</string>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SP1-eC-f2r">
-                                <rect key="frame" x="42" y="169" width="291" height="396"/>
+                                <rect key="frame" x="42" y="213" width="291" height="581"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.87843137250000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0Qk-b6-VMK">
@@ -602,14 +602,14 @@ encore.cat.app@gmail.com</string>
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-ma-dWF">
-                                <rect key="frame" x="110" y="23" width="155" height="28"/>
+                                <rect key="frame" x="110" y="67" width="155" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="JNY-Z0-qmy"/>
                                     <constraint firstAttribute="height" constant="28" id="VyE-Jz-fEG"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzk-Mv-Hhr">
-                                <rect key="frame" x="322" y="23" width="28" height="28"/>
+                                <rect key="frame" x="322" y="67" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="Jyc-Vi-WV9"/>
                                     <constraint firstAttribute="width" constant="28" id="clI-KQ-c1R"/>
@@ -656,11 +656,11 @@ encore.cat.app@gmail.com</string>
             <objects>
                 <viewController storyboardIdentifier="GoalsForDayViewController" id="yUM-LZ-LGk" customClass="GoalsForDayViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n3X-oJ-IRZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M9-aS-5Fr">
-                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <rect key="frame" x="25" y="69" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="NIa-vg-AFm"/>
                                     <constraint firstAttribute="width" constant="24" id="YgG-ib-aiH"/>
@@ -671,13 +671,13 @@ encore.cat.app@gmail.com</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goals For Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zS-Le-cfb">
-                                <rect key="frame" x="43" y="59" width="289" height="49.5"/>
+                                <rect key="frame" x="62.5" y="103" width="289" height="49.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="38"/>
                                 <color key="textColor" red="0.33836960789999998" green="0.36438676710000001" blue="0.60394877199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gPV-JL-hqm">
-                                <rect key="frame" x="42" y="168.5" width="291" height="498.5"/>
+                                <rect key="frame" x="42" y="212.5" width="330" height="649.5"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.87843137250000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
@@ -707,11 +707,11 @@ encore.cat.app@gmail.com</string>
             <objects>
                 <viewController storyboardIdentifier="SessionViewController" id="kcy-Vz-MFC" customClass="SessionViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kcV-7C-viq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULs-Lt-Cng">
-                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <rect key="frame" x="25" y="69" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="7n8-kg-buE"/>
                                     <constraint firstAttribute="width" constant="24" id="V4F-6c-aKz"/>
@@ -722,10 +722,10 @@ encore.cat.app@gmail.com</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ilw-ZL-efS">
-                                <rect key="frame" x="0.0" y="126" width="375" height="326"/>
+                                <rect key="frame" x="0.0" y="170" width="414" height="477"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="RO6-yu-fY9">
-                                        <rect key="frame" x="20" y="20" width="335" height="286"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="437"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.90196078431372551" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -737,16 +737,16 @@ encore.cat.app@gmail.com</string>
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:01:38" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1H-jV-Xx6">
-                                <rect key="frame" x="34.5" y="477" width="306" height="68"/>
+                                <rect key="frame" x="54" y="672" width="306" height="102"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="72"/>
                                 <color key="textColor" red="0.33836960789999998" green="0.36438676710000001" blue="0.60394877199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="jfK-Mx-1gN">
-                                <rect key="frame" x="23" y="590" width="329" height="45"/>
+                                <rect key="frame" x="23" y="819" width="368" height="45"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Next Session: Stretching" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-d9-cu1">
-                                <rect key="frame" x="61" y="78" width="253.5" height="30"/>
+                                <rect key="frame" x="80.5" y="122" width="253.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="lkL-Ut-6kg"/>
                                 </constraints>
@@ -755,7 +755,7 @@ encore.cat.app@gmail.com</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0B-Y3-3xP">
-                                <rect key="frame" x="322" y="23" width="28" height="28"/>
+                                <rect key="frame" x="361" y="67" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="A4z-F3-0yL"/>
                                     <constraint firstAttribute="height" constant="28" id="Cai-Q4-OCF"/>
@@ -766,7 +766,7 @@ encore.cat.app@gmail.com</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="wWF-0e-Pq5">
-                                <rect key="frame" x="22.5" y="590" width="330" height="45"/>
+                                <rect key="frame" x="42" y="819" width="330" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW1-Y7-b1E">
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="45"/>
@@ -810,7 +810,7 @@ encore.cat.app@gmail.com</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focused Work 1/4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="6E1-gS-oif">
-                                <rect key="frame" x="72.5" y="16" width="230" height="42"/>
+                                <rect key="frame" x="92" y="60" width="230" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="230" id="h8z-Un-7bS"/>
                                 </constraints>
@@ -819,16 +819,16 @@ encore.cat.app@gmail.com</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s2W-6y-a68">
-                                <rect key="frame" x="56.5" y="482" width="262.5" height="73"/>
+                                <rect key="frame" x="76" y="677" width="262.5" height="107"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Time for the next session:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyB-hf-gwR">
-                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="55"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
                                         <color key="textColor" red="0.33836960789999998" green="0.36438676710000001" blue="0.60394877199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Meal Break" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="z1Q-xa-pTy">
-                                        <rect key="frame" x="25.5" y="30" width="211.5" height="43"/>
+                                        <rect key="frame" x="25.5" y="55" width="211.5" height="52"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                         <color key="textColor" red="0.33836960789999998" green="0.36438676710000001" blue="0.60394877199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -886,11 +886,11 @@ encore.cat.app@gmail.com</string>
             <objects>
                 <viewController storyboardIdentifier="ScheduleViewController" id="nnf-Ey-5RE" customClass="ScheduleViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6j-L8-sP2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsx-QS-3wF">
-                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <rect key="frame" x="25" y="69" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="App-Hz-ojz"/>
                                     <constraint firstAttribute="width" constant="24" id="hwM-1c-GO3"/>
@@ -901,21 +901,21 @@ encore.cat.app@gmail.com</string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aEy-R2-xYm">
-                                <rect key="frame" x="0.0" y="164" width="375" height="503"/>
+                                <rect key="frame" x="0.0" y="208" width="414" height="654"/>
                                 <color key="backgroundColor" red="0.96042054889999995" green="0.96151894329999998" blue="0.92940837139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FRQ-L0-vQE">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FRQ-L0-vQE" id="aR2-WW-yJB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsz-j7-ATg">
-                                <rect key="frame" x="64" y="59" width="247" height="50"/>
+                                <rect key="frame" x="83.5" y="103" width="247" height="50"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="38"/>
                                 <color key="textColor" red="0.33836960789999998" green="0.36438676710000001" blue="0.60394877199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -947,17 +947,17 @@ encore.cat.app@gmail.com</string>
             <objects>
                 <viewController storyboardIdentifier="CongratulationsViewController" id="cdH-8J-M86" customClass="CongratulationsViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7b-Q3-zSh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-kE-vjT">
-                                <rect key="frame" x="45" y="70" width="285" height="49.5"/>
+                                <rect key="frame" x="64.5" y="114" width="285" height="49.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="38"/>
                                 <color key="textColor" red="0.3529411764705882" green="0.34901960784313724" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check the review to evaluate your results!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzZ-FX-uvb">
-                                <rect key="frame" x="77.5" y="498.5" width="220" height="57.5"/>
+                                <rect key="frame" x="97" y="693.5" width="220" height="57.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="9Kx-Rj-FIb"/>
                                 </constraints>
@@ -966,7 +966,7 @@ encore.cat.app@gmail.com</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FWI-Pb-ERU">
-                                <rect key="frame" x="25" y="590" width="325" height="45"/>
+                                <rect key="frame" x="44.5" y="785" width="325" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMK-da-8C1" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
@@ -1005,10 +1005,10 @@ encore.cat.app@gmail.com</string>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-Kv-tTm">
-                                <rect key="frame" x="0.0" y="163.5" width="375" height="335"/>
+                                <rect key="frame" x="0.0" y="207.5" width="414" height="486"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="yEO-3L-XsM">
-                                        <rect key="frame" x="103" y="17.5" width="200" height="300"/>
+                                        <rect key="frame" x="122.5" y="93" width="200" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="USL-6o-ARn"/>
                                             <constraint firstAttribute="width" constant="200" id="eue-wI-Cs9"/>
@@ -1022,7 +1022,7 @@ encore.cat.app@gmail.com</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You made it till the end" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0w-ay-ZcW">
-                                <rect key="frame" x="31.5" y="124.5" width="312.5" height="39"/>
+                                <rect key="frame" x="51" y="168.5" width="312.5" height="39"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <color key="textColor" red="0.35294117650000001" green="0.34901960780000002" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1058,11 +1058,11 @@ encore.cat.app@gmail.com</string>
             <objects>
                 <viewController storyboardIdentifier="GoalsReviewViewController" id="UPw-kL-gJk" customClass="GoalsReviewViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xhc-mI-jgf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdN-CQ-tOL">
-                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <rect key="frame" x="25" y="69" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="I79-HK-4QK"/>
                                     <constraint firstAttribute="height" constant="24" id="KVa-bJ-TkZ"/>
@@ -1075,17 +1075,17 @@ encore.cat.app@gmail.com</string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-P1-jBL">
-                                <rect key="frame" x="42" y="169" width="291" height="381"/>
+                                <rect key="frame" x="42" y="213" width="330" height="532"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.90196078430000004" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E28-C5-EaN">
-                                <rect key="frame" x="69.5" y="59" width="236" height="50"/>
+                                <rect key="frame" x="89" y="103" width="236" height="50"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="38"/>
                                 <color key="textColor" red="0.35447415710000002" green="0.34938305619999999" blue="0.63349866870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCg-zv-Wc9" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
-                                <rect key="frame" x="112.5" y="590" width="150" height="45"/>
+                                <rect key="frame" x="132" y="785" width="150" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Und-rd-sbJ"/>
                                     <constraint firstAttribute="height" constant="45" id="Uqd-YR-wSo"/>

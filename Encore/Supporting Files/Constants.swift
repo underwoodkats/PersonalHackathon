@@ -63,6 +63,8 @@ struct K {
         
         static let insertGoalScreenWarningTip = ["Are you sure? You won’t be able to change them later"]
         
+        static let sessionScreenClosingWarningTip = ["Are you sure you want to stop? Tap again to force finish the session"]
+        
         // Session Stages
         static let focusedWorkHints = ["We strongly recommend to not move to another stage before the end of time.", "We advice you to split your big goals into small ones in order to finish everything!"]
         static let activeBreakHints = ["There is nothing better than fresh air! Please, use this time for a walk!"]

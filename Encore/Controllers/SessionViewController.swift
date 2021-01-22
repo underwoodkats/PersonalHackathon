@@ -12,6 +12,8 @@ class SessionViewController: UIViewController {
     // TODO: Level 1 - Add push notifications when stage is finished
     // TODO: Level 1 - Add tips for closing the session
     // TODO: Level 2 - Exctract all texts strings. At least withing this file
+    // TODO: Level 1 - Make done button gray at first
+    // TODO: Level 2 - Gray out todays goals if there are none
     
     enum StageLifecycle: Int {
         case stageInProcess
@@ -45,6 +47,7 @@ class SessionViewController: UIViewController {
     private var model = EncoreBrain.shared
     private var toolTipManager: ToolTipManager?
     private var currentTipsArray: [String]?
+    private var hasPressedClose = false
     
     private var currentStageLifecycle: StageLifecycle? {
         didSet {
@@ -130,11 +133,15 @@ class SessionViewController: UIViewController {
 
     
     @IBAction func closePressed(_ sender: UIButton) {
-        goToHomeScreen()
+        if hasPressedClose {
+            goToHomeScreen()
+        } else {
+            hasPressedClose = true
+            toolTipManager?.showToolTip(attachTo: sender, textArray: K.ToolTips.sessionScreenClosingWarningTip, toolTipType: .Warning)
+        }
     }
     
     @IBAction func nextStageButtonPressed(_ sender: Any) {
-        
         if let cycle = currentStageLifecycle, cycle == .stageFinished {
             if !model.goToNextStageIfPossible() {
                 goTo(screen: K.StoryBoard.congratulationsViewController)

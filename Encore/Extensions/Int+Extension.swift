@@ -7,9 +7,6 @@
 
 import Foundation
 
-// TODO: Level 3 - Think if we want to show hours or we can just show only minutes - like 90:30
-// instead of 01:30:30
-
 extension Int {
     func stringTimeFormat() -> String {
         let hours = normilizeTimeValue(self / 3600)
