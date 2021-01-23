@@ -25,15 +25,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
 
-        if UserDefaults.standard.bool(forKey: K.UserDefaultsKey.hasViewedWalkthrough) {
-            let storyboard = UIStoryboard(name: K.StoryBoard.mainStoryBoardName, bundle: nil)
-            let loginViewController = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.homeViewController)
-            initialViewController = loginViewController
-        } else {
+//        if UserDefaults.standard.bool(forKey: K.UserDefaultsKey.hasViewedWalkthrough) {
+//            let storyboard = UIStoryboard(name: K.StoryBoard.mainStoryBoardName, bundle: nil)
+//            let loginViewController = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.homeViewController)
+//            initialViewController = loginViewController
+//        } else {
             let storyboard = UIStoryboard(name: K.StoryBoard.walkthroughStoryBoardName, bundle: nil)
             let onboardingViewController = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.walkthroughViewController)
             initialViewController = onboardingViewController
-        }
+//        }
         
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
