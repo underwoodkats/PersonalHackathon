@@ -14,7 +14,10 @@ class WalkthroughViewController: UIViewController {
     @IBOutlet var pageControl: UIPageControl!
     
     @IBOutlet var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    
     @IBOutlet var skipButton: UIButton!
+    @IBOutlet weak var startButton: EncoreButton!
     
     // MARK: - Public Properties
     
@@ -26,17 +29,17 @@ class WalkthroughViewController: UIViewController {
         finishWalkthroughPresentation()
     }
     
+    @IBAction func startButtonPressed(_ sender: Any) {
+        finishWalkthroughPresentation()
+    }
+    
     @IBAction func nextButtonPressed(sender: UIButton) {
-        if let index = walkthroughPageViewController?.currentIndex {
-            switch index {
-            case 0...2:
-                walkthroughPageViewController?.forwardPage()
-            case 3:
-               finishWalkthroughPresentation()
-            default:
-                break
-            }
-        }
+        walkthroughPageViewController?.forwardPage()
+        updateUI()
+    }
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        walkthroughPageViewController?.backwardPage()
         updateUI()
     }
     
@@ -45,12 +48,24 @@ class WalkthroughViewController: UIViewController {
     private func updateUI() {
         if let index = walkthroughPageViewController?.currentIndex {
             switch index {
-            case 0...2:
-                nextButton.setTitle("Next", for: .normal)
+            case 0:
+                nextButton.isHidden = false
+                backButton.isHidden = true
+                
                 skipButton.isHidden = false
+                startButton.isHidden = true
+            case 1...2:
+                nextButton.isHidden = false
+                backButton.isHidden = false
+                
+                skipButton.isHidden = false
+                startButton.isHidden = true
             case 3:
-                nextButton.setTitle("Start", for: .normal)
+                nextButton.isHidden = true
+                backButton.isHidden = false
+                
                 skipButton.isHidden = true
+                startButton.isHidden = false
             default:
                 break
             }
@@ -85,6 +100,14 @@ class WalkthroughViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        // Making page control dots bigger
+        pageControl.subviews.forEach {
+            $0.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

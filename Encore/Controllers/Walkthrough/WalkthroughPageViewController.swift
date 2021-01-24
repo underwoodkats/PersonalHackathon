@@ -51,6 +51,14 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         }
     }
     
+    func backwardPage() {
+        currentIndex -= 1
+        if currentIndex >= 0 && currentIndex < pages.count {
+            let nextViewController = pages[currentIndex]
+            setViewControllers([nextViewController], direction: .reverse, animated: true, completion: nil)
+        }
+    }
+    
     // MARK: - Page View Controller Delegate
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {

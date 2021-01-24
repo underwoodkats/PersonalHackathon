@@ -751,7 +751,7 @@ encore.cat.app@gmail.com</string>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="lkL-Ut-6kg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
-                                <color key="textColor" red="0.52549019607843139" green="0.5607843137254902" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.63921568627450975" green="0.67450980392156867" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0B-Y3-3xP">

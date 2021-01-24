@@ -210,33 +210,58 @@ I’m your Encore buddy</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDW-Bb-3tW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="791"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                                 <color key="backgroundColor" red="0.98039215800000001" green="0.96470588450000005" blue="0.93725490570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YellowBackground" translatesAutoresizingMaskIntoConstraints="NO" id="wk8-fP-ezl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="569"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-2t-Pu6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="791"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                                 <connections>
                                     <segue destination="Ge1-46-LeB" kind="embed" id="26x-Ye-rzd"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1s4-2A-POs">
-                                <rect key="frame" x="0.0" y="791" width="414" height="105"/>
+                                <rect key="frame" x="0.0" y="786" width="414" height="110"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmq-dx-OZ8">
-                                        <rect key="frame" x="166" y="32" width="43" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
-                                        <state key="normal" title="Skip">
-                                            <color key="titleColor" red="0.28070589899999998" green="0.27276217940000003" blue="0.51829332110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="skipButtonPressedWithSender:" destination="pTy-Gq-njK" eventType="touchUpInside" id="FMl-fl-6EM"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaO-eB-zCl">
+                                        <rect key="frame" x="57" y="33" width="300" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmq-dx-OZ8">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="Pm6-UC-32r"/>
+                                                    <constraint firstAttribute="height" constant="45" id="d7e-kK-omh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                                <state key="normal" title="Skip">
+                                                    <color key="titleColor" red="0.63921568627450975" green="0.67450980392156867" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="skipButtonPressedWithSender:" destination="pTy-Gq-njK" eventType="touchUpInside" id="FMl-fl-6EM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYq-4V-Zof" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
+                                                <rect key="frame" x="150" y="0.0" width="150" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="ezo-bx-cTw"/>
+                                                    <constraint firstAttribute="width" constant="150" id="iO6-JK-SYt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                                <state key="normal" title="Start">
+                                                    <color key="titleColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="startButtonPressed:" destination="pTy-Gq-njK" eventType="touchUpInside" id="Bpc-OV-Zwc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="fTj-ch-WhX">
                                         <rect key="frame" x="136.5" y="5" width="141" height="16"/>
                                         <constraints>
@@ -270,17 +295,22 @@ I’m your Encore buddy</string>
                                             <constraint firstAttribute="width" constant="24" id="oTL-uP-Jky"/>
                                         </constraints>
                                         <state key="normal" image="BackArrow"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="pTy-Gq-njK" eventType="touchUpInside" id="edL-qi-0Ex"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97606045009999998" green="0.96526032689999997" blue="0.94117397069999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="5k5-Lh-EDH" firstAttribute="centerY" secondItem="fTj-ch-WhX" secondAttribute="centerY" id="8By-bp-t2M"/>
                                     <constraint firstItem="wAC-ko-30A" firstAttribute="centerY" secondItem="fTj-ch-WhX" secondAttribute="centerY" id="Dlv-1u-VKW"/>
-                                    <constraint firstAttribute="height" constant="105" id="E6T-HY-5Zv"/>
+                                    <constraint firstAttribute="height" constant="110" id="E6T-HY-5Zv"/>
                                     <constraint firstItem="fTj-ch-WhX" firstAttribute="top" secondItem="1s4-2A-POs" secondAttribute="top" constant="5" id="Elh-Pf-FuZ"/>
                                     <constraint firstItem="wAC-ko-30A" firstAttribute="leading" secondItem="1s4-2A-POs" secondAttribute="leading" constant="25" id="H3t-Pb-xDd"/>
                                     <constraint firstItem="fTj-ch-WhX" firstAttribute="centerX" secondItem="1s4-2A-POs" secondAttribute="centerX" id="HNL-Dc-wx6"/>
                                     <constraint firstAttribute="trailing" secondItem="5k5-Lh-EDH" secondAttribute="trailing" constant="25" id="VsN-bE-wtR"/>
+                                    <constraint firstAttribute="bottom" secondItem="XaO-eB-zCl" secondAttribute="bottom" constant="32" id="mQc-Mh-sti"/>
+                                    <constraint firstItem="XaO-eB-zCl" firstAttribute="centerX" secondItem="1s4-2A-POs" secondAttribute="centerX" id="xqr-bt-CsR"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -304,9 +334,11 @@ I’m your Encore buddy</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="wAC-ko-30A" id="p0K-MA-UlJ"/>
                         <outlet property="nextButton" destination="5k5-Lh-EDH" id="A8R-Zt-rLc"/>
                         <outlet property="pageControl" destination="fTj-ch-WhX" id="Jrd-qd-fk4"/>
                         <outlet property="skipButton" destination="Gmq-dx-OZ8" id="wJo-Yy-hSo"/>
+                        <outlet property="startButton" destination="KYq-4V-Zof" id="W2i-kJ-g1C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m4P-mE-2fB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -314,6 +346,11 @@ I’m your Encore buddy</string>
             <point key="canvasLocation" x="682.60869565217399" y="8.0357142857142847"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="KYq-4V-Zof">
+            <size key="intrinsicContentSize" width="50" height="42"/>
+        </designable>
+    </designables>
     <resources>
         <image name="BackArrow" width="30" height="21"/>
         <image name="CatFace" width="173" height="175"/>
