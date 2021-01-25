@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -22,34 +22,40 @@
             <objects>
                 <viewController storyboardIdentifier="WalkthroughFirstContentViewController" id="UOd-7Y-Ec8" customClass="WalkthroughFirstContentViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nqH-Sg-HM8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="fNw-Xt-pV0">
-                                <rect key="frame" x="30" y="319" width="260" height="234"/>
+                                <rect key="frame" x="30" y="443" width="315" height="209"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Yp7-tA-PzB">
-                                        <rect key="frame" x="0.0" y="0.0" width="260" height="106"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Yp7-tA-PzB">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="93.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="93.5" id="Lin-5s-nmr"/>
+                                        </constraints>
                                         <string key="text">Meow!
 Hello there, I’m Momo
 I’m your Encore buddy</string>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="I will guide you through your productivity journey" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="bug-Nm-70e">
-                                        <rect key="frame" x="0.0" y="128" width="260" height="106"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="115.5" width="315" height="93.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <color key="textColor" red="0.32941176470588235" green="0.36470588235294116" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="vXG-dm-hOl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="369"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="493"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="WelcomeCat" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-AO-HJO">
-                                        <rect key="frame" x="-5" y="5" width="247" height="364"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="WelcomeCat" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-AO-HJO">
+                                        <rect key="frame" x="-5" y="5" width="331" height="488"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GFs-AO-HJO" secondAttribute="height" multiplier="19:28" id="adW-rl-707"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,7 +70,6 @@ I’m your Encore buddy</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vXG-dm-hOl" firstAttribute="top" secondItem="epp-WC-oGO" secondAttribute="top" id="2Ov-vx-Frx"/>
-                            <constraint firstItem="vXG-dm-hOl" firstAttribute="height" secondItem="nqH-Sg-HM8" secondAttribute="height" multiplier="0.65" id="8AP-9Z-vzP"/>
                             <constraint firstItem="vXG-dm-hOl" firstAttribute="leading" secondItem="epp-WC-oGO" secondAttribute="leading" id="C4I-td-Hhw"/>
                             <constraint firstItem="vXG-dm-hOl" firstAttribute="trailing" secondItem="epp-WC-oGO" secondAttribute="trailing" id="LDh-uV-eM9"/>
                             <constraint firstItem="fNw-Xt-pV0" firstAttribute="top" secondItem="vXG-dm-hOl" secondAttribute="bottom" constant="-50" id="Lpm-U1-gTw"/>
@@ -83,11 +88,11 @@ I’m your Encore buddy</string>
             <objects>
                 <viewController storyboardIdentifier="WalkthroughSecondContentViewController" id="J1c-H5-Xdd" customClass="WalkthroughSecondContentViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gqk-2A-0cY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whatever you have been putting off, let’s finish it together!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmU-lT-63Q">
-                                <rect key="frame" x="30" y="451" width="260" height="102"/>
+                                <rect key="frame" x="30" y="550" width="315" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="b2b-Cx-z1E"/>
                                 </constraints>
@@ -95,11 +100,15 @@ I’m your Encore buddy</string>
                                 <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CatFace" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-yK-kS8">
-                                <rect key="frame" x="73.5" y="108" width="173" height="147.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" image="CatFace" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-yK-kS8">
+                                <rect key="frame" x="106" y="108" width="163" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e9J-yK-kS8" secondAttribute="height" multiplier="163:165" id="F7J-yg-SQV"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="165" id="kci-63-tK4"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We all procrastinate and our work builds up" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Jj0-Q9-gmp">
-                                <rect key="frame" x="30" y="25" width="260" height="68"/>
+                                <rect key="frame" x="30" y="25" width="315" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="pZR-ZF-Zxh"/>
                                 </constraints>
@@ -107,89 +116,99 @@ I’m your Encore buddy</string>
                                 <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="U6E-vC-bva">
-                                <rect key="frame" x="30" y="280.5" width="260" height="140"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSv-OA-S50">
+                                <rect key="frame" x="0.0" y="285" width="375" height="253"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studying 📝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzh-Dq-UIb">
-                                        <rect key="frame" x="67.5" y="0.0" width="125.5" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                        <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job applications 📬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiZ-pQ-lst">
-                                        <rect key="frame" x="27.5" y="38" width="205" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                        <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House chores 🧹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA0-gA-0Hm">
-                                        <rect key="frame" x="43" y="76" width="174" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                        <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal projects 💡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrN-rp-ww1">
-                                        <rect key="frame" x="23" y="114" width="214" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                        <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="U6E-vC-bva">
+                                        <rect key="frame" x="80.5" y="56.5" width="214" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studying 📝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzh-Dq-UIb">
+                                                <rect key="frame" x="44.5" y="0.0" width="125.5" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job applications 📬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiZ-pQ-lst">
+                                                <rect key="frame" x="4.5" y="38" width="205" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House chores 🧹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA0-gA-0Hm">
+                                                <rect key="frame" x="20" y="76" width="174" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal projects 💡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrN-rp-ww1">
+                                                <rect key="frame" x="0.0" y="114" width="214" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="U6E-vC-bva" firstAttribute="centerY" secondItem="wSv-OA-S50" secondAttribute="centerY" id="c6E-s0-g1s"/>
+                                    <constraint firstItem="U6E-vC-bva" firstAttribute="centerX" secondItem="wSv-OA-S50" secondAttribute="centerX" id="ggQ-29-4tE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lCb-YS-Sa3"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lCb-YS-Sa3" firstAttribute="trailing" secondItem="U6E-vC-bva" secondAttribute="trailing" constant="30" id="3tY-Ua-7Hk"/>
+                            <constraint firstItem="lCb-YS-Sa3" firstAttribute="trailing" secondItem="wSv-OA-S50" secondAttribute="trailing" id="5R5-hZ-cWn"/>
+                            <constraint firstItem="wSv-OA-S50" firstAttribute="leading" secondItem="lCb-YS-Sa3" secondAttribute="leading" id="9qj-g6-PVW"/>
                             <constraint firstItem="e9J-yK-kS8" firstAttribute="centerX" secondItem="Gqk-2A-0cY" secondAttribute="centerX" id="AAs-aa-ct6"/>
                             <constraint firstItem="Jj0-Q9-gmp" firstAttribute="leading" secondItem="Gqk-2A-0cY" secondAttribute="leading" constant="30" id="CBq-L2-CsP"/>
+                            <constraint firstItem="wSv-OA-S50" firstAttribute="top" secondItem="e9J-yK-kS8" secondAttribute="bottom" constant="12" id="CHM-vq-Fvy"/>
                             <constraint firstAttribute="trailing" secondItem="Jj0-Q9-gmp" secondAttribute="trailing" constant="30" id="CYj-Ai-l5Y"/>
                             <constraint firstItem="Jj0-Q9-gmp" firstAttribute="top" secondItem="lCb-YS-Sa3" secondAttribute="top" constant="25" id="FkS-Sb-WEJ"/>
+                            <constraint firstItem="CmU-lT-63Q" firstAttribute="top" secondItem="wSv-OA-S50" secondAttribute="bottom" constant="12" id="Juu-Az-bcF"/>
                             <constraint firstItem="e9J-yK-kS8" firstAttribute="top" secondItem="Jj0-Q9-gmp" secondAttribute="bottom" constant="15" id="MwG-gb-Ulg"/>
                             <constraint firstItem="lCb-YS-Sa3" firstAttribute="bottom" secondItem="CmU-lT-63Q" secondAttribute="bottom" constant="15" id="V9i-rC-pPA"/>
-                            <constraint firstItem="U6E-vC-bva" firstAttribute="leading" secondItem="lCb-YS-Sa3" secondAttribute="leading" constant="30" id="VYB-Z0-dwD"/>
                             <constraint firstItem="lCb-YS-Sa3" firstAttribute="trailing" secondItem="CmU-lT-63Q" secondAttribute="trailing" constant="30" id="XMi-7B-7He"/>
                             <constraint firstItem="CmU-lT-63Q" firstAttribute="leading" secondItem="lCb-YS-Sa3" secondAttribute="leading" constant="30" id="ahM-RM-Xm0"/>
-                            <constraint firstItem="e9J-yK-kS8" firstAttribute="height" secondItem="lCb-YS-Sa3" secondAttribute="height" multiplier="0.26" id="oO1-yI-L3r"/>
-                            <constraint firstItem="U6E-vC-bva" firstAttribute="top" secondItem="e9J-yK-kS8" secondAttribute="bottom" constant="25" id="uEE-Pg-Y6c"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWV-Lf-WnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3237.68115942029" y="8.7053571428571423"/>
+            <point key="canvasLocation" x="3237.5999999999999" y="8.5457271364317844"/>
         </scene>
         <!--Walkthrough Third Content View Controller-->
         <scene sceneID="cOq-Zs-P73">
             <objects>
                 <viewController storyboardIdentifier="WalkthroughThirdContentViewController" id="fl3-bx-WUp" customClass="WalkthroughThirdContentViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qz9-v3-lO6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to use Encore?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYE-wg-3vO">
-                                <rect key="frame" x="43" y="46" width="234.5" height="34"/>
+                                <rect key="frame" x="70.5" y="46" width="234.5" height="34"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
                                 <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No matter how much time you have, I have a schedule for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="34Z-8x-sFz">
-                                <rect key="frame" x="30" y="110" width="260" height="74.5"/>
+                                <rect key="frame" x="30" y="110" width="315" height="49.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                                 <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CLR-9U-gbQ">
-                                <rect key="frame" x="50" y="331" width="220" height="207"/>
+                                <rect key="frame" x="50" y="468" width="275" height="169"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These plans have been designed with a lot of care and research" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ODi-3q-dTS">
-                                        <rect key="frame" x="0.0" y="0.0" width="220" height="93.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="74.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                                         <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If followed with a positive mindset, you can increase your productivity by almost 70%!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Pqe-an-TZT">
-                                        <rect key="frame" x="0.0" y="113.5" width="220" height="93.5"/>
+                                        <rect key="frame" x="0.0" y="94.5" width="275" height="74.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                         <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -197,10 +216,10 @@ I’m your Encore buddy</string>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRF-so-rwS">
-                                <rect key="frame" x="0.0" y="184.5" width="320" height="146.5"/>
+                                <rect key="frame" x="0.0" y="159.5" width="375" height="308.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="OhD-wC-Ivz">
-                                        <rect key="frame" x="3.5" y="22.5" width="313" height="102"/>
+                                        <rect key="frame" x="31" y="103.5" width="313" height="102"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xAj-Ke-bND">
                                                 <rect key="frame" x="0.0" y="0.0" width="87" height="102"/>
@@ -305,11 +324,11 @@ I’m your Encore buddy</string>
             <objects>
                 <viewController storyboardIdentifier="WalkthroughFourthContentViewController" id="jtc-eb-unY" customClass="WalkthroughFourthContentViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xtQ-OG-WPS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That’s it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reI-Qh-ZZO">
-                                <rect key="frame" x="110" y="35" width="100" height="34"/>
+                                <rect key="frame" x="137.5" y="35" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="OxK-5x-Phf"/>
                                 </constraints>
@@ -318,7 +337,7 @@ I’m your Encore buddy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-0x-FQX">
-                                <rect key="frame" x="30" y="434" width="260" height="104"/>
+                                <rect key="frame" x="30" y="533" width="315" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="tpA-4o-iLN"/>
                                 </constraints>
@@ -329,32 +348,42 @@ I’m your Encore buddy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="All you have to do is follow the plan, and you will see the results!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlt-Bl-KzN">
-                                <rect key="frame" x="30" y="79" width="260" height="64"/>
+                                <rect key="frame" x="30" y="79" width="315" height="52"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" image="WelcomeCatRight" translatesAutoresizingMaskIntoConstraints="NO" id="8e3-DC-6qa">
-                                <rect key="frame" x="92" y="143" width="228" height="341"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXn-xj-C38">
+                                <rect key="frame" x="0.0" y="136" width="375" height="427"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" image="WelcomeCatRight" translatesAutoresizingMaskIntoConstraints="NO" id="8e3-DC-6qa">
+                                        <rect key="frame" x="89" y="0.0" width="301" height="427"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8e3-DC-6qa" secondAttribute="height" multiplier="246:349" id="Vjd-wt-Yxh"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="341" id="BcI-kY-OxF"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="228" id="Hsn-58-mhq"/>
-                                    <constraint firstAttribute="width" secondItem="8e3-DC-6qa" secondAttribute="height" multiplier="228:341" id="JTM-D7-6ig"/>
+                                    <constraint firstAttribute="bottom" secondItem="8e3-DC-6qa" secondAttribute="bottom" id="6Es-YW-Q6E"/>
+                                    <constraint firstItem="8e3-DC-6qa" firstAttribute="top" secondItem="DXn-xj-C38" secondAttribute="top" id="bol-zz-u9a"/>
+                                    <constraint firstAttribute="trailing" secondItem="8e3-DC-6qa" secondAttribute="trailing" constant="-15" id="u37-ry-toA"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XZU-mm-BgG"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bsl-0x-FQX" firstAttribute="top" secondItem="DXn-xj-C38" secondAttribute="bottom" constant="-30" id="2Pe-U4-cC4"/>
                             <constraint firstItem="Jlt-Bl-KzN" firstAttribute="leading" secondItem="XZU-mm-BgG" secondAttribute="leading" constant="30" id="4aN-tD-o5f"/>
                             <constraint firstAttribute="trailing" secondItem="Jlt-Bl-KzN" secondAttribute="trailing" constant="30" id="7iB-wa-o8o"/>
-                            <constraint firstItem="8e3-DC-6qa" firstAttribute="top" secondItem="Jlt-Bl-KzN" secondAttribute="bottom" id="L5e-sJ-Rjh"/>
+                            <constraint firstItem="DXn-xj-C38" firstAttribute="leading" secondItem="xtQ-OG-WPS" secondAttribute="leading" id="GzX-2p-Dr9"/>
+                            <constraint firstItem="DXn-xj-C38" firstAttribute="top" secondItem="Jlt-Bl-KzN" secondAttribute="bottom" constant="5" id="IpK-5p-UZW"/>
                             <constraint firstItem="XZU-mm-BgG" firstAttribute="bottom" secondItem="bsl-0x-FQX" secondAttribute="bottom" constant="30" id="LIX-st-Z0y"/>
                             <constraint firstAttribute="trailing" secondItem="bsl-0x-FQX" secondAttribute="trailing" constant="30" id="SlU-EN-QIH"/>
                             <constraint firstItem="bsl-0x-FQX" firstAttribute="leading" secondItem="XZU-mm-BgG" secondAttribute="leading" constant="30" id="UcX-pI-ZKP"/>
                             <constraint firstItem="reI-Qh-ZZO" firstAttribute="top" secondItem="XZU-mm-BgG" secondAttribute="top" constant="35" id="UnR-hw-Ddh"/>
-                            <constraint firstItem="8e3-DC-6qa" firstAttribute="trailing" secondItem="XZU-mm-BgG" secondAttribute="trailing" id="bVQ-eI-SUo"/>
-                            <constraint firstItem="bsl-0x-FQX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8e3-DC-6qa" secondAttribute="bottom" constant="-50" id="qH3-0H-Mco"/>
+                            <constraint firstItem="XZU-mm-BgG" firstAttribute="trailing" secondItem="DXn-xj-C38" secondAttribute="trailing" id="gUU-fB-fAs"/>
                             <constraint firstItem="reI-Qh-ZZO" firstAttribute="centerX" secondItem="xtQ-OG-WPS" secondAttribute="centerX" id="uJ7-vt-Vw5"/>
                             <constraint firstItem="Jlt-Bl-KzN" firstAttribute="top" secondItem="reI-Qh-ZZO" secondAttribute="bottom" constant="10" id="wbh-M0-ss9"/>
                         </constraints>
@@ -369,27 +398,27 @@ I’m your Encore buddy</string>
             <objects>
                 <viewController storyboardIdentifier="WalkthroughViewController" id="pTy-Gq-njK" customClass="WalkthroughViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="teH-uO-TWJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDW-Bb-3tW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
                                 <color key="backgroundColor" red="0.98039215800000001" green="0.96470588450000005" blue="0.93725490570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YellowBackground" translatesAutoresizingMaskIntoConstraints="NO" id="wk8-fP-ezl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="569"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-2t-Pu6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
                                 <connections>
                                     <segue destination="Ge1-46-LeB" kind="embed" id="26x-Ye-rzd"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1s4-2A-POs">
-                                <rect key="frame" x="0.0" y="458" width="320" height="110"/>
+                                <rect key="frame" x="0.0" y="557" width="375" height="110"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaO-eB-zCl">
-                                        <rect key="frame" x="10" y="33" width="300" height="45"/>
+                                        <rect key="frame" x="37.5" y="33" width="300" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmq-dx-OZ8">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
@@ -426,7 +455,7 @@ I’m your Encore buddy</string>
                                         </subviews>
                                     </stackView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="fTj-ch-WhX">
-                                        <rect key="frame" x="89.5" y="5" width="141" height="16"/>
+                                        <rect key="frame" x="117" y="5" width="141" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="Z0e-OK-lG1"/>
                                         </constraints>
@@ -434,7 +463,7 @@ I’m your Encore buddy</string>
                                         <color key="currentPageIndicatorTintColor" red="0.74501234289999996" green="0.73724091049999996" blue="0.73725575210000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5k5-Lh-EDH">
-                                        <rect key="frame" x="271" y="1" width="24" height="24"/>
+                                        <rect key="frame" x="326" y="1" width="24" height="24"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Tx3-fL-IT2"/>
