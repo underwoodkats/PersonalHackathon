@@ -307,13 +307,62 @@ I’m your Encore buddy</string>
                     <view key="view" contentMode="scaleToFill" id="xtQ-OG-WPS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That’s it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reI-Qh-ZZO">
+                                <rect key="frame" x="110" y="35" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="OxK-5x-Phf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
+                                <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-0x-FQX">
+                                <rect key="frame" x="30" y="434" width="260" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="tpA-4o-iLN"/>
+                                </constraints>
+                                <string key="text">and don’t worry! I will be there in every step of the way
+</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="All you have to do is follow the plan, and you will see the results!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlt-Bl-KzN">
+                                <rect key="frame" x="30" y="79" width="260" height="64"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.3294117647" green="0.36470588240000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" image="WelcomeCatRight" translatesAutoresizingMaskIntoConstraints="NO" id="8e3-DC-6qa">
+                                <rect key="frame" x="92" y="143" width="228" height="341"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="341" id="BcI-kY-OxF"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="228" id="Hsn-58-mhq"/>
+                                    <constraint firstAttribute="width" secondItem="8e3-DC-6qa" secondAttribute="height" multiplier="228:341" id="JTM-D7-6ig"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XZU-mm-BgG"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jlt-Bl-KzN" firstAttribute="leading" secondItem="XZU-mm-BgG" secondAttribute="leading" constant="30" id="4aN-tD-o5f"/>
+                            <constraint firstAttribute="trailing" secondItem="Jlt-Bl-KzN" secondAttribute="trailing" constant="30" id="7iB-wa-o8o"/>
+                            <constraint firstItem="8e3-DC-6qa" firstAttribute="top" secondItem="Jlt-Bl-KzN" secondAttribute="bottom" id="L5e-sJ-Rjh"/>
+                            <constraint firstItem="XZU-mm-BgG" firstAttribute="bottom" secondItem="bsl-0x-FQX" secondAttribute="bottom" constant="30" id="LIX-st-Z0y"/>
+                            <constraint firstAttribute="trailing" secondItem="bsl-0x-FQX" secondAttribute="trailing" constant="30" id="SlU-EN-QIH"/>
+                            <constraint firstItem="bsl-0x-FQX" firstAttribute="leading" secondItem="XZU-mm-BgG" secondAttribute="leading" constant="30" id="UcX-pI-ZKP"/>
+                            <constraint firstItem="reI-Qh-ZZO" firstAttribute="top" secondItem="XZU-mm-BgG" secondAttribute="top" constant="35" id="UnR-hw-Ddh"/>
+                            <constraint firstItem="8e3-DC-6qa" firstAttribute="trailing" secondItem="XZU-mm-BgG" secondAttribute="trailing" id="bVQ-eI-SUo"/>
+                            <constraint firstItem="bsl-0x-FQX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8e3-DC-6qa" secondAttribute="bottom" constant="-50" id="qH3-0H-Mco"/>
+                            <constraint firstItem="reI-Qh-ZZO" firstAttribute="centerX" secondItem="xtQ-OG-WPS" secondAttribute="centerX" id="uJ7-vt-Vw5"/>
+                            <constraint firstItem="Jlt-Bl-KzN" firstAttribute="top" secondItem="reI-Qh-ZZO" secondAttribute="bottom" constant="10" id="wbh-M0-ss9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3eI-tg-aP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5047.826086956522" y="8.7053571428571423"/>
+            <point key="canvasLocation" x="5047.5" y="8.4507042253521121"/>
         </scene>
         <!--Walkthrough View Controller-->
         <scene sceneID="f2Y-ta-hHY">
@@ -473,6 +522,7 @@ I’m your Encore buddy</string>
         <image name="WalkthroughHard" width="61" height="61"/>
         <image name="WalkthroughMedium" width="61" height="61"/>
         <image name="WelcomeCat" width="247" height="373"/>
+        <image name="WelcomeCatRight" width="247" height="373"/>
         <image name="YellowBackground" width="375" height="569"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
