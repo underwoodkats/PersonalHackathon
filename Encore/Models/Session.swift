@@ -29,7 +29,7 @@ struct Sessions {
         Stage(name: "Focused Work 2/4", durationInSeconds: 90*60, stageType: .focusedWork),
         Stage(name: "Active Break", durationInSeconds: 20*60, stageType: .activeBreak),
         Stage(name: "Focused Work 3/4", durationInSeconds: 90*60, stageType: .focusedWork),
-        Stage(name: "Focus Exercise", durationInSeconds: 10*60, stageType: .meditation),
+        Stage(name: "Meditation", durationInSeconds: 10*60, stageType: .meditation),
         Stage(name: "Active Break", durationInSeconds: 10*60, stageType: .activeBreak),
         Stage(name: "Focused Work 4/4", durationInSeconds: 45*60, stageType: .focusedWork),
     ])
@@ -43,7 +43,7 @@ struct Sessions {
         Stage(name: "Focused Work 3/6", durationInSeconds: 90*60, stageType: .focusedWork),
         Stage(name: "Active Break", durationInSeconds: 20*60, stageType: .activeBreak),
         Stage(name: "Focused Work 4/6", durationInSeconds: 90*60, stageType: .focusedWork),
-        Stage(name: "Focus Exercise", durationInSeconds: 10*60, stageType: .meditation),
+        Stage(name: "Meditation", durationInSeconds: 10*60, stageType: .meditation),
         Stage(name: "Active Break", durationInSeconds: 10*60, stageType: .activeBreak),
         Stage(name: "Focused Work 5/6", durationInSeconds: 90*60, stageType: .focusedWork),
         Stage(name: "Meal Break", durationInSeconds: 50*60, stageType: .mealBreak),
