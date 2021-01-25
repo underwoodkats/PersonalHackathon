@@ -9,8 +9,6 @@ import UIKit
 
 class WalkthroughThirdContentViewController: WalkthroughContentViewController {
     
-    // TODO: Level 1 - Update the design
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pageIndex = 2
