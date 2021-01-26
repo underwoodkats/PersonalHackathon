@@ -10,7 +10,6 @@ import UIKit
 class SessionViewController: UIViewController {
     
     // TODO: Level 1 - Add tips for closing the session
-    // TODO: Level 2 - Exctract all texts strings. At least withing this file
     // TODO: Level 1 - Make done button gray at first
     // TODO: Level 2 - Gray out todays goals if there are none
     
@@ -126,22 +125,22 @@ class SessionViewController: UIViewController {
         
         if let nextStage = model.getNextStage() {
             nextStageTitle.text = nextStage.name
-            nextStageSubtitle.text = "Next session: \(nextStage.name)"
+            nextStageSubtitle.text = K.Strings.nextSession +  nextStage.name
         } else {
-            nextStageTitle.text = "Review"
-            nextStageSubtitle.text = "Next session: Review"
+            nextStageTitle.text = K.Strings.review
+            nextStageSubtitle.text = K.Strings.nextSession + K.Strings.review
         }
 
-        nextStageButton.setTitle("Done", for: .normal)
+        nextStageButton.setTitle(K.Strings.doneButtonText, for: .normal)
     }
     
     private func scheduleNotification(timeInterval: TimeInterval) {
-        let title = "Yey! Stage completed!"
+        let title = K.Notifications.completeStageNotificationTitle
         var body = ""
         if let nextStage = model.getNextStage() {
-            body = "Next stage is " + nextStage.name
+            body = K.Notifications.completeStageNotificationBodyBase + nextStage.name
         } else {
-            body = "Next stage is " + "Review"
+            body = K.Notifications.completeStageNotificationBodyBase + K.Strings.review
         }
         notificationManager.scheduleNotification(notificationTitle: title, notificationBody: body, timeInterval: timeInterval)
     }
@@ -153,8 +152,8 @@ class SessionViewController: UIViewController {
         nextStageSubtitle.isHidden = true
         infoButton.isHidden = true
         
-        stageTitle.text = "Stage Finished"
-        nextStageButton.setTitle("Let's go!", for: .normal)
+        stageTitle.text = K.Strings.stageFinishedText
+        nextStageButton.setTitle(K.Strings.nextButtonText, for: .normal)
     }
     
     // Unfortunately, timer can't work in background state.

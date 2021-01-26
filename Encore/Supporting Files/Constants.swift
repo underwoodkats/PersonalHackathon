@@ -35,6 +35,7 @@ struct K {
     }
     
     struct Colors {
+        
         static let mainYellowColor = UIColor(hexString: "#F9E06A")
         static let mainBlueColor = UIColor(hexString: "#545D9E")
         static let warningRedColor = UIColor(hexString: "#FA6060")
@@ -92,6 +93,19 @@ struct K {
     }
     
     struct Notifications {
+        static let completeStageNotificationTitle = "Yey! Stage completed!"
+        static let completeStageNotificationBodyBase = "Next stage is "
+        
         static let didNotAllowNotificationsLog = "The user didn't allow notification permissions."
+    }
+    
+    struct Strings {
+        
+        // Session Screen
+        static let nextSession = "Next stage: "
+        static let review = "Review"
+        static let stageFinishedText = "Stage Finished"
+        static let doneButtonText = "Done"
+        static let nextButtonText = "Let's go!"
     }
 }
