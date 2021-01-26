@@ -35,6 +35,14 @@ extension EncoreBrain {
         return goals.filter{ $0.goalId == id }.first
     }
     
+    func getGoalPosition(by goalId: Int) -> Int? {
+        let index = goals.firstIndex(where: { $0.goalId == goalId } )
+        if let index = index {
+            return index
+        }
+        return nil
+    }
+    
     func generateGoalId() -> Int {
         // Since we just incrementing the id from zero,
         // goals count could work just fine
@@ -47,7 +55,7 @@ extension EncoreBrain {
     private var goalsParts: [GoalPart] {
         var result = [GoalPart]()
         goals.forEach { goal in
-            let substrings = goal.name.split(by: 20)
+            let substrings = goal.name.split(by: 16)
             for (index, substring) in substrings.enumerated() {
                 result.append(GoalPart(goalId: goal.goalId, text: substring, isFirstPart: index == 0))
             }
@@ -76,6 +84,14 @@ extension EncoreBrain {
     
     func sortGoals() {
         goals.sort(by: { $0.isAchieved && !$1.isAchieved})
+    }
+    
+    func removeGoal(by goalPartPosition: Int) {
+        let targetGoalPart = goalsParts[goalPartPosition]
+        let targetGoalId = targetGoalPart.goalId
+        if let targetIndex = goals.firstIndex(where: { $0.goalId == targetGoalId }) {
+            goals.remove(at: targetIndex)
+        }
     }
 }
 

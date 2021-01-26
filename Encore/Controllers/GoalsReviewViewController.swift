@@ -46,7 +46,7 @@ class GoalsReviewViewController: UIViewController {
 extension GoalsReviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let possibleRowsWithoutScrolling = Int((tableView.frame.height / Metrics.goalsTableViewRowHeight))
-        return max(model.totalGoalsPartsCount, possibleRowsWithoutScrolling)
+        return max(model.totalGoalsPartsCount + 1, possibleRowsWithoutScrolling)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
