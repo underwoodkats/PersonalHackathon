@@ -8,8 +8,6 @@
 import UIKit
 
 class GoalsReviewViewController: UIViewController {
-    
-    // TODO: Level 1 - Update the design
 
     // MARK: - IBOutlets
     
