@@ -50,8 +50,8 @@ struct K {
         static let focusedWorkBackgroundColor = UIColor(hexString: "#FAE67D")
         static let activeBreakBackgroundColor = UIColor(hexString: "#C3FDE3")
         static let mealBreakBackgroundColor = UIColor(hexString: "#DBEBFF")
-        static let stretchingBackgroundColor = UIColor(hexString: "#FFBFBF")
-        static let meditationBackgroundColor = UIColor(hexString: "#BDA0E2")
+        static let stretchingBackgroundColor = UIColor(hexString: "#E6BEE2")
+        static let meditationBackgroundColor = UIColor(hexString: "#C9BEE6")
     }
     
     struct Images {
@@ -60,8 +60,8 @@ struct K {
         static let focusedWorkCatImage = UIImage(named: "WorkingCat")!
         static let activeBreakCatImage = UIImage(named: "DancingCat")!
         static let mealBreakCatImage = UIImage(named: "EatingCat")!
-        static let stretchingCatImage = UIImage(named: "Cat")!
-        static let meditationCatImage = UIImage(named: "Cat")!
+        static let stretchingCatImage = UIImage(named: "StretchingCat")!
+        static let meditationCatImage = UIImage(named: "MeditatingCat")!
     }
     
     struct ToolTips {
