@@ -9,8 +9,6 @@ import UIKit
 
 class PreparationViewController: UIViewController {
     
-    // TODO: Level 1 : Update the design
-    
     // MARK: - IBOutlets
     
     @IBOutlet weak var catAreaView: UIView!

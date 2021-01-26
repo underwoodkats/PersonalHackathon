@@ -8,8 +8,6 @@
 import UIKit
 
 class GoalCell: UITableViewCell {
-
-    // TODO: Level 1 - We need to think how user can correct the goals
     
     weak var delegate: GoalCellDelegate?
     

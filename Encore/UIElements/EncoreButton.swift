@@ -7,8 +7,6 @@
 
 import UIKit
 
-// TODO: Level 2 - We need to apply gradient for the button
-
 @IBDesignable
 class EncoreButton: UIButton {
     
