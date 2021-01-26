@@ -103,6 +103,10 @@ extension EncoreBrain {
         return currentSession?.stages.count ?? 0
     }
     
+    func getCurrentStageIndex() -> Int {
+     return currentStageIndex
+    }
+    
     func setSession(_ session: Session) {
         currentSession = session
     }

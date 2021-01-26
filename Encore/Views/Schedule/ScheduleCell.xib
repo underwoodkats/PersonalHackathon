@@ -44,6 +44,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellContentView" destination="H2p-sc-9uM" id="2Pu-Af-pYf"/>
                 <outlet property="stageLabel" destination="XNL-5Z-TW5" id="WyG-eG-oDn"/>
                 <outlet property="timeLabel" destination="pfW-eW-qca" id="UHd-Fe-01l"/>
             </connections>

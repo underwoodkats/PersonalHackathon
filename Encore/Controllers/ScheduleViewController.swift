@@ -9,8 +9,6 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
     
-    // TODO: Level 1 - Update design
-    
     // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!
@@ -51,6 +49,10 @@ extension ScheduleViewController: UITableViewDataSource {
         
         if let duration = currentStage?.durationInMinutes {
             cell.timeLabel.text = "\(duration) minutes"
+        }
+        
+        if indexPath.row < model.getCurrentStageIndex() {
+            cell.markStageAsCompleted()
         }
         
         return cell

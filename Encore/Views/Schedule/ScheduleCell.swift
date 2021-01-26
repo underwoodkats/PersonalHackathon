@@ -11,7 +11,7 @@ class ScheduleCell: UITableViewCell {
 
     @IBOutlet weak var stageLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var backgroundGradientView: UIView!
+    @IBOutlet weak var cellContentView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,4 +22,9 @@ class ScheduleCell: UITableViewCell {
         // TODO: Level 1 - Implement gradient
     }
     
+    func markStageAsCompleted() {
+        cellContentView.backgroundColor = UIColor.lightGray
+        stageLabel.textColor = UIColor.white
+        timeLabel.textColor = UIColor.white
+    }
 }
