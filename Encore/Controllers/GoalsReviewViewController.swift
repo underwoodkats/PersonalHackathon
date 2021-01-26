@@ -16,6 +16,7 @@ class GoalsReviewViewController: UIViewController {
     // MARK: - Private Variables
     
     private let model = EncoreBrain.shared
+    private let gradientLayer = CAGradientLayer()
     
     // MARK: - Life Cycles
     
@@ -28,8 +29,24 @@ class GoalsReviewViewController: UIViewController {
         tableView.register(UINib(nibName: K.Cells.goalCellNibName, bundle: nil), forCellReuseIdentifier: K.Cells.goalCellIdentifier)
     }
     
-    // MARK: - IBActions
+    override func viewWillLayoutSubviews() {
+        setTableViewBackgroundGradient()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setTableViewBackgroundGradient() {
+        let colorTop = K.Colors.gradientYellowTop
+        let colorBottom = K.Colors.gradientYellowBottom
 
+        gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        gradientLayer.frame = self.tableView.bounds
+        let backgroundView = UIView(frame: self.tableView.bounds)
+        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
+        self.tableView.backgroundView = backgroundView
+    }
+    
+    // MARK: - IBActions
     
     @IBAction func finishPressed(_ sender: Any) {
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
@@ -71,5 +88,9 @@ extension GoalsReviewViewController: UITableViewDataSource {
 extension GoalsReviewViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Metrics.goalsTableViewRowHeight
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
 }

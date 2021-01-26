@@ -23,6 +23,7 @@ class InputGoalsViewController: UIViewController {
     // MARK: - Private Variables
     
     private let model = EncoreBrain.shared
+    private let gradientLayer = CAGradientLayer()
     private var toolTipManager: ToolTipManager?
     private var hasPressedNext = false
     
@@ -44,12 +45,27 @@ class InputGoalsViewController: UIViewController {
         tableView.register(UINib(nibName: K.Cells.goalCellNibName, bundle: nil), forCellReuseIdentifier: K.Cells.goalCellIdentifier)
     }
     
+    override func viewWillLayoutSubviews() {
+        setTableViewBackgroundGradient()
+    }
+    
     // MARK: - Private Methods
     
     private func setTableViewUI() {
         tableView.clipsToBounds = true
         tableView.layer.cornerRadius = 40 // Set As you want
         tableView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+    }
+    
+    private func setTableViewBackgroundGradient() {
+        let colorTop = K.Colors.gradientYellowTop
+        let colorBottom = K.Colors.gradientYellowBottom
+
+        gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        gradientLayer.frame = self.tableView.bounds
+        let backgroundView = UIView(frame: self.tableView.bounds)
+        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
+        self.tableView.backgroundView = backgroundView
     }
     
     private func addGoal() {
@@ -163,6 +179,10 @@ extension InputGoalsViewController: UITableViewDelegate {
         if indexPath.row >= model.totalGoalsPartsCount {
             addGoal()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
 }
 
