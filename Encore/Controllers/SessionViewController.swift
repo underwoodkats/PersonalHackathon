@@ -194,6 +194,7 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func nextStageButtonPressed(_ sender: Any) {
+        notificationManager.cancelNotifications()
         if let cycle = currentStageLifecycle, cycle == .stageFinished {
             if !model.goToNextStageIfPossible() {
                 goTo(screen: K.StoryBoard.congratulationsViewController)
