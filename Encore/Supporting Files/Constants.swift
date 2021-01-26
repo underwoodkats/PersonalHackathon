@@ -85,7 +85,7 @@ struct K {
     }
     
     struct Placeholders {
-        static let addingGoalPlaceholder = "I want to achieve..."
+        static let addingGoalPlaceholder = "Ex: Apply to 4 internships"
     }
     
     struct UserDefaultsKey {

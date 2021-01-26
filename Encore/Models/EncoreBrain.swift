@@ -55,7 +55,7 @@ extension EncoreBrain {
     private var goalsParts: [GoalPart] {
         var result = [GoalPart]()
         goals.forEach { goal in
-            let substrings = goal.name.split(by: 16)
+            let substrings = goal.name.split(by: 17)
             for (index, substring) in substrings.enumerated() {
                 result.append(GoalPart(goalId: goal.goalId, text: substring, isFirstPart: index == 0))
             }

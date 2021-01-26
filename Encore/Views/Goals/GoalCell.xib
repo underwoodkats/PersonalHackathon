@@ -53,7 +53,7 @@
                         </subviews>
                     </stackView>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0P-uu-Ehf">
-                        <rect key="frame" x="280" y="49.5" width="11" height="11"/>
+                        <rect key="frame" x="285" y="49.5" width="11" height="11"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="11" id="4tA-m6-nGy"/>
                             <constraint firstAttribute="height" constant="11" id="7Yf-PK-gtJ"/>
@@ -70,7 +70,7 @@
                     <constraint firstItem="xmU-zW-ksQ" firstAttribute="top" secondItem="FZb-AE-hkO" secondAttribute="bottom" id="W2m-cW-oy7"/>
                     <constraint firstItem="t0P-uu-Ehf" firstAttribute="centerY" secondItem="vFn-49-Y1F" secondAttribute="centerY" id="Yjg-YY-MPA"/>
                     <constraint firstItem="xmU-zW-ksQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="eTm-s1-z6b"/>
-                    <constraint firstItem="t0P-uu-Ehf" firstAttribute="leading" secondItem="FZb-AE-hkO" secondAttribute="trailing" id="kFz-Ba-CbW"/>
+                    <constraint firstItem="t0P-uu-Ehf" firstAttribute="leading" secondItem="FZb-AE-hkO" secondAttribute="trailing" constant="5" id="kFz-Ba-CbW"/>
                     <constraint firstAttribute="trailing" secondItem="FZb-AE-hkO" secondAttribute="trailing" constant="42" id="mss-RG-X4n"/>
                     <constraint firstItem="FZb-AE-hkO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="pXt-md-9aT"/>
                     <constraint firstAttribute="trailing" secondItem="xmU-zW-ksQ" secondAttribute="trailing" constant="26" id="x6b-RG-LfN"/>
