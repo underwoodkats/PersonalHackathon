@@ -1,20 +1,24 @@
 PODS:
   - BugfenderSDK (1.10.0)
+  - IQKeyboardManager (6.5.6)
   - TipSee (1.4.0)
 
 DEPENDENCIES:
   - BugfenderSDK (~> 1.10)
+  - IQKeyboardManager
   - TipSee
 
 SPEC REPOS:
   trunk:
     - BugfenderSDK
+    - IQKeyboardManager
     - TipSee
 
 SPEC CHECKSUMS:
   BugfenderSDK: 2cbdbc72b28b73732a4c281194367b0756ad4bc3
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   TipSee: 3b3a31aaff5edd47bc6e2c5099a1cfab6ec4a920
 
-PODFILE CHECKSUM: a949b0012f38ecd3ba82f8a192355d87bac3c71b
+PODFILE CHECKSUM: ce4fbcc81ee9e7b4eb6cd0b8f78d7f37da718670
 
 COCOAPODS: 1.10.1

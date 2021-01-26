@@ -7,5 +7,6 @@ target 'Encore' do
   # Pods for Encore
   pod 'BugfenderSDK', '~> 1.10'
   pod 'TipSee'
+  pod 'IQKeyboardManager'
 
 end

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 @_exported import BugfenderSDK
 
 @main
@@ -17,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setBugfender()
         configureInitialViewController()
-        
+        setIQKeyboardManager()
         notificationManager.notificationCenter.delegate = notificationManager
         
         return true
@@ -51,5 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Bugfender.activateLogger("PUT-YOUR-KEY")
         Bugfender.enableCrashReporting()
 //        Bugfender.enableUIEventLogging()
+    }
+    
+    private func setIQKeyboardManager() {
+        IQKeyboardManager.shared().isEnabled = true
+        IQKeyboardManager.shared().isEnableAutoToolbar = false
     }
 }
