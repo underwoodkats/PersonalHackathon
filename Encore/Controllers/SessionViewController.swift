@@ -9,7 +9,6 @@ import UIKit
 
 class SessionViewController: UIViewController {
     
-    // TODO: Level 1 - Add push notifications when stage is finished
     // TODO: Level 1 - Add tips for closing the session
     // TODO: Level 2 - Exctract all texts strings. At least withing this file
     // TODO: Level 1 - Make done button gray at first
@@ -59,8 +58,10 @@ class SessionViewController: UIViewController {
         }
     }
     
+    private let notificationManager = NotificationManager.shared
     private var timer: Timer?
-    var counter = 0.0
+    private var counter = 0.0
+    private var currentStageTimeStart: Date?
     
     // MARK: - Life Cycles
 
@@ -68,6 +69,29 @@ class SessionViewController: UIViewController {
         super.viewDidLoad()
         model.startSession()
         currentStageLifecycle = .stageInProcess
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self,
+                                               selector:#selector(applicationWillEnterForeground(_:)),
+                                               name: UIApplication.willEnterForegroundNotification,
+                                               object: nil)
+        
+        updateTimerAfterAwaking()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func applicationWillEnterForeground(_ notification: NSNotification) {
+        updateTimerAfterAwaking()
+        if counter <= 0.0 {
+            timer?.invalidate()
+            currentStageLifecycle?.next()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,6 +104,8 @@ class SessionViewController: UIViewController {
     // MARK: - Private Methods
     
     private func setStageInProcess() {
+        currentStageTimeStart = Date()
+        
         afterStageInformationStack.isHidden = true
         
         timerTitle.isHidden = false
@@ -95,6 +121,7 @@ class SessionViewController: UIViewController {
             currentTipsArray = stage.hintsArray
             timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimerLabel), userInfo: nil, repeats: true)
+            scheduleNotification(timeInterval: TimeInterval(stage.durationInSeconds))
         }
         
         if let nextStage = model.getNextStage() {
@@ -108,6 +135,17 @@ class SessionViewController: UIViewController {
         nextStageButton.setTitle("Done", for: .normal)
     }
     
+    private func scheduleNotification(timeInterval: TimeInterval) {
+        let title = "Yey! Stage completed!"
+        var body = ""
+        if let nextStage = model.getNextStage() {
+            body = "Next stage is " + nextStage.name
+        } else {
+            body = "Next stage is " + "Review"
+        }
+        notificationManager.scheduleNotification(notificationTitle: title, notificationBody: body, timeInterval: timeInterval)
+    }
+    
     private func setStageFinished() {
         afterStageInformationStack.isHidden = false
         
@@ -116,22 +154,38 @@ class SessionViewController: UIViewController {
         infoButton.isHidden = true
         
         stageTitle.text = "Stage Finished"
-        
         nextStageButton.setTitle("Let's go!", for: .normal)
+    }
+    
+    // Unfortunately, timer can't work in background state.
+    // So this additional logic helps us keep track on time.
+    private func updateTimerAfterAwaking() {
+        if let currentStageTimeStart = currentStageTimeStart {
+            let currentTime = Date()
+            let timePassed = Double(currentTime.timeIntervalSince(currentStageTimeStart))
+            
+            counter -= timePassed
+            if counter <= 0.0 {
+                counter = 0.0
+            }
+            
+            let timerLabelText = Int(counter).stringTimeFormat()
+            timerTitle.text = timerLabelText
+        }
     }
     
     @objc private func updateTimerLabel() {
         counter -= 1
         let timerLabelText = Int(counter).stringTimeFormat()
         timerTitle.text = timerLabelText
-        if counter == 0 {
+        if counter <= 0 {
+            timer?.invalidate()
             currentStageLifecycle?.next()
         }
     }
     
     // MARK: - IBActions
 
-    
     @IBAction func closePressed(_ sender: UIButton) {
         if hasPressedClose {
             goToHomeScreen()

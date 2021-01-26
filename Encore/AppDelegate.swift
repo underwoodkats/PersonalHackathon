@@ -12,11 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    let notificationManager = NotificationManager.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setBugfender()
         configureInitialViewController()
+        
+        notificationManager.notificationCenter.delegate = notificationManager
+        
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
     
     private func configureInitialViewController() {
@@ -40,9 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setBugfender() {
-        Bugfender.activateLogger("FyR8iFCy4n4CvOR7YW2OVffxhZE93oVE")
+        Bugfender.activateLogger("PUT-YOUR-KEY")
         Bugfender.enableCrashReporting()
 //        Bugfender.enableUIEventLogging()
     }
 }
-

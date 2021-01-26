@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6AC76EE2186506BB97550A34 /* Pods_Encore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4564A3F33594FEA54CB312BE /* Pods_Encore.framework */; };
+		7809950D25BF9BF800E539CA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809950C25BF9BF800E539CA /* NotificationManager.swift */; };
 		7D00DC90259474AF006965A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DC8F259474AF006965A8 /* AppDelegate.swift */; };
 		7D00DC94259474AF006965A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DC93259474AF006965A8 /* HomeViewController.swift */; };
 		7D00DC97259474AF006965A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D00DC95259474AF006965A8 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		4564A3F33594FEA54CB312BE /* Pods_Encore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Encore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A51103068078B69D5B768D7 /* Pods-Encore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encore.release.xcconfig"; path = "Target Support Files/Pods-Encore/Pods-Encore.release.xcconfig"; sourceTree = "<group>"; };
 		70BA6D38B51870E966035059 /* Pods-Encore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encore.debug.xcconfig"; path = "Target Support Files/Pods-Encore/Pods-Encore.debug.xcconfig"; sourceTree = "<group>"; };
+		7809950C25BF9BF800E539CA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		7D00DC8C259474AF006965A8 /* Encore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D00DC8F259474AF006965A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D00DC93259474AF006965A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7809950A25BF9BDA00E539CA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7860625AEAE6C0008DE05 /* ToolTipManager.swift */,
+				7809950C25BF9BF800E539CA /* NotificationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		7D00DC83259474AF006965A8 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +151,7 @@
 		7D00DC8E259474AF006965A8 /* Encore */ = {
 			isa = PBXGroup;
 			children = (
+				7809950A25BF9BDA00E539CA /* Managers */,
 				7DAD5B562596E55A00C902EE /* Supporting Files */,
 				7DAD5B4A2594CF1E00C902EE /* Models */,
 				7D00DCAB259483C3006965A8 /* Extensions */,
@@ -229,7 +241,6 @@
 				7DAD5B4B2594CF6300C902EE /* Session.swift */,
 				7DAD5B4E2594CF8E00C902EE /* Stage.swift */,
 				7D68A72E25972F830073E5EE /* Goal.swift */,
-				7DA7860625AEAE6C0008DE05 /* ToolTipManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -422,6 +433,7 @@
 				7DA4F81C25A49C6100FE8537 /* CongratulationsViewController.swift in Sources */,
 				7DA4F82025A4B40000FE8537 /* GoalsReviewViewController.swift in Sources */,
 				7D68A72F25972F830073E5EE /* Goal.swift in Sources */,
+				7809950D25BF9BF800E539CA /* NotificationManager.swift in Sources */,
 				7DA4F82425A5FC4100FE8537 /* HelpViewController.swift in Sources */,
 				7D68A727259728230073E5EE /* GoalCell.swift in Sources */,
 			);

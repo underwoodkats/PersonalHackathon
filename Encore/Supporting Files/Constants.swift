@@ -88,4 +88,8 @@ struct K {
     struct UserDefaultsKey {
         static let hasViewedWalkthrough = "hasViewedWalkthrough"
     }
+    
+    struct Notifications {
+        static let didNotAllowNotificationsLog = "The user didn't allow notification permissions."
+    }
 }

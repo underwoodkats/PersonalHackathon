@@ -9,7 +9,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    let notificationManager = NotificationManager.shared
+    
     // MARK: - Life Cycles
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        notificationManager.requestForPersmission() // Ask for this permission only once
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
