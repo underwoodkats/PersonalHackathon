@@ -9,7 +9,11 @@ import UIKit
 
 class HelpViewController: UIViewController {
     
-    // TODO: Level 1 - Update the design
+    @IBOutlet weak var tutorialAreaStackView: UIStackView!
+    @IBOutlet weak var feedbackAreaStackView: UIStackView!
+    let tutorialGradientLayer = CAGradientLayer()
+    let feedbackGradientLayer = CAGradientLayer()
+
 
     // MARK: - Life Cycles
 
@@ -21,6 +25,24 @@ class HelpViewController: UIViewController {
 
     @IBAction func backPressed(_ sender: UIButton) {
         goToPreviousScreen()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        setGradient()
+    }
+    
+    private func setGradient() {
+        let colorTop = K.Colors.gradientYellowTop
+        let colorBottom = K.Colors.gradientYellowBottom
+        
+        tutorialGradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        feedbackGradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        
+        tutorialGradientLayer.frame = tutorialAreaStackView.bounds
+        feedbackGradientLayer.frame = feedbackAreaStackView.bounds
+        
+        tutorialAreaStackView.layer.insertSublayer(tutorialGradientLayer, at: 0)
+        feedbackAreaStackView.layer.insertSublayer(feedbackGradientLayer, at: 0)
     }
     
     @IBAction func openTutorialPressed(_ sender: UIButton) {

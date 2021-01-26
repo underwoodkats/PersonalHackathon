@@ -42,8 +42,6 @@ extension UIViewController {
         dismiss(animated: false)
     }
     
-    
-    
     func goToHomeScreen() {
         let transition = CATransition()
         transition.duration = 0.25
