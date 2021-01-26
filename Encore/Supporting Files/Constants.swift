@@ -59,8 +59,8 @@ struct K {
     }
     
     struct ToolTips {
-        static let insertGoalsScreenInfoTips =  ["We advice you to set achievable goals.",
-                                                 "We recommend splitting goals into smaller ones in order to achieve results."]
+        static let insertGoalsScreenInfoTips =  ["Tip: Prioritize your most urgent and important goals and tasks first",
+                                                 "But remember to make sure that they are doable within the current session 😺"]
         
         static let insertGoalScreenWarningTip = ["Are you sure? You won’t be able to change them later"]
         
@@ -100,6 +100,12 @@ struct K {
     }
     
     struct Strings {
+        
+        // Input Goals Screen
+        static let alertTitle = "Add a new goal"
+        static let alertMessage = "Describe your goal in one easy to understand sentence"
+        static let alertAddActionTitle = "Add"
+        static let alertCancelActionTitle = "Back"
         
         // Session Screen
         static let nextSession = "Next stage: "
