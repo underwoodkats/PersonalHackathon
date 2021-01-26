@@ -26,7 +26,7 @@ class ScheduleViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.alwaysBounceVertical = false
-        tableView.register(UINib(nibName: K.scheduleCellNibName, bundle: nil), forCellReuseIdentifier: K.scheduleCellIdentifier)
+        tableView.register(UINib(nibName: K.Cells.scheduleCellNibName, bundle: nil), forCellReuseIdentifier: K.Cells.scheduleCellIdentifier)
     }
     
     // MARK: - IBActions
@@ -44,7 +44,7 @@ extension ScheduleViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.scheduleCellIdentifier, for: indexPath) as! ScheduleCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.scheduleCellIdentifier, for: indexPath) as! ScheduleCell
         let currentStage = model.currentSession?.stages[indexPath.row]
         
         cell.stageLabel.text = currentStage?.name

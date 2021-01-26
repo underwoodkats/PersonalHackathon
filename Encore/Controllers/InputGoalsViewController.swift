@@ -40,7 +40,7 @@ class InputGoalsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.alwaysBounceVertical = false
-        tableView.register(UINib(nibName: K.goalCellNibName, bundle: nil), forCellReuseIdentifier: K.goalCellIdentifier)
+        tableView.register(UINib(nibName: K.Cells.goalCellNibName, bundle: nil), forCellReuseIdentifier: K.Cells.goalCellIdentifier)
     }
     
     // MARK: - Private Methods
@@ -109,7 +109,7 @@ extension InputGoalsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.goalCellIdentifier, for: indexPath) as! GoalCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.goalCellIdentifier, for: indexPath) as! GoalCell
         if indexPath.row < model.totalGoalsPartsCount {
             if let currentPart = model.getGoalPart(index: indexPath.row) {
                 if currentPart.isFirstPart {

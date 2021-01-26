@@ -26,7 +26,7 @@ class GoalsForDayViewController: UIViewController {
         tableView.dataSource = self
         tableView.alwaysBounceVertical = false
         tableView.delegate = self
-        tableView.register(UINib(nibName: K.goalCellNibName, bundle: nil), forCellReuseIdentifier: K.goalCellIdentifier)
+        tableView.register(UINib(nibName: K.Cells.goalCellNibName, bundle: nil), forCellReuseIdentifier: K.Cells.goalCellIdentifier)
     }
     
     // MARK: - IBActions
@@ -45,7 +45,7 @@ extension GoalsForDayViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.goalCellIdentifier, for: indexPath) as! GoalCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.goalCellIdentifier, for: indexPath) as! GoalCell
         if indexPath.row < model.totalGoalsPartsCount {
             if let currentPart = model.getGoalPart(index: indexPath.row) {
                 cell.goalLabel.text = currentPart.text

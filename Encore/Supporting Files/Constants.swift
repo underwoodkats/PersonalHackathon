@@ -73,13 +73,15 @@ struct K {
         static let meditationHints = ["Close your eyes, relax and concetrate on your exhales and inhales!"]
     }
     
-    // Cell Names
-    static let scheduleCellNibName = "ScheduleCell"
-    static let goalCellNibName = "GoalCell"
-    
-    // Cell Identifiers
-    static let scheduleCellIdentifier = "ScheduleCell"
-    static let goalCellIdentifier = "GoalCell"
+    struct Cells {
+        // Cell Names
+        static let scheduleCellNibName = "ScheduleCell"
+        static let goalCellNibName = "GoalCell"
+        
+        // Cell Identifiers
+        static let scheduleCellIdentifier = "ScheduleCell"
+        static let goalCellIdentifier = "GoalCell"
+    }
     
     struct Placeholders {
         static let addingGoalPlaceholder = "I want to achieve..."
