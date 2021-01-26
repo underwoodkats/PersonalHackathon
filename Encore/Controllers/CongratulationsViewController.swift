@@ -9,11 +9,10 @@ import UIKit
 
 class CongratulationsViewController: UIViewController {
     
-    // TODO: Level 1 - Update the design
-
     // MARK: - IBOutlets
     
     @IBOutlet weak var reviewButton: EncoreButton!
+    @IBOutlet weak var callToActionLabel: UILabel!
     
     // MARK: - Private Variables
     private let model = EncoreBrain.shared
@@ -26,6 +25,7 @@ class CongratulationsViewController: UIViewController {
         // doesn't have any goals
         if model.goalsCount == 0 {
             reviewButton.isHidden = true
+            callToActionLabel.isHidden = true
         }
     }
     
