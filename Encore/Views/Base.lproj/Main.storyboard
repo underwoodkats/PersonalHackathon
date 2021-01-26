@@ -525,6 +525,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="a2u-LR-GKG"/>
                     <connections>
+                        <outlet property="catAreaView" destination="9Pz-4U-ozn" id="O1C-Vb-yUZ"/>
                         <outlet property="catImage" destination="0Wt-Rz-EJd" id="9D7-rY-jLB"/>
                         <outlet property="firstModeButton" destination="Z9P-Ht-Xvr" id="gpo-LI-Xhv"/>
                         <outlet property="nextButton" destination="Kvq-FR-BNY" id="bwf-CG-uXl"/>

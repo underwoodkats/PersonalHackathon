@@ -13,6 +13,7 @@ class PreparationViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var catAreaView: UIView!
     @IBOutlet weak var firstModeButton: ModeButton!
     @IBOutlet weak var secondModeButton: ModeButton!
     @IBOutlet weak var thirdModeButton: ModeButton!
@@ -25,11 +26,16 @@ class PreparationViewController: UIViewController {
     
     private var buttons: [ModeButton] = []
     private let model = EncoreBrain.shared
+    private let gradientLayer = CAGradientLayer()
 
     // MARK: - Life Cycles
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        setGradient()
     }
     
     override func viewDidLoad() {
@@ -46,6 +52,15 @@ class PreparationViewController: UIViewController {
     }
     
     // MARK: - Private Methods
+    
+    private func setGradient() {
+        let colorTop = K.Colors.gradientYellowTop
+        let colorBottom = K.Colors.gradientYellowBottom
+        
+        gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        gradientLayer.frame = catAreaView.bounds
+        catAreaView.layer.insertSublayer(gradientLayer, at: 0)
+    }
     
     private func clearButtonsSelection() {
         buttons.forEach {
