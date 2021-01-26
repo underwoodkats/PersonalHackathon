@@ -51,9 +51,7 @@ class InputGoalsViewController: UIViewController {
         tableView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
     }
     
-    // MARK: - IBActions
-    
-    @IBAction func addGoalPressed(_ sender: EncoreButton) {
+    private func addGoal() {
         var textField = UITextField()
         textField.autocapitalizationType = .sentences
         
@@ -80,6 +78,12 @@ class InputGoalsViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func addGoalPressed(_ sender: EncoreButton) {
+        addGoal()
     }
     
     @IBAction func infoPressed(_ sender: UIButton) {
@@ -131,5 +135,9 @@ extension InputGoalsViewController: UITableViewDataSource {
 extension InputGoalsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Metrics.goalsTableViewRowHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        addGoal()
     }
 }

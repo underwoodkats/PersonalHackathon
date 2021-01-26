@@ -9,7 +9,6 @@ import UIKit
 
 class SessionViewController: UIViewController {
     
-    // TODO: Level 1 - Add tips for closing the session
     // TODO: Level 1 - Make done button gray at first
     // TODO: Level 2 - Gray out todays goals if there are none
     
