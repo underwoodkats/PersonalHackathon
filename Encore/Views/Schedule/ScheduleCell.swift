@@ -13,17 +13,33 @@ class ScheduleCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var cellContentView: UIView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    let gradientLayer = CAGradientLayer()
+    var isCompleted: Bool = false
+
+    override func layoutSubviews() {
         setGradientView()
     }
-
+    
     func setGradientView() {
-        // TODO: Level 1 - Implement gradient
+        
+        var colorTop: UIColor
+        var colorBottom: UIColor
+        
+        if !isCompleted {
+            colorTop = K.Colors.gradientYellowTop
+            colorBottom = K.Colors.gradientYellowBottom
+        } else {
+            colorTop = K.Colors.gradientGrayTop
+            colorBottom = K.Colors.gradientGrayBottom
+        }
+        
+        gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        gradientLayer.frame = self.bounds
+        self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-    func markStageAsCompleted() {
-        cellContentView.backgroundColor = UIColor.lightGray
+    func representStageAsCompleted() {
+        isCompleted = true
         stageLabel.textColor = UIColor.white
         timeLabel.textColor = UIColor.white
     }

@@ -52,7 +52,7 @@ extension ScheduleViewController: UITableViewDataSource {
         }
         
         if indexPath.row < model.getCurrentStageIndex() {
-            cell.markStageAsCompleted()
+            cell.representStageAsCompleted()
         }
         
         return cell

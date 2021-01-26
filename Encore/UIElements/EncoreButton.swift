@@ -33,15 +33,13 @@ class EncoreButton: UIButton {
         var colorBottom: UIColor
         
         if isPrimaryButton {
-            colorTop = UIColor(hexString: "#F6EE66")
-            colorBottom = UIColor(hexString: "#FBD66D")
+            colorTop = K.Colors.gradientYellowTop
+            colorBottom = K.Colors.gradientYellowBottom
         } else {
             colorTop = K.Colors.mainBlueColor
             colorBottom = K.Colors.mainBlueColor
         }
         
-        
-
         gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
         gradientLayer.frame = self.bounds
         gradientLayer.cornerRadius = 16

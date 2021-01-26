@@ -36,6 +36,12 @@ struct K {
     
     struct Colors {
         
+        static let gradientYellowTop = UIColor(hexString: "#F6EE66")
+        static let gradientYellowBottom = UIColor(hexString: "#FBD66D")
+        
+        static let gradientGrayTop = UIColor(hexString: "#BEBCBC")
+        static let gradientGrayBottom = UIColor(hexString: "#B2B2B2")
+        
         static let mainYellowColor = UIColor(hexString: "#F9E06A")
         static let mainBlueColor = UIColor(hexString: "#545D9E")
         static let warningRedColor = UIColor(hexString: "#FA6060")
