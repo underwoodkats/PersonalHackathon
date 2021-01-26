@@ -12,6 +12,7 @@ import UIKit
 @IBDesignable
 class EncoreButton: UIButton {
     
+    private var gradientLayer = CAGradientLayer()
     
     // MARK: - Initializers
 
@@ -22,32 +23,44 @@ class EncoreButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     @IBInspectable
     var isPrimaryButton: Bool = true
+
+    func setGradientBackground() {
+        
+        var colorTop: UIColor
+        var colorBottom: UIColor
+        
+        if isPrimaryButton {
+            colorTop = UIColor(hexString: "#F6EE66")
+            colorBottom = UIColor(hexString: "#FBD66D")
+        } else {
+            colorTop = K.Colors.mainBlueColor
+            colorBottom = K.Colors.mainBlueColor
+        }
+        
+        
+
+        gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        gradientLayer.frame = self.bounds
+        gradientLayer.cornerRadius = 16
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        self.layer.shadowOpacity = 0.8
+        self.layer.shadowRadius = 2
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.masksToBounds = false
+
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
     
-    private var shadowLayer: CAShapeLayer!
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        if shadowLayer == nil {
-            shadowLayer = CAShapeLayer()
-            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
-            
-            if isPrimaryButton {
-                shadowLayer.fillColor = K.Colors.mainYellowColor.cgColor
-            } else {
-                shadowLayer.fillColor = K.Colors.mainBlueColor.cgColor
-            }
-            
-            shadowLayer.shadowColor = UIColor.darkGray.cgColor
-            shadowLayer.shadowPath = shadowLayer.path
-            shadowLayer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-            shadowLayer.shadowOpacity = 0.8
-            shadowLayer.shadowRadius = 2
-            
-            layer.insertSublayer(shadowLayer, at: 0)
+
+            DispatchQueue.main.async {
+                self.setGradientBackground()
         }
     }
 }
+
