@@ -165,7 +165,9 @@ extension InputGoalsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        addGoal()
+        if indexPath.row >= model.totalGoalsPartsCount {
+            addGoal()
+        }
     }
 }
 
