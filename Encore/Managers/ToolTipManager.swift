@@ -25,7 +25,7 @@ class ToolTipManager {
             .with{
                 $0.foregroundColor = .white
                 $0.backgroundColor = K.Colors.mainBlueColor
-                $0.position = .top
+                $0.position = .bottom
             }
     }
     

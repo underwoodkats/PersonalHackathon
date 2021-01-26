@@ -72,12 +72,17 @@ struct K {
         
         static let sessionScreenClosingWarningTip = ["Are you sure you want to stop? Tap again to force finish the session"]
         
-        // Session Stages
-        static let focusedWorkHints = ["We strongly recommend to not move to another stage before the end of time.", "We advice you to split your big goals into small ones in order to finish everything!"]
-        static let activeBreakHints = ["There is nothing better than fresh air! Please, use this time for a walk!"]
-        static let mealBreakHints = ["Try to eat something light to work later at your best!"]
-        static let stretchingHints = ["Great time to remember your PE classes and shake your limbs! Don’t be shy!"]
-        static let meditationHints = ["Close your eyes, relax and concetrate on your exhales and inhales!"]
+//         Session Stages
+        static let focusedWorkHints = ["Remove all distractions and dive deep into your goals.\n",
+                                       "Try to finish your most important tasks first.\n",
+        ]
+        
+        static let activeBreakHints = ["There is nothing better than fresh air! Please, use this time for a walk!",
+                                       "Don’t forget to drink water! It’s important to stay hydrated and fresh."]
+        static let mealBreakHints = ["Reward your body with some fuel to recharge yourself. Eat something that makes you happy and refreshed."]
+        static let stretchingHints = ["Great time to remember your PE classes and shake your limbs! Don’t be shy! 1..2..3..4"]
+        static let meditationHints = ["When the mind is so active, its important to bring it back to a calm and happy place.",
+                                      "Let’s practice some deep breathing. Close your eyes and inhale... exhale..."]
     }
     
     struct Cells {
