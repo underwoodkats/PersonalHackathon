@@ -18,6 +18,7 @@ class CongratulationsViewController: UIViewController {
     private let model = EncoreBrain.shared
     
     // MARK: - Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +26,9 @@ class CongratulationsViewController: UIViewController {
         // doesn't have any goals
         if model.goalsCount == 0 {
             reviewButton.isHidden = true
-            callToActionLabel.isHidden = true
+            callToActionLabel.text = K.Strings.noGoalsToReviewText
+        } else {
+            callToActionLabel.text = K.Strings.callToReviewText
         }
     }
     

@@ -119,5 +119,9 @@ struct K {
         static let stageFinishedText = "Stage Finished"
         static let doneButtonText = "Done"
         static let nextButtonText = "Let's go!"
+        
+        // Congratulations Screen
+        static let callToReviewText = "Check the review to evaluate your results!"
+        static let noGoalsToReviewText = "Reward yourself with a treat! And rest well until the next time"
     }
 }
