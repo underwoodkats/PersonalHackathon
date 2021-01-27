@@ -11,6 +11,7 @@ class SessionViewController: UIViewController {
     
     // TODO: Level 1 - Make done button gray at first
     // TODO: Level 2 - Gray out todays goals if there are none
+    // TODO: Level 1 - If that is a first time use for the user, please open tool tips for him. After don't do that. 
     
     enum StageLifecycle: Int {
         case stageInProcess
@@ -88,7 +89,9 @@ class SessionViewController: UIViewController {
         updateTimerAfterAwaking()
         if counter <= 0.0 {
             timer?.invalidate()
-            currentStageLifecycle?.next()
+            if let stage = currentStageLifecycle, stage == .stageInProcess {
+                currentStageLifecycle?.next()
+            }
         }
     }
     
@@ -119,6 +122,10 @@ class SessionViewController: UIViewController {
             currentTipsArray = stage.hintsArray
             timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimerLabel), userInfo: nil, repeats: true)
+            // Before scheduling new notifications, let's cancel all that we have in our queue.
+            // Since all of them are scheduled it might happen that it will be shown for not correct stage.
+            // In the case when user tap "done" button and copmlete the stage manually.
+            notificationManager.cancelNotifications()
             scheduleNotification(timeInterval: TimeInterval(stage.durationInSeconds))
         }
         
@@ -153,6 +160,9 @@ class SessionViewController: UIViewController {
         
         stageTitle.text = K.Strings.stageFinishedText
         nextStageButton.setTitle(K.Strings.nextButtonText, for: .normal)
+        // This cleaning protect us from showing redundant notification in case
+        // when a user manually taps "done" button and waits in the "stage finished" state for some time
+        notificationManager.cancelNotifications()
     }
     
     // Unfortunately, timer can't work in background state.
@@ -194,7 +204,6 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func nextStageButtonPressed(_ sender: Any) {
-        notificationManager.cancelNotifications()
         if let cycle = currentStageLifecycle, cycle == .stageFinished {
             if !model.goToNextStageIfPossible() {
                 goTo(screen: K.StoryBoard.congratulationsViewController)
