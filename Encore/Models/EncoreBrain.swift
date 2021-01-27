@@ -139,4 +139,9 @@ extension EncoreBrain {
             return false
         }
     }
+    
+    func getTotalTimeForCurrentSession() -> String? {
+        let totalTimeInSeconds = currentSession?.stages.reduce(0) { $0 + $1.durationInSeconds }
+        return totalTimeInSeconds?.stringTimeFormatShort()
+    }
 }

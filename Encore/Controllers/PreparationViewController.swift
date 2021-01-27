@@ -9,6 +9,8 @@ import UIKit
 
 class PreparationViewController: UIViewController {
     
+    // TODO: Level 3 - Create gradient manager. It could have different methods to appl gradient to tableView background, or just to button, or to a view. But it is better more centrilized.
+    
     // MARK: - IBOutlets
     
     @IBOutlet weak var catAreaView: UIView!
@@ -19,12 +21,16 @@ class PreparationViewController: UIViewController {
     @IBOutlet weak var catImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: EncoreButton!
+    @IBOutlet weak var totalTimeView: UIView!
+    @IBOutlet weak var totalTimeLabel: UILabel!
     
     // MARK: - Private Variables
     
     private var buttons: [ModeButton] = []
     private let model = EncoreBrain.shared
-    private let gradientLayer = CAGradientLayer()
+    private let catAreaGradientLayer = CAGradientLayer()
+    private let tableViewBackgroundGradientLayer = CAGradientLayer()
+    private let totalTimeGradientLayer = CAGradientLayer()
 
     // MARK: - Life Cycles
     
@@ -33,7 +39,7 @@ class PreparationViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        setGradient()
+        setGradients()
     }
     
     override func viewDidLoad() {
@@ -51,15 +57,26 @@ class PreparationViewController: UIViewController {
     
     // MARK: - Private Methods
     
-    private func setGradient() {
+    private func setGradients() {
         let colorTop = K.Colors.gradientYellowTop
         let colorBottom = K.Colors.gradientYellowBottom
+
+        catAreaGradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        tableViewBackgroundGradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        totalTimeGradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
         
-        gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
-        gradientLayer.frame = catAreaView.bounds
-        catAreaView.layer.insertSublayer(gradientLayer, at: 0)
+        catAreaGradientLayer.frame = catAreaView.bounds
+        tableViewBackgroundGradientLayer.frame = tableView.bounds
+        totalTimeGradientLayer.frame = totalTimeView.bounds
+        
+        let backgroundView = UIView(frame: self.tableView.bounds)
+        
+        catAreaView.layer.insertSublayer(catAreaGradientLayer, at: 0)
+        backgroundView.layer.insertSublayer(tableViewBackgroundGradientLayer, at: 0)
+        tableView.backgroundView = backgroundView
+        totalTimeView.layer.insertSublayer(totalTimeGradientLayer, at: 0)
     }
-    
+ 
     private func clearButtonsSelection() {
         buttons.forEach {
             $0.borderColor = .clear
@@ -76,6 +93,8 @@ class PreparationViewController: UIViewController {
         catImage.isHidden = isModeChosen
         nextButton.isHidden = !isModeChosen
         tableView.isHidden = !isModeChosen
+        totalTimeView.isHidden = !isModeChosen
+        totalTimeLabel.isHidden = !isModeChosen
     }
     
     private func scrollToFirstRow() {
@@ -101,9 +120,19 @@ class PreparationViewController: UIViewController {
                     break
                 }
         
+                let totalTimeString = self.model.getTotalTimeForCurrentSession()
+        
                 updateUIElements(isModeChosen: true)
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    
                     self.tableView.reloadData()
+                    if let time = totalTimeString, !time.isEmpty {
+                        self.totalTimeView.isHidden = false
+                        self.totalTimeLabel.text = time
+                    } else {
+                        self.totalTimeView.isHidden = true
+                    }
                     self.scrollToFirstRow()
                 }
     }
@@ -137,6 +166,3 @@ extension PreparationViewController: UITableViewDataSource {
         return cell
     }
 }
-
-
-
