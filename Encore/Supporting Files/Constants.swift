@@ -56,6 +56,8 @@ struct K {
     
     struct Images {
         
+        static let goalsButtonDisabled = UIImage(named: "GoalsListGray")!
+        
         // Images for Stages
         static let focusedWorkCatImage = UIImage(named: "WorkingCat")!
         static let activeBreakCatImage = UIImage(named: "DancingCat")!

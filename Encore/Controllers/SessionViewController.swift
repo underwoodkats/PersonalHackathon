@@ -37,6 +37,7 @@ class SessionViewController: UIViewController {
     @IBOutlet weak var nextStageButton: EncoreButton!
     @IBOutlet weak var infoButton: UIButton!
     
+    @IBOutlet weak var goalsButton: UIButton!
     @IBOutlet weak var catImage: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
     
@@ -66,6 +67,7 @@ class SessionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkIfUserHasGoals()
         model.startSession()
         currentStageLifecycle = .stageInProcess
     }
@@ -149,6 +151,13 @@ class SessionViewController: UIViewController {
             body = K.Notifications.completeStageNotificationBodyBase + K.Strings.review
         }
         notificationManager.scheduleNotification(notificationTitle: title, notificationBody: body, timeInterval: timeInterval)
+    }
+    
+    private func checkIfUserHasGoals() {
+        if model.goalsCount == 0 {
+            goalsButton.isEnabled = false
+            goalsButton.setImage(K.Images.goalsButtonDisabled, for: .normal)
+        }
     }
     
     private func setStageFinished() {
