@@ -9,6 +9,8 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
     
+    // TODO: Level 3 - Add total time left here as well
+    
     // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!

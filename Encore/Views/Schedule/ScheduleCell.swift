@@ -17,10 +17,17 @@ class ScheduleCell: UITableViewCell {
     var isCompleted: Bool = false
 
     override func layoutSubviews() {
-        setGradientView()
+        super.layoutSubviews()
+        setGradient()
+        setUI()
     }
     
-    func setGradientView() {
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        isCompleted = false
+    }
+    
+    func setGradient() {
         
         var colorTop: UIColor
         var colorBottom: UIColor
@@ -38,9 +45,18 @@ class ScheduleCell: UITableViewCell {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    func setUI() {
+        if isCompleted {
+            stageLabel.textColor = UIColor.white
+            timeLabel.textColor = UIColor.white
+        } else {
+            stageLabel.textColor = K.Colors.mainBlueColor
+            timeLabel.textColor = K.Colors.mainBlueColor
+        }
+    }
+    
     func representStageAsCompleted() {
         isCompleted = true
-        stageLabel.textColor = UIColor.white
-        timeLabel.textColor = UIColor.white
+//        layoutSubviews()
     }
 }
