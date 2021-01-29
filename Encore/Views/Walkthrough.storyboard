@@ -169,6 +169,11 @@ I’m your Encore buddy</string>
                             <constraint firstItem="CmU-lT-63Q" firstAttribute="leading" secondItem="lCb-YS-Sa3" secondAttribute="leading" constant="30" id="ahM-RM-Xm0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityListStackView" destination="U6E-vC-bva" id="WGf-I7-hzS"/>
+                        <outlet property="bottomTitle" destination="CmU-lT-63Q" id="swZ-mH-0qj"/>
+                        <outlet property="topTitle" destination="Jj0-Q9-gmp" id="g3G-5D-Gh0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWV-Lf-WnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,6 +319,7 @@ I’m your Encore buddy</string>
                         <outlet property="bottomLabel" destination="Pqe-an-TZT" id="ncj-rS-EG5"/>
                         <outlet property="fullEncoreLabel" destination="Nlh-L3-0s4" id="ql5-lW-S7k"/>
                         <outlet property="halfEncoreLabel" destination="jzI-dB-Vxv" id="Zk9-b1-HB4"/>
+                        <outlet property="labelsStackView" destination="CLR-9U-gbQ" id="ci3-wN-Fj8"/>
                         <outlet property="midLabel" destination="ODi-3q-dTS" id="MpR-7E-ahk"/>
                         <outlet property="miniEncoreLabel" destination="Ldb-mk-0FC" id="RMh-Ib-oAy"/>
                         <outlet property="screenTitle" destination="RYE-wg-3vO" id="7Nm-aQ-bg6"/>
