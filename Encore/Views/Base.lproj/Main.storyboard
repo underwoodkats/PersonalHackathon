@@ -255,19 +255,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiM-8z-rLW">
-                                <rect key="frame" x="55" y="74" width="210" height="39"/>
+                                <rect key="frame" x="55" y="69" width="210" height="39"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <color key="textColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know what’s on your mind and a member of the team will reach to you as soon as possible!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cog-5T-7YR">
-                                <rect key="frame" x="25" y="138" width="270" height="78"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know what’s on your mind and a member of the team will reach to you as soon as possible!" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cog-5T-7YR">
+                                <rect key="frame" x="25" y="128" width="270" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="Rvj-9i-1Rz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ru6-1Z-C4I">
-                                <rect key="frame" x="0.0" y="236" width="320" height="150"/>
+                                <rect key="frame" x="0.0" y="235" width="320" height="150"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I feel it would be interesting if the app..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4YN-eR-SYC" customClass="FeedbackTextView" customModule="Encore" customModuleProvider="target">
                                         <rect key="frame" x="25" y="10" width="270" height="130"/>
@@ -306,8 +309,8 @@
                                     <action selector="sendFeedbackPressed:" destination="dx6-Le-pNn" eventType="touchUpInside" id="26Y-JZ-2Ps"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To reach out to us directly, feel free to email us at encore.cat.app@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl0-PM-AfX">
-                                <rect key="frame" x="25" y="401" width="270" height="66.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To reach out to us directly, feel free to email us at encore.cat.app@gmail.com" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="fl0-PM-AfX">
+                                <rect key="frame" x="25" y="400" width="270" height="44.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" red="0.49019607843137253" green="0.51372549019607838" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -326,13 +329,14 @@
                             <constraint firstItem="eNh-PQ-DqQ" firstAttribute="top" secondItem="ig3-U4-2td" secondAttribute="top" constant="25" id="15w-CP-OWo"/>
                             <constraint firstItem="fl0-PM-AfX" firstAttribute="leading" secondItem="ig3-U4-2td" secondAttribute="leading" constant="25" id="1Vz-CV-CrX"/>
                             <constraint firstItem="eNh-PQ-DqQ" firstAttribute="leading" secondItem="ig3-U4-2td" secondAttribute="leading" constant="25" id="5Zn-Ie-KIo"/>
-                            <constraint firstItem="Cog-5T-7YR" firstAttribute="top" secondItem="tiM-8z-rLW" secondAttribute="bottom" constant="25" id="7x6-CB-AzP"/>
+                            <constraint firstItem="Cog-5T-7YR" firstAttribute="top" secondItem="tiM-8z-rLW" secondAttribute="bottom" priority="999" constant="20" id="7x6-CB-AzP"/>
                             <constraint firstItem="ig3-U4-2td" firstAttribute="bottom" secondItem="eHG-zX-ZCF" secondAttribute="bottom" constant="32" id="AZR-Sz-gqR"/>
                             <constraint firstItem="fl0-PM-AfX" firstAttribute="top" secondItem="ru6-1Z-C4I" secondAttribute="bottom" constant="15" id="Ds9-P9-Sh8"/>
                             <constraint firstAttribute="trailing" secondItem="fl0-PM-AfX" secondAttribute="trailing" constant="25" id="DvE-B8-z9a"/>
-                            <constraint firstItem="tiM-8z-rLW" firstAttribute="top" secondItem="eNh-PQ-DqQ" secondAttribute="bottom" constant="25" id="FmO-Om-Aqe"/>
+                            <constraint firstItem="tiM-8z-rLW" firstAttribute="top" secondItem="eNh-PQ-DqQ" secondAttribute="bottom" priority="999" constant="20" id="FmO-Om-Aqe"/>
                             <constraint firstItem="esH-4j-4Um" firstAttribute="centerY" secondItem="eNh-PQ-DqQ" secondAttribute="centerY" id="IyR-tQ-8eZ"/>
                             <constraint firstItem="Cog-5T-7YR" firstAttribute="leading" secondItem="ig3-U4-2td" secondAttribute="leading" constant="25" id="Kqi-V6-DP6"/>
+                            <constraint firstItem="eHG-zX-ZCF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fl0-PM-AfX" secondAttribute="bottom" constant="15" id="Wch-LS-VI7"/>
                             <constraint firstItem="ig3-U4-2td" firstAttribute="trailing" secondItem="ru6-1Z-C4I" secondAttribute="trailing" id="Ylz-99-jzA"/>
                             <constraint firstItem="esH-4j-4Um" firstAttribute="centerX" secondItem="Z62-Ui-naz" secondAttribute="centerX" id="beu-Nt-XWF"/>
                             <constraint firstItem="ig3-U4-2td" firstAttribute="trailing" secondItem="Cog-5T-7YR" secondAttribute="trailing" constant="25" id="hSs-Px-4p0"/>
