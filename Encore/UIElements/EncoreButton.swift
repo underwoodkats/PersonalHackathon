@@ -11,6 +11,12 @@ import UIKit
 class EncoreButton: UIButton {
     
     private var gradientLayer = CAGradientLayer()
+    var isGray: Bool = false {
+        didSet {
+            layoutSubviews()
+            setNeedsLayout()
+        }
+    }
     
     // MARK: - Initializers
 
@@ -30,12 +36,19 @@ class EncoreButton: UIButton {
         var colorTop: UIColor
         var colorBottom: UIColor
         
-        if isPrimaryButton {
+        
+        if isGray {
+            colorTop = K.Colors.grayButtonTopColor
+            colorBottom = K.Colors.grayButtonBottomColor
+            setTitleColor(K.Colors.grayButtonTitleColor, for: .normal)
+        } else if isPrimaryButton {
             colorTop = K.Colors.gradientYellowTop
             colorBottom = K.Colors.gradientYellowBottom
+            setTitleColor(K.Colors.mainBlueColor, for: .normal)
         } else {
             colorTop = K.Colors.mainBlueColor
             colorBottom = K.Colors.mainBlueColor
+            setTitleColor(.white, for: .normal)
         }
         
         gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
@@ -53,7 +66,6 @@ class EncoreButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-
             DispatchQueue.main.async {
                 self.setGradientBackground()
         }

@@ -9,12 +9,8 @@ import UIKit
 
 class SendFeedbackViewController: UIViewController {
     
-    // TODO: Level 2 - Firslty disable send button if the text is empty
-    // TODO: Level 2 - Fix the problem that a user can't edit the text, but unevitable remove it
-    // TODO: Level 2 - Make the button be diasbled for the interaction if the text is not inputted.
-    // The thing above could be solved via managing states of the app. So everything is in one place.
-    // And we can set the button disabled view in the EncoreButton place.
-
+    // TODO: Level 3 - Fix the problem that a user can't edit the text, but unevitable remove it
+    
     // MARK: - IBOutlets
     
     @IBOutlet weak var frameView: UIView!
@@ -32,7 +28,7 @@ class SendFeedbackViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         textView.delegate = self
         FeedbackTextView.appearance().tintColor = .gray
-        sendButton.isEnabled = false
+        disableSendButton()
     }
     
     override func viewWillLayoutSubviews() {
@@ -48,6 +44,16 @@ class SendFeedbackViewController: UIViewController {
         gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
         gradientLayer.frame = frameView.bounds
         frameView.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    private func enableSendButton() {
+        sendButton.isEnabled = true
+        sendButton.isGray = false
+    }
+    
+    private func disableSendButton() {
+        sendButton.isEnabled = false
+        sendButton.isGray = true
     }
     
     // MARK: - IBActions
@@ -76,7 +82,7 @@ extension SendFeedbackViewController: UITextViewDelegate {
         if textView.text.isEmpty {
             textView.text = "I feel it would be interesting if the app..."
             textView.textColor = UIColor.lightGray
-            sendButton.isEnabled = false
+            disableSendButton()
         }
     }
     
@@ -90,7 +96,9 @@ extension SendFeedbackViewController: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         if !textView.text.isEmpty {
-            sendButton.isEnabled = true
+            enableSendButton()
+        } else {
+            disableSendButton()
         }
     }
 }

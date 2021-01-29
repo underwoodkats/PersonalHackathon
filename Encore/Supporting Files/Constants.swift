@@ -42,6 +42,10 @@ struct K {
         static let gradientGrayTop = UIColor(hexString: "#BEBCBC")
         static let gradientGrayBottom = UIColor(hexString: "#B2B2B2")
         
+        static let grayButtonTitleColor = UIColor(hexString: "#8E8D8D")
+        static let grayButtonTopColor = UIColor(hexString: "#E5E3E3")
+        static let grayButtonBottomColor = UIColor(hexString: "#BEBEBE")
+        
         static let mainYellowColor = UIColor(hexString: "#F9E06A")
         static let mainBlueColor = UIColor(hexString: "#545D9E")
         static let warningRedColor = UIColor(hexString: "#FA6060")
