@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     
     private func prepareModelForNewSession() {
         EncoreBrain.shared.prepareNewBrain()
+        EncoreBrain.shared.screenWidth = Double(self.view.bounds.width)
     }
     
     // MARK: - IBActions

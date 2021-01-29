@@ -17,6 +17,8 @@ class EncoreBrain {
     
     private var currentStageIndex: Int = 0
     
+    var screenWidth: Double?
+    
     func prepareNewBrain() {
         currentSession = nil
         goals = []
@@ -29,6 +31,16 @@ class EncoreBrain {
 extension EncoreBrain {
     var goalsCount: Int {
         return goals.count
+    }
+    
+    var splitNumberForGoalPart: Int {
+        var splitNumber = 17 // default
+        if let width = screenWidth, width <= 340 {
+            splitNumber = 13
+        } else if let width = screenWidth, width >= 400 {
+            splitNumber = 22
+        }
+        return splitNumber
     }
     
     func getGoal(by id: Int) -> Goal? {
@@ -55,7 +67,7 @@ extension EncoreBrain {
     private var goalsParts: [GoalPart] {
         var result = [GoalPart]()
         goals.forEach { goal in
-            let substrings = goal.name.split(by: 17)
+            let substrings = goal.name.split(by: splitNumberForGoalPart)
             for (index, substring) in substrings.enumerated() {
                 result.append(GoalPart(goalId: goal.goalId, text: substring, isFirstPart: index == 0))
             }
