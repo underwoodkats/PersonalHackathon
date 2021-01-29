@@ -8,7 +8,7 @@
 import UIKit
 
 struct Stage {
-    private var stageType: StageType
+    private(set) var stageType: StageType
     
     var name: String
     var durationInSeconds: Int
@@ -51,7 +51,7 @@ struct Stage {
     }
 }
 
-enum StageType {
+enum StageType: String {
     case focusedWork
     case activeBreak
     case mealBreak

@@ -69,7 +69,6 @@ class SessionViewController: UIViewController {
         super.viewDidLoad()
         checkIfUserHasGoals()
         model.startSession()
-        currentStageLifecycle = .stageInProcess
         adjustUI()
     }
     
@@ -103,6 +102,7 @@ class SessionViewController: UIViewController {
         if let window = self.view.window {
             toolTipManager = ToolTipManager(on: window)
         }
+        currentStageLifecycle = .stageInProcess
     }
     
     // MARK: - Private Methods
@@ -146,6 +146,8 @@ class SessionViewController: UIViewController {
             nextStageTitle.text = K.Strings.review
             nextStageSubtitle.text = K.Strings.nextSession + K.Strings.review
         }
+        
+        openToolTipIfNeeded()
 
         nextStageButton.setTitle(K.Strings.doneButtonText, for: .normal)
     }
@@ -165,6 +167,35 @@ class SessionViewController: UIViewController {
         if model.goalsCount == 0 {
             goalsButton.isEnabled = false
             goalsButton.setImage(K.Images.goalsButtonDisabled, for: .normal)
+        }
+    }
+    
+    private func openToolTipIfNeeded() {
+        let stageType = model.getCurrentStage()?.stageType.rawValue
+        if let stage = stageType {
+            let key = "hasOpened" + stage
+            
+            if !UserDefaults.standard.bool(forKey: key) {
+                openToolTip()
+                UserDefaults.standard.set(true, forKey: key)
+            }
+            
+//            print("POC - \(!UserDefaults.standard.bool(forKey: key))")
+        }
+        
+//        if !UserDefaults.standard.bool(forKey: key) {
+//            print("POC - im inside if")
+//        } else {
+//
+//        }
+//        UserDefaults.standard.set(true, forKey: key)
+//
+    }
+    
+    
+    private func openToolTip() {
+        if let tips = currentTipsArray {
+            toolTipManager?.showToolTip(attachTo: self.infoButton, textArray: tips, toolTipType: .Info)
         }
     }
     
@@ -247,8 +278,6 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func infoPressed(_ sender: Any) {
-        if let tips = currentTipsArray {
-            toolTipManager?.showToolTip(attachTo: self.infoButton, textArray: tips, toolTipType: .Info)
-        }
+        openToolTip()
     }
 }
