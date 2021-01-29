@@ -70,6 +70,7 @@ class SessionViewController: UIViewController {
         checkIfUserHasGoals()
         model.startSession()
         currentStageLifecycle = .stageInProcess
+        adjustUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -105,6 +106,13 @@ class SessionViewController: UIViewController {
     }
     
     // MARK: - Private Methods
+    
+    private func adjustUI() {
+        if let width = model.screenWidth, width <= 320 { // small size of screen
+            stageTitle.font = stageTitle.font.withSize(23)
+            nextStageSubtitle.font = nextStageSubtitle.font.withSize(20)
+        }
+    }
     
     private func setStageInProcess() {
         currentStageTimeStart = Date()
