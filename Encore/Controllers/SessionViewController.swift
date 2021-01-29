@@ -180,6 +180,14 @@ class SessionViewController: UIViewController {
         // This cleaning protect us from showing redundant notification in case
         // when a user manually taps "done" button and waits in the "stage finished" state for some time
         notificationManager.cancelNotifications()
+        
+        remindReviewGoalsIfNeeded()
+    }
+    
+    private func remindReviewGoalsIfNeeded() {
+        if nextStageTitle.text == K.Strings.review && goalsButton.isEnabled {
+            toolTipManager?.showToolTip(attachTo: goalsButton, textArray: K.ToolTips.reviseGoals, toolTipType: .Info)
+        }
     }
     
     // Unfortunately, timer can't work in background state.

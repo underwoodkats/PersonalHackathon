@@ -29,7 +29,7 @@ class WalkthroughSecondContentViewController: WalkthroughContentViewController {
                 .compactMap { $0 as? UILabel }
                 .forEach { $0.font = $0.font.withSize(26) }
             activityListStackView.spacing = 20
-        } else {
+        } else if screenWidth >= 340 {
             labels.forEach { $0?.font = $0?.font.withSize(22) }
             activityListStackView.subviews
                 .compactMap { $0 as? UILabel }

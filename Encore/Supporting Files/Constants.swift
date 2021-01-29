@@ -85,6 +85,8 @@ struct K {
         static let stretchingHints = ["Great time to remember your PE classes and shake your limbs! Don’t be shy! 1..2..3..4"]
         static let meditationHints = ["When the mind is so active, its important to bring it back to a calm and happy place.",
                                       "Let’s practice some deep breathing. Close your eyes and inhale... exhale..."]
+        
+        static let reviseGoals = ["It is a great time to revise your goals!"]
     }
     
     struct Cells {
