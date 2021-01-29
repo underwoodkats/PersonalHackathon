@@ -10,6 +10,7 @@ import UIKit
 class PreparationViewController: UIViewController {
     
     // TODO: Level 3 - Create gradient manager. It could have different methods to appl gradient to tableView background, or just to button, or to a view. But it is better more centrilized.
+    // TODO: Level 3 - Remove yellow background on iPhone 11 for the small session
     
     // MARK: - IBOutlets
     
@@ -34,11 +35,8 @@ class PreparationViewController: UIViewController {
 
     // MARK: - Life Cycles
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         setGradients()
     }
     
