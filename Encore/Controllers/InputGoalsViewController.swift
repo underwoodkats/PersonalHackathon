@@ -29,8 +29,9 @@ class InputGoalsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let window = self.view.window {
+        if let window = self.view.window, toolTipManager == nil {
             toolTipManager = ToolTipManager(on: window)
+            openToolTipIfNeeded()
         }
     }
     
@@ -105,6 +106,17 @@ class InputGoalsViewController: UIViewController {
         }
     }
     
+    private func openToolTipIfNeeded() {
+        if !UserDefaults.standard.bool(forKey: K.UserDefaultsKey.hasOpenedInputGoals) {
+            openToolTip()
+            UserDefaults.standard.set(true, forKey: K.UserDefaultsKey.hasOpenedInputGoals)
+        }
+    }
+    
+    private func openToolTip() {
+        toolTipManager?.showToolTip(attachTo: self.infoButton, textArray: K.ToolTips.insertGoalsScreenInfoTips, toolTipType: .Info)
+    }
+    
     @objc func dismissOnTapOutside(){
        self.dismiss(animated: true, completion: nil)
     }
@@ -116,7 +128,7 @@ class InputGoalsViewController: UIViewController {
     }
     
     @IBAction func infoPressed(_ sender: UIButton) {
-        toolTipManager?.showToolTip(attachTo: self.infoButton, textArray: K.ToolTips.insertGoalsScreenInfoTips, toolTipType: .Info)
+        openToolTip()
     }
     
     @IBAction func nextPressed(_ sender: EncoreButton) {

@@ -71,8 +71,8 @@ struct K {
     }
     
     struct ToolTips {
-        static let insertGoalsScreenInfoTips =  ["Tip: Prioritize your most urgent and important goals and tasks first",
-                                                 "But remember to make sure that they are doable within the current session 😺"]
+        static let insertGoalsScreenInfoTips =  ["Tip: Prioritize your most urgent and important goals and tasks first (1/2)",
+                                                 "But remember to make sure that they are doable within the current session 😺 (2/2)"]
         
         static let insertGoalScreenWarningTip = ["Are you sure? You won’t be able to change them later"]
         
@@ -108,6 +108,8 @@ struct K {
     
     struct UserDefaultsKey {
         static let hasViewedWalkthrough = "hasViewedWalkthrough"
+        
+        static let hasOpenedInputGoals = "hasOpenedInputGoals"
     }
     
     struct Notifications {
