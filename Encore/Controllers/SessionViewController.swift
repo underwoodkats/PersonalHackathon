@@ -61,6 +61,7 @@ class SessionViewController: UIViewController {
     private var timer: Timer?
     private var counter = 0.0
     private var currentStageTimeStart: Date?
+    private var currentStageDurationInSeconds = 0.0
     
     // MARK: - Life Cycles
 
@@ -81,8 +82,7 @@ class SessionViewController: UIViewController {
         updateTimerAfterAwaking()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -130,7 +130,8 @@ class SessionViewController: UIViewController {
         
         if let stage = model.getCurrentStage() {
             stageTitle.text = stage.name
-            counter = Double(stage.durationInSeconds)
+            currentStageDurationInSeconds = Double(stage.durationInSeconds)
+            counter = currentStageDurationInSeconds
             timerTitle.text = stage.durationInSeconds.stringTimeFormat()
             catImage.image = stage.catImage
             backgroundView.backgroundColor = stage.backgroundColor
@@ -187,7 +188,6 @@ class SessionViewController: UIViewController {
         }
     }
     
-    
     private func openToolTip() {
         if let tips = currentTipsArray {
             toolTipManager?.showToolTip(attachTo: self.infoButton, textArray: tips, toolTipType: .Info)
@@ -204,10 +204,6 @@ class SessionViewController: UIViewController {
         
         stageTitle.text = K.Strings.stageFinishedText
         nextStageButton.setTitle(K.Strings.nextButtonText, for: .normal)
-        // This cleaning protect us from showing redundant notification in case
-        // when a user manually taps "done" button and waits in the "stage finished" state for some time
-        notificationManager.cancelNotifications()
-        
         remindReviewGoalsIfNeeded()
     }
     
@@ -239,7 +235,8 @@ class SessionViewController: UIViewController {
             let currentTime = Date()
             let timePassed = Double(currentTime.timeIntervalSince(currentStageTimeStart))
             
-            counter -= timePassed
+            counter = currentStageDurationInSeconds - timePassed
+            
             if counter <= 0.0 {
                 counter = 0.0
             }
@@ -272,6 +269,7 @@ class SessionViewController: UIViewController {
     
     @IBAction func nextStageButtonPressed(_ sender: Any) {
         if isDoneAllowed {
+            notificationManager.cancelNotifications()
             if let cycle = currentStageLifecycle, cycle == .stageFinished {
                 if !model.goToNextStageIfPossible() {
                     goTo(screen: K.StoryBoard.congratulationsViewController)
@@ -281,10 +279,11 @@ class SessionViewController: UIViewController {
             
             currentStageLifecycle?.next()
         } else {
-            enableDoneButton()
             if !hasSkipStageWarningBeenShown {
                 showSkipStageWarning()
             }
+            enableDoneButton()
+            
         }
     }
     
