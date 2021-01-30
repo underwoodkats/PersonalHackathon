@@ -57,6 +57,5 @@ class ScheduleCell: UITableViewCell {
     
     func representStageAsCompleted() {
         isCompleted = true
-//        layoutSubviews()
     }
 }

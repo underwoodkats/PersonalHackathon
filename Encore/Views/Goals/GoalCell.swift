@@ -9,6 +9,8 @@ import UIKit
 
 class GoalCell: UITableViewCell {
     
+    // TODO: Level 3 - Make different limit for letters in different rows (first is always smaller than others)
+    
     weak var delegate: GoalCellDelegate?
     
     @IBOutlet weak var goalLabel: UILabel!
@@ -18,9 +20,18 @@ class GoalCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        prepareInitialPresentation()
+    }
+    
+    private func prepareInitialPresentation() {
         goalInProcessImage.isHidden = true
         goalCompletedImage.isHidden = true
         removeButton.isHidden = true
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        prepareInitialPresentation()
     }
     
     @IBAction func removePressed(_ sender: UIButton) {
