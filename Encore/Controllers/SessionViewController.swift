@@ -38,6 +38,7 @@ class SessionViewController: UIViewController {
     @IBOutlet weak var goalsButton: UIButton!
     @IBOutlet weak var catImage: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var nextStageInformationLabel: UILabel!
     
     // MARK: - Private Variables
     
@@ -112,6 +113,9 @@ class SessionViewController: UIViewController {
             stageTitle.font = stageTitle.font.withSize(23)
             nextStageSubtitle.font = nextStageSubtitle.font.withSize(20)
         }
+        
+        let unconstrainedSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        nextStageInformationLabel.heightAnchor.constraint(equalToConstant: nextStageInformationLabel.sizeThatFits(unconstrainedSize).height).isActive = true
     }
     
     private func setStageInProcess() {
