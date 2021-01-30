@@ -9,8 +9,6 @@ import UIKit
 
 class SessionViewController: UIViewController {
     
-    // TODO: Level 1 - Make done button gray at first
-    
     enum StageLifecycle: Int {
         case stageInProcess
         case stageFinished
@@ -46,6 +44,8 @@ class SessionViewController: UIViewController {
     private var toolTipManager: ToolTipManager?
     private var currentTipsArray: [String]?
     private var hasPressedClose = false
+    private var isDoneAllowed = false
+    private var hasSkipStageWarningBeenShown = false
     
     private var currentStageLifecycle: StageLifecycle? {
         didSet {
@@ -119,6 +119,7 @@ class SessionViewController: UIViewController {
     }
     
     private func setStageInProcess() {
+        disableDoneButton()
         currentStageTimeStart = Date()
         
         afterStageInformationStack.isHidden = true
@@ -194,6 +195,7 @@ class SessionViewController: UIViewController {
     }
     
     private func setStageFinished() {
+        enableDoneButton()
         afterStageInformationStack.isHidden = false
         
         timerTitle.isHidden = true
@@ -209,10 +211,25 @@ class SessionViewController: UIViewController {
         remindReviewGoalsIfNeeded()
     }
     
+    private func enableDoneButton() {
+        isDoneAllowed = true
+        nextStageButton.isGray = false
+    }
+    
+    private func disableDoneButton() {
+        isDoneAllowed = false
+        nextStageButton.isGray = true
+    }
+    
     private func remindReviewGoalsIfNeeded() {
         if nextStageTitle.text == K.Strings.review && goalsButton.isEnabled {
             toolTipManager?.showToolTip(attachTo: goalsButton, textArray: K.ToolTips.reviseGoals, toolTipType: .Info)
         }
+    }
+    
+    private func showSkipStageWarning() {
+        toolTipManager?.showToolTip(attachTo: self.nextStageButton, textArray: K.ToolTips.skipStageWarning, toolTipType: .Warning)
+        hasSkipStageWarningBeenShown = true
     }
     
     // Unfortunately, timer can't work in background state.
@@ -254,14 +271,21 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func nextStageButtonPressed(_ sender: Any) {
-        if let cycle = currentStageLifecycle, cycle == .stageFinished {
-            if !model.goToNextStageIfPossible() {
-                goTo(screen: K.StoryBoard.congratulationsViewController)
-                return
+        if isDoneAllowed {
+            if let cycle = currentStageLifecycle, cycle == .stageFinished {
+                if !model.goToNextStageIfPossible() {
+                    goTo(screen: K.StoryBoard.congratulationsViewController)
+                    return
+                }
+            }
+            
+            currentStageLifecycle?.next()
+        } else {
+            enableDoneButton()
+            if !hasSkipStageWarningBeenShown {
+                showSkipStageWarning()
             }
         }
-        
-        currentStageLifecycle?.next()
     }
     
     @IBAction func schedulePressed(_ sender: UIButton) {

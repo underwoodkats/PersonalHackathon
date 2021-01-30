@@ -90,6 +90,8 @@ struct K {
                                       "Let’s practice some deep breathing. Close your eyes and inhale... exhale... (2/2)"]
         
         static let reviseGoals = ["It is a great time to revise your goals!"]
+        
+        static let skipStageWarning = ["Tap again to force finish the stage"]
     }
     
     struct Cells {
