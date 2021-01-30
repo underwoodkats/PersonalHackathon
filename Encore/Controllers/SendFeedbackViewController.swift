@@ -78,7 +78,6 @@ extension SendFeedbackViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         textView.layer.borderColor = UIColor.clear.cgColor
-        print("end end")
         if textView.text.isEmpty {
             textView.text = "I feel it would be interesting if the app..."
             textView.textColor = UIColor.lightGray

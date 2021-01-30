@@ -10,8 +10,6 @@ import UIKit
 class SessionViewController: UIViewController {
     
     // TODO: Level 1 - Make done button gray at first
-    // TODO: Level 2 - Gray out todays goals if there are none
-    // TODO: Level 1 - If that is a first time use for the user, please open tool tips for him. After don't do that. 
     
     enum StageLifecycle: Int {
         case stageInProcess
@@ -99,10 +97,12 @@ class SessionViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let window = self.view.window {
+        if let window = self.view.window, toolTipManager == nil {
             toolTipManager = ToolTipManager(on: window)
+            // We need to set it here, so the tooltip manager is created before
+            // stage is set - in order to present tool tip right when the screen opens
+            currentStageLifecycle = .stageInProcess
         }
-        currentStageLifecycle = .stageInProcess
     }
     
     // MARK: - Private Methods
@@ -179,17 +179,7 @@ class SessionViewController: UIViewController {
                 openToolTip()
                 UserDefaults.standard.set(true, forKey: key)
             }
-            
-//            print("POC - \(!UserDefaults.standard.bool(forKey: key))")
         }
-        
-//        if !UserDefaults.standard.bool(forKey: key) {
-//            print("POC - im inside if")
-//        } else {
-//
-//        }
-//        UserDefaults.standard.set(true, forKey: key)
-//
     }
     
     
