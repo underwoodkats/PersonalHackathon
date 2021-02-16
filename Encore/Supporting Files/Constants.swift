@@ -112,6 +112,8 @@ struct K {
         static let hasViewedWalkthrough = "hasViewedWalkthrough"
         
         static let hasOpenedInputGoals = "hasOpenedInputGoals"
+        
+        static let lastReviewRequestAppVersion = "lastReviewRequestAppVersion"
     }
     
     struct Notifications {

@@ -35,6 +35,7 @@ class CongratulationsViewController: UIViewController {
     // MARK: - IBActions
     
      @IBAction func finishPressed(_ sender: EncoreButton) {
+        AppStoreReviewManager.requestReviewIfAppropriate()
         goToHomeScreen()
     }
     

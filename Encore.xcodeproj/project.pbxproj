@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6AC76EE2186506BB97550A34 /* Pods_Encore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4564A3F33594FEA54CB312BE /* Pods_Encore.framework */; };
 		7809950D25BF9BF800E539CA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809950C25BF9BF800E539CA /* NotificationManager.swift */; };
+		78E4AFB025DAEADD000266EC /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E4AFAF25DAEADD000266EC /* AppStoreReviewManager.swift */; };
 		7D00DC90259474AF006965A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DC8F259474AF006965A8 /* AppDelegate.swift */; };
 		7D00DC94259474AF006965A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DC93259474AF006965A8 /* HomeViewController.swift */; };
 		7D00DC97259474AF006965A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D00DC95259474AF006965A8 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		6A51103068078B69D5B768D7 /* Pods-Encore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encore.release.xcconfig"; path = "Target Support Files/Pods-Encore/Pods-Encore.release.xcconfig"; sourceTree = "<group>"; };
 		70BA6D38B51870E966035059 /* Pods-Encore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encore.debug.xcconfig"; path = "Target Support Files/Pods-Encore/Pods-Encore.debug.xcconfig"; sourceTree = "<group>"; };
 		7809950C25BF9BF800E539CA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		78E4AFAF25DAEADD000266EC /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		7D00DC8C259474AF006965A8 /* Encore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D00DC8F259474AF006965A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D00DC93259474AF006965A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				7DA7860625AEAE6C0008DE05 /* ToolTipManager.swift */,
 				7809950C25BF9BF800E539CA /* NotificationManager.swift */,
+				78E4AFAF25DAEADD000266EC /* AppStoreReviewManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				7D68A71425970EA90073E5EE /* ModeButton.swift in Sources */,
 				7DAD5B4C2594CF6300C902EE /* Session.swift in Sources */,
 				7DBC31E825AB5BDB00C9F75B /* WalkthroughThirdContentViewController.swift in Sources */,
+				78E4AFB025DAEADD000266EC /* AppStoreReviewManager.swift in Sources */,
 				7D0D5DE825A977C300A5E004 /* SendFeedbackViewController.swift in Sources */,
 				7DBC31D925AB202100C9F75B /* WalkthroughPageViewController.swift in Sources */,
 				7DCF0CE0259F391000FC25CB /* Int+Extension.swift in Sources */,
@@ -585,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = V4NCRG9QAS;
 				INFOPLIST_FILE = Encore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -610,7 +614,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = V4NCRG9QAS;
 				INFOPLIST_FILE = Encore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
