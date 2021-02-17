@@ -630,7 +630,7 @@
                                             <constraint firstAttribute="width" constant="150" id="Vba-Wr-f0U"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
-                                        <state key="normal" title="Next">
+                                        <state key="normal" title="Start">
                                             <color key="titleColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
