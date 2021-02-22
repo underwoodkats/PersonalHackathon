@@ -19,10 +19,15 @@ extension UIViewController {
           view.endEditing(true)
       }
    
-    func goTo(screen name: String) {
+    func goTo(screen name: String, isFading: Bool = false) {
         let transition = CATransition()
         transition.duration = 0.30
+        
         transition.type = CATransitionType.moveIn
+        if isFading {
+            transition.type = CATransitionType.fade
+        }
+        
         transition.subtype = CATransitionSubtype.fromRight
         view.window!.layer.add(transition, forKey: kCATransition)
         

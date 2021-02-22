@@ -8,5 +8,15 @@ target 'Encore' do
   pod 'BugfenderSDK', '~> 1.10'
   pod 'TipSee'
   pod 'IQKeyboardManager'
+  
+  pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
+  pod 'Flurry-iOS-SDK/FlurryAds' #Advertising Pod (requires Analytics)
 
+end
+
+# This snippet could be removed when Pods vendors will support Apple M1
+post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+  end
 end

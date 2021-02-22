@@ -26,6 +26,7 @@ struct K {
         static let preparationViewController = "PreparationViewController"
         static let inputGoalsViewController = "InputGoalsViewController"
         static let sessionViewController = "SessionViewController"
+        static let countdownViewController = "CountdownViewController"
         static let scheduleViewController = "ScheduleViewController"
         static let goalsForDayViewController = "GoalsForDayViewController"
         static let congratulationsViewController = "CongratulationsViewController"

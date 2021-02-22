@@ -764,7 +764,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Apg-X1-RCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4438" y="-663"/>
+            <point key="canvasLocation" x="5345" y="-664"/>
+        </scene>
+        <!--Countdown View Controller-->
+        <scene sceneID="aVI-MJ-5us">
+            <objects>
+                <viewController storyboardIdentifier="CountdownViewController" id="6Ke-pE-Btl" customClass="CountdownViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y0g-yc-0oE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l50-uW-2Vx">
+                                <rect key="frame" x="150.5" y="255.5" width="74.5" height="156"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="120"/>
+                                <color key="textColor" red="0.32941176470588235" green="0.36470588235294116" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pik-ec-uW2"/>
+                        <color key="backgroundColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.92549026010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="l50-uW-2Vx" firstAttribute="centerY" secondItem="y0g-yc-0oE" secondAttribute="centerY" id="UP7-CO-QpA"/>
+                            <constraint firstItem="l50-uW-2Vx" firstAttribute="centerX" secondItem="y0g-yc-0oE" secondAttribute="centerX" id="bVW-69-Mf6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="l50-uW-2Vx" id="Sg4-qq-1Pn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BvN-Xj-7MZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3597.5999999999999" y="92.203898050974516"/>
         </scene>
         <!--Session View Controller-->
         <scene sceneID="0xw-NF-iJ2">
@@ -951,7 +981,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TiP-YF-KQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3557.5999999999999" y="91.304347826086968"/>
+            <point key="canvasLocation" x="4433" y="93"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="TY5-al-tTe">
@@ -1021,7 +1051,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbW-4y-dg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4438" y="845"/>
+            <point key="canvasLocation" x="5345" y="843"/>
         </scene>
         <!--Congratulations View Controller-->
         <scene sceneID="f09-AM-vUo">
@@ -1148,7 +1178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otw-kI-EMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4436" y="91.304347826086968"/>
+            <point key="canvasLocation" x="5345" y="93"/>
         </scene>
         <!--Goals Review View Controller-->
         <scene sceneID="ful-o3-19P">
@@ -1229,7 +1259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGG-Nk-HBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5308" y="92.203898050974516"/>
+            <point key="canvasLocation" x="6287" y="91"/>
         </scene>
     </scenes>
     <designables>
@@ -1240,7 +1270,7 @@
             <size key="intrinsicContentSize" width="87" height="42"/>
         </designable>
         <designable name="L11-TY-dJn">
-            <size key="intrinsicContentSize" width="52" height="42"/>
+            <size key="intrinsicContentSize" width="50" height="42"/>
         </designable>
         <designable name="UjS-EU-KAb">
             <size key="intrinsicContentSize" width="144" height="90"/>

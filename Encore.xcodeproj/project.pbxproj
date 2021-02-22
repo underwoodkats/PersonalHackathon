@@ -10,6 +10,13 @@
 		6AC76EE2186506BB97550A34 /* Pods_Encore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4564A3F33594FEA54CB312BE /* Pods_Encore.framework */; };
 		7809950D25BF9BF800E539CA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809950C25BF9BF800E539CA /* NotificationManager.swift */; };
 		78E4AFB025DAEADD000266EC /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E4AFAF25DAEADD000266EC /* AppStoreReviewManager.swift */; };
+		78E6F70325DEDCB500648BB0 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6F70225DEDCB500648BB0 /* ProgressView.swift */; };
+		78E6F70625DEE6D800648BB0 /* ProgressShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6F70525DEE6D800648BB0 /* ProgressShapeLayer.swift */; };
+		78E6F70925DEF15A00648BB0 /* StrokeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6F70825DEF15A00648BB0 /* StrokeAnimation.swift */; };
+		78E6F70E25DEF33800648BB0 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6F70D25DEF33800648BB0 /* CountdownViewController.swift */; };
+		78E6F71825E0144400648BB0 /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6F71725E0144400648BB0 /* RotationAnimation.swift */; };
+		78E6F71B25E025D400648BB0 /* StrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6F71A25E025D400648BB0 /* StrokeColorAnimation.swift */; };
+		78E6F71E25E02F7200648BB0 /* ScreenSizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6F71D25E02F7200648BB0 /* ScreenSizeManager.swift */; };
 		7D00DC90259474AF006965A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DC8F259474AF006965A8 /* AppDelegate.swift */; };
 		7D00DC94259474AF006965A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DC93259474AF006965A8 /* HomeViewController.swift */; };
 		7D00DC97259474AF006965A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D00DC95259474AF006965A8 /* Main.storyboard */; };
@@ -58,6 +65,13 @@
 		70BA6D38B51870E966035059 /* Pods-Encore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encore.debug.xcconfig"; path = "Target Support Files/Pods-Encore/Pods-Encore.debug.xcconfig"; sourceTree = "<group>"; };
 		7809950C25BF9BF800E539CA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		78E4AFAF25DAEADD000266EC /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
+		78E6F70225DEDCB500648BB0 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		78E6F70525DEE6D800648BB0 /* ProgressShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressShapeLayer.swift; sourceTree = "<group>"; };
+		78E6F70825DEF15A00648BB0 /* StrokeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeAnimation.swift; sourceTree = "<group>"; };
+		78E6F70D25DEF33800648BB0 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		78E6F71725E0144400648BB0 /* RotationAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationAnimation.swift; sourceTree = "<group>"; };
+		78E6F71A25E025D400648BB0 /* StrokeColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeColorAnimation.swift; sourceTree = "<group>"; };
+		78E6F71D25E02F7200648BB0 /* ScreenSizeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeManager.swift; sourceTree = "<group>"; };
 		7D00DC8C259474AF006965A8 /* Encore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D00DC8F259474AF006965A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D00DC93259474AF006965A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -129,8 +143,21 @@
 				7DA7860625AEAE6C0008DE05 /* ToolTipManager.swift */,
 				7809950C25BF9BF800E539CA /* NotificationManager.swift */,
 				78E4AFAF25DAEADD000266EC /* AppStoreReviewManager.swift */,
+				78E6F71D25E02F7200648BB0 /* ScreenSizeManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		78E6F70B25DEF2B300648BB0 /* Circular Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				78E6F70225DEDCB500648BB0 /* ProgressView.swift */,
+				78E6F70525DEE6D800648BB0 /* ProgressShapeLayer.swift */,
+				78E6F70825DEF15A00648BB0 /* StrokeAnimation.swift */,
+				78E6F71725E0144400648BB0 /* RotationAnimation.swift */,
+				78E6F71A25E025D400648BB0 /* StrokeColorAnimation.swift */,
+			);
+			path = "Circular Indicator";
 			sourceTree = "<group>";
 		};
 		7D00DC83259474AF006965A8 = {
@@ -175,6 +202,7 @@
 				7D00DCA725948057006965A8 /* EncoreButton.swift */,
 				7D68A71325970EA90073E5EE /* ModeButton.swift */,
 				7D0D5DED25A9886B00A5E004 /* FeedbackTextView.swift */,
+				78E6F70B25DEF2B300648BB0 /* Circular Indicator */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -196,6 +224,7 @@
 				7D00DC93259474AF006965A8 /* HomeViewController.swift */,
 				7D00DCB22594BDDB006965A8 /* PreparationViewController.swift */,
 				7D68A71E259725AE0073E5EE /* InputGoalsViewController.swift */,
+				78E6F70D25DEF33800648BB0 /* CountdownViewController.swift */,
 				7DCF0CDC259F0D1700FC25CB /* SessionViewController.swift */,
 				7DCF0CE225A040B500FC25CB /* ScheduleViewController.swift */,
 				7DCF0CE625A04FFB00FC25CB /* GoalsForDayViewController.swift */,
@@ -406,6 +435,7 @@
 			files = (
 				7D0D5DE525A9707300A5E004 /* UIViewController+Extension.swift in Sources */,
 				7D68A73225987EA90073E5EE /* String+Extension.swift in Sources */,
+				78E6F71B25E025D400648BB0 /* StrokeColorAnimation.swift in Sources */,
 				7D68A71425970EA90073E5EE /* ModeButton.swift in Sources */,
 				7DAD5B4C2594CF6300C902EE /* Session.swift in Sources */,
 				7DBC31E825AB5BDB00C9F75B /* WalkthroughThirdContentViewController.swift in Sources */,
@@ -419,14 +449,19 @@
 				7DAD5B522594D04D00C902EE /* EncoreBrain.swift in Sources */,
 				7DCF0CDD259F0D1700FC25CB /* SessionViewController.swift in Sources */,
 				7DA7860A25AECA520008DE05 /* Metrics.swift in Sources */,
+				78E6F71825E0144400648BB0 /* RotationAnimation.swift in Sources */,
 				7DBC31DC25AB298400C9F75B /* WalkthroughViewController.swift in Sources */,
+				78E6F70E25DEF33800648BB0 /* CountdownViewController.swift in Sources */,
 				7DAD5B4F2594CF8E00C902EE /* Stage.swift in Sources */,
+				78E6F70325DEDCB500648BB0 /* ProgressView.swift in Sources */,
 				7D68A71F259725AE0073E5EE /* InputGoalsViewController.swift in Sources */,
 				7DCF0CE725A04FFB00FC25CB /* GoalsForDayViewController.swift in Sources */,
 				7D00DC94259474AF006965A8 /* HomeViewController.swift in Sources */,
 				7DAD5B582596E56E00C902EE /* Constants.swift in Sources */,
 				7DCF0CE325A040B500FC25CB /* ScheduleViewController.swift in Sources */,
 				7DAD5B5D2596EC8700C902EE /* ScheduleCell.swift in Sources */,
+				78E6F71E25E02F7200648BB0 /* ScreenSizeManager.swift in Sources */,
+				78E6F70925DEF15A00648BB0 /* StrokeAnimation.swift in Sources */,
 				7DBC31E525AB5BC500C9F75B /* WalkthroughSecondContentViewController.swift in Sources */,
 				7D00DCA825948057006965A8 /* EncoreButton.swift in Sources */,
 				7D00DC90259474AF006965A8 /* AppDelegate.swift in Sources */,
@@ -439,6 +474,7 @@
 				7D68A72F25972F830073E5EE /* Goal.swift in Sources */,
 				7809950D25BF9BF800E539CA /* NotificationManager.swift in Sources */,
 				7DA4F82425A5FC4100FE8537 /* HelpViewController.swift in Sources */,
+				78E6F70625DEE6D800648BB0 /* ProgressShapeLayer.swift in Sources */,
 				7D68A727259728230073E5EE /* GoalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,6 +627,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = V4NCRG9QAS;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = Encore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -616,6 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = V4NCRG9QAS;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = Encore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
