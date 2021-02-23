@@ -49,10 +49,10 @@ class CountdownViewController: UIViewController {
             timerLabel.font = timerLabel.font.withSize(Metrics.CountdownScreen.smallTimerFontSize)
         case .medium:
             indicatorSize = Metrics.CountdownScreen.mediumIndicatorSize
-            timerLabel.font = timerLabel.font.withSize(Metrics.CountdownScreen.mediumIndicatorSize)
+            timerLabel.font = timerLabel.font.withSize(Metrics.CountdownScreen.mediumTimerFontSize)
         case .large:
             indicatorSize = Metrics.CountdownScreen.largeIndicatorSize
-            timerLabel.font = timerLabel.font.withSize(Metrics.CountdownScreen.largeIndicatorSize)
+            timerLabel.font = timerLabel.font.withSize(Metrics.CountdownScreen.largeTimerFontSize)
         }
     }
     
