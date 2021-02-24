@@ -5,12 +5,9 @@ target 'Encore' do
   use_frameworks!
 
   # Pods for Encore
-  pod 'BugfenderSDK', '~> 1.10'
   pod 'TipSee'
   pod 'IQKeyboardManager'
-  
   pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
-  pod 'Flurry-iOS-SDK/FlurryAds' #Advertising Pod (requires Analytics)
 
 end
 

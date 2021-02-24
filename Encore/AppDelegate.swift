@@ -7,7 +7,6 @@
 
 import UIKit
 import IQKeyboardManager
-@_exported import BugfenderSDK
 import Flurry_iOS_SDK
 
 @main
@@ -17,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let notificationManager = NotificationManager.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setBugfender()
         configureInitialViewController()
         setIQKeyboardManager()
         configureFlurry()
@@ -48,12 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
-    }
-    
-    private func setBugfender() {
-        Bugfender.activateLogger("FyR8iFCy4n4CvOR7YW2OVffxhZE93oVE")
-        Bugfender.enableCrashReporting()
-//        Bugfender.enableUIEventLogging()
     }
     
     private func setIQKeyboardManager() {

@@ -7,7 +7,6 @@
 
 import Foundation
 import UserNotifications
-import BugfenderSDK
 
 class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     static let shared = NotificationManager()
@@ -17,12 +16,11 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     let notificationCenter = UNUserNotificationCenter.current()
     let options: UNAuthorizationOptions = [.alert, .sound, .badge]
     
-    
     func requestForPersmission() {
         notificationCenter.requestAuthorization(options: options) { (didAllow, error) in
-            if (!didAllow) {
-                BFLog(K.Notifications.didNotAllowNotificationsLog)
-            }
+            let eventName = "Notification_Persmission"
+            let eventParams = ["Allowed": didAllow]
+            AnalyticsManager.logEvent(eventName, eventParams)
         }
     }
     
@@ -42,7 +40,8 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         
         notificationCenter.add(request) { (error) in
             if let error = error {
-                BFLog(error.localizedDescription)
+                let errorMessage = "An error occured with scheduling notification."
+                AnalyticsManager.logError(errorMessage: errorMessage, error: error)
             }
         }
     }

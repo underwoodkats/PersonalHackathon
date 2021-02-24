@@ -9,7 +9,8 @@ import UIKit
 
 class SendFeedbackViewController: UIViewController {
     
-    // TODO: Level 3 - Fix the problem that a user can't edit the text, but unevitable remove it
+    // TODO: Level 2 - Fix the problem that a user can't edit the text, but unevitable remove it
+    // TODO: Level 1 - This screen will be removed completely 
     
     // MARK: - IBOutlets
     
@@ -64,7 +65,6 @@ class SendFeedbackViewController: UIViewController {
     
     @IBAction func sendFeedbackPressed(_ sender: EncoreButton) {
         if let message = textView.text {
-            Bugfender.sendUserFeedbackReturningUrl(withSubject: "Feedback", message: message)
             goToHomeScreen()
         }
     }

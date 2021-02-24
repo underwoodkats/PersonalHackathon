@@ -1,31 +1,24 @@
 PODS:
-  - BugfenderSDK (1.10.0)
-  - Flurry-iOS-SDK/FlurryAds (11.2.0):
-    - Flurry-iOS-SDK/FlurrySDK (~> 11.2.0)
   - Flurry-iOS-SDK/FlurrySDK (11.2.0)
   - IQKeyboardManager (6.5.6)
   - TipSee (1.4.0)
 
 DEPENDENCIES:
-  - BugfenderSDK (~> 1.10)
-  - Flurry-iOS-SDK/FlurryAds
   - Flurry-iOS-SDK/FlurrySDK
   - IQKeyboardManager
   - TipSee
 
 SPEC REPOS:
   trunk:
-    - BugfenderSDK
     - Flurry-iOS-SDK
     - IQKeyboardManager
     - TipSee
 
 SPEC CHECKSUMS:
-  BugfenderSDK: 2cbdbc72b28b73732a4c281194367b0756ad4bc3
   Flurry-iOS-SDK: 6636d30c30f12010e7c7c71d84b443416a168efc
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   TipSee: 3b3a31aaff5edd47bc6e2c5099a1cfab6ec4a920
 
-PODFILE CHECKSUM: c1c05458003e2e66af9d4ce1085b6b7f83d026a7
+PODFILE CHECKSUM: de2386588fa76e784c1546a24e6cc944da90e2bc
 
 COCOAPODS: 1.10.1

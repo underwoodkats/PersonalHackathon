@@ -17,4 +17,9 @@ class AnalyticsManager {
     static func logEvent(_ eventName: String) {
         Flurry.logEvent(eventName)
     }
+    
+    static func logError(errorMessage: String?, error: Error?) {
+        let errorID = UUID().uuidString
+        Flurry.logError(errorID, message: errorMessage, error: error)
+    }
 }
