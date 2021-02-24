@@ -70,6 +70,7 @@ class SessionViewController: UIViewController {
         checkIfUserHasGoals()
         model.startSession()
         adjustUI()
+        sendAnalytics()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -246,6 +247,25 @@ class SessionViewController: UIViewController {
         }
     }
     
+    private func sendAnalytics() {
+        let eventName = "Session_Start"
+        let sessionVolume = model.currentSession?.stages.count ?? 0
+        let goalsCount = model.goals.count
+        
+        let eventParams = ["Session_Volume": sessionVolume, "Goals_Count": goalsCount]
+        
+        AnalyticsManager.logEvent(eventName, eventParams)
+    }
+    
+    private func sendInfoAnalytics() {
+        let eventName = "Info_Clicked"
+        let stageName = model.getCurrentStage()?.name ?? ""
+        
+        let eventParams = ["Stage_Name": stageName]
+        
+        AnalyticsManager.logEvent(eventName, eventParams)
+    }
+    
     @objc private func updateTimerLabel() {
         counter -= 1
         let timerLabelText = Int(counter).stringTimeFormat()
@@ -290,11 +310,13 @@ class SessionViewController: UIViewController {
     @IBAction func schedulePressed(_ sender: UIButton) {
         goTo(screen: K.StoryBoard.scheduleViewController)
     }
+    
     @IBAction func goalsPressed(_ sender: UIButton) {
         goTo(screen: K.StoryBoard.goalsForDayViewController)
     }
     
     @IBAction func infoPressed(_ sender: Any) {
+        sendInfoAnalytics()
         openToolTip()
     }
 }

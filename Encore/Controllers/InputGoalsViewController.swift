@@ -12,7 +12,7 @@ class InputGoalsViewController: UIViewController {
     
     // TODO: Level 3 - Make round corners for the first cell
     // TODO: Level 3 - Make it possible to edit a goal
-    // TODO: Level 3 - When add goal, go down to that goal (move table view)
+    // TODO: Level 2 - When add goal, go down to that goal (move table view)
 
     // MARK: - IBOutlets
     
@@ -133,7 +133,7 @@ class InputGoalsViewController: UIViewController {
     
     @IBAction func nextPressed(_ sender: EncoreButton) {
         if model.goalsCount > 0 || hasPressedNext {
-            goTo(screen: K.StoryBoard.sessionViewController)
+            goTo(screen: K.StoryBoard.countdownViewController)
         } else {
             hasPressedNext = true
             toolTipManager?.showToolTip(attachTo: sender, textArray: K.ToolTips.insertGoalScreenWarningTip, toolTipType: .Warning)

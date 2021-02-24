@@ -52,6 +52,8 @@ class HelpViewController: UIViewController {
     }
     
     @IBAction func openTutorialPressed(_ sender: UIButton) {
+        AnalyticsManager.logEvent("Tutorial_Clicked")
+        
         let transition = CATransition()
         transition.duration = 0.30
         transition.type = CATransitionType.moveIn

@@ -105,6 +105,10 @@ extension EncoreBrain {
             goals.remove(at: targetIndex)
         }
     }
+    
+    func getGoalsAchivedCount() -> Int {
+        return goals.filter{ $0.isAchieved == true }.count
+    }
 }
 
 // MARK: - Session
