@@ -18,8 +18,8 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     
     func requestForPersmission() {
         notificationCenter.requestAuthorization(options: options) { (didAllow, error) in
-            let eventName = "Notification_Persmission"
-            let eventParams = ["Allowed": didAllow]
+            let eventName = K.AnalyticsEvents.notificationPersmission
+            let eventParams = [K.AnalyticsParams.notificationAllowed: didAllow]
             AnalyticsManager.logEvent(eventName, eventParams)
         }
     }
@@ -40,7 +40,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         
         notificationCenter.add(request) { (error) in
             if let error = error {
-                let errorMessage = "An error occured with scheduling notification."
+                let errorMessage = K.ErrorsMessages.notificationSchedulingErrorMessage
                 AnalyticsManager.logError(errorMessage: errorMessage, error: error)
             }
         }

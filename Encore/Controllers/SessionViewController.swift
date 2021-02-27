@@ -248,20 +248,20 @@ class SessionViewController: UIViewController {
     }
     
     private func sendAnalytics() {
-        let eventName = "Session_Start"
+        let eventName = K.AnalyticsEvents.sessionStart
         let sessionVolume = model.currentSession?.stages.count ?? 0
         let goalsCount = model.goals.count
         
-        let eventParams = ["Session_Volume": sessionVolume, "Goals_Count": goalsCount]
+        let eventParams = [K.AnalyticsParams.sessionVolume: sessionVolume, K.AnalyticsParams.goalsCount: goalsCount]
         
         AnalyticsManager.logEvent(eventName, eventParams)
     }
     
     private func sendInfoAnalytics() {
-        let eventName = "Info_Pressed"
+        let eventName = K.AnalyticsEvents.infoPressed
         let stageName = model.getCurrentStage()?.name ?? ""
         
-        let eventParams = ["Stage_Name": stageName]
+        let eventParams = [K.AnalyticsParams.stageName: stageName]
         
         AnalyticsManager.logEvent(eventName, eventParams)
     }

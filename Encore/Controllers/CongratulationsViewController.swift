@@ -39,16 +39,16 @@ class CongratulationsViewController: UIViewController {
     }
     
     private func sendAnalytics() {
-        let eventName = "Session_End"
+        let eventName = K.AnalyticsEvents.sessionEnd
         let sessionVolume = model.currentSession?.stages.count ?? 0
         let goalsCount = model.goals.count
         let goalsAchiviedCount = model.getGoalsAchivedCount()
         
-        var eventParams = ["Session_Volume": sessionVolume, "Goals_Count": goalsCount, "Goals_Achived_Count": goalsAchiviedCount]
+        var eventParams = [K.AnalyticsParams.sessionVolume: sessionVolume, K.AnalyticsParams.goalsCount: goalsCount, K.AnalyticsParams.goalsAchievedCount: goalsAchiviedCount]
         
         if goalsCount != 0 {
             let percentageOfCompletion = Int(Double(goalsAchiviedCount) / Double(goalsCount) * 100)
-            eventParams["Percentage_Of_Completion_%"] = percentageOfCompletion
+            eventParams[K.AnalyticsParams.percentageOfCompletion] = percentageOfCompletion
         }
         
         AnalyticsManager.logEvent(eventName, eventParams)

@@ -148,4 +148,27 @@ struct K {
         static let appStoreProductPageURL = "https://apps.apple.com/us/app/encore-personal-growth/id1548470945"
         static let productURL = URL(string: appStoreProductPageURL)
     }
+    
+    struct AnalyticsEvents {
+        static let notificationPersmission = "Notification_Persmission"
+        
+        static let sessionStart = "Session_Start"
+        static let sessionEnd = "Session_End"
+        static let infoPressed = "Info_Pressed"
+        static let tutorialPressed = "Tutorial_Pressed"
+        static let shareAppPressed = "Share_Pressed"
+    }
+    
+    struct AnalyticsParams {
+        static let notificationAllowed = "Notification_Allowed"
+        static let sessionVolume = "Session_Volume"
+        static let goalsCount = "Goals_Count"
+        static let stageName = "Stage_Name"
+        static let goalsAchievedCount = "Goals_Achived_Count"
+        static let percentageOfCompletion = "Percentage_Of_Completion_%"
+    }
+    
+    struct ErrorsMessages {
+        static let notificationSchedulingErrorMessage = "An error occured with scheduling notification."
+    }
 }

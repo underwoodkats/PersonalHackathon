@@ -77,7 +77,7 @@ class MoreViewController: UIViewController {
     }
     
     @IBAction func openTutorialPressed(_ sender: UIButton) {
-        AnalyticsManager.logEvent("Tutorial_Pressed")
+        AnalyticsManager.logEvent(K.AnalyticsEvents.tutorialPressed)
         
         let transition = CATransition()
         transition.duration = 0.30
@@ -92,7 +92,7 @@ class MoreViewController: UIViewController {
     }
     
     @IBAction func shareAppPressed(_ sender: UIButton) {
-        AnalyticsManager.logEvent("Share_Pressed")
+        AnalyticsManager.logEvent(K.AnalyticsEvents.shareAppPressed)
         share()
     }
     
