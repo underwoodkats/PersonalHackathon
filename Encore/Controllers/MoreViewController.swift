@@ -16,6 +16,7 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var tutorialAreaStackView: UIStackView!
     @IBOutlet weak var contactUsAreaStackView: UIStackView!
     @IBOutlet weak var shareAppAreaStackView: UIStackView!
+    @IBOutlet weak var versionLabel: UILabel!
     
     // MARK: - Private Variables
     
@@ -27,6 +28,7 @@ class MoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setVersionLabel()
     }
     
     override func viewWillLayoutSubviews() {
@@ -60,6 +62,12 @@ class MoreViewController: UIViewController {
             applicationActivities: nil)
         
         present(activityViewController, animated: true, completion: nil)
+    }
+    
+    private func setVersionLabel() {
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            self.versionLabel.text = "Encore \(version)"
+        }
     }
     
     // MARK: - IBActions
