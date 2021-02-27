@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="PYg-ZT-MTf">
-                                <rect key="frame" x="24" y="590" width="327" height="45"/>
+                                <rect key="frame" x="24" y="590" width="328" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMq-gq-Yq4" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="86e-oj-ALN"/>
                                             <constraint firstAttribute="width" constant="150" id="Omh-ta-4ej"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
-                                        <state key="normal" title="Help"/>
+                                        <state key="normal" title="More"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimaryButton" value="NO"/>
                                         </userDefinedRuntimeAttributes>
@@ -36,7 +36,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAQ-Tu-k6W" customClass="EncoreButton" customModule="Encore" customModuleProvider="target">
-                                        <rect key="frame" x="177.5" y="0.0" width="149.5" height="45"/>
+                                        <rect key="frame" x="178" y="0.0" width="150" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="C47-Wj-nVl"/>
                                             <constraint firstAttribute="width" constant="150" id="Zod-48-S2l"/>
@@ -55,16 +55,16 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get productive!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2Y-ZH-W4M">
-                                <rect key="frame" x="43" y="90" width="289.5" height="42"/>
+                                <rect key="frame" x="43.5" y="90" width="289.5" height="42"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.35686274509999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-dZ-yXT">
-                                <rect key="frame" x="0.0" y="132" width="375" height="458"/>
+                                <rect key="frame" x="0.0" y="132" width="376" height="458"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" image="WelcomingCat" translatesAutoresizingMaskIntoConstraints="NO" id="hjR-68-d8N">
-                                        <rect key="frame" x="20" y="20" width="335" height="418"/>
+                                        <rect key="frame" x="20" y="20" width="336" height="418"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -75,7 +75,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="e8m-gp-JG7">
-                                <rect key="frame" x="79" y="45" width="217" height="37"/>
+                                <rect key="frame" x="79.5" y="45" width="217" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="BB6-xF-9E6"/>
                                     <constraint firstAttribute="width" constant="217" id="mX9-9c-bi3"/>
@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="93.103448275862078"/>
         </scene>
-        <!--Help View Controller-->
+        <!--More View Controller-->
         <scene sceneID="jxG-x1-oI0">
             <objects>
-                <viewController storyboardIdentifier="HelpViewController" id="2G0-u8-v0B" customClass="HelpViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreViewController" id="2G0-u8-v0B" customClass="MoreViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gdK-Sc-Tpf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,8 +123,8 @@
                                     <action selector="backPressed:" destination="2G0-u8-v0B" eventType="touchUpInside" id="qME-Gh-Hi9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1e-Z5-YlV">
-                                <rect key="frame" x="155.5" y="74" width="64.5" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1e-Z5-YlV">
+                                <rect key="frame" x="150.5" y="74" width="74.5" height="39"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <color key="textColor" red="0.35294117650000001" green="0.34901960780000002" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -137,7 +137,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-73-ODg">
-                                <rect key="frame" x="0.0" y="138" width="375" height="130"/>
+                                <rect key="frame" x="0.0" y="138" width="375" height="195"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Mj-63-wKA">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
@@ -184,11 +184,38 @@
                                                     <constraint firstAttribute="height" constant="65" id="QGb-Sb-bi8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                <state key="normal" title="Give Us Feedback">
+                                                <state key="normal" title="Contact Us">
                                                     <color key="titleColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="giveUsFeedbackPressed:" destination="2G0-u8-v0B" eventType="touchUpInside" id="2Uz-t6-kP5"/>
+                                                    <action selector="contactUsPressed:" destination="2G0-u8-v0B" eventType="touchUpInside" id="2Uz-t6-kP5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Z2M-N6-dLK">
+                                        <rect key="frame" x="0.0" y="130" width="375" height="65"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG1-aC-1oc">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="65"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="mYJ-1x-Cgx"/>
+                                                    <constraint firstAttribute="height" constant="65" id="zTh-KR-nzG"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-C7-Lhd">
+                                                <rect key="frame" x="25" y="0.0" width="350" height="65"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="6DR-4S-cwh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                <state key="normal" title="Share the App">
+                                                    <color key="titleColor" red="0.41903901100000002" green="0.4313421845" blue="0.67184287310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="shareAppPressed:" destination="2G0-u8-v0B" eventType="touchUpInside" id="Bxk-Sj-tIv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -200,6 +227,8 @@
                                     <constraint firstItem="7Mj-63-wKA" firstAttribute="leading" secondItem="pfx-73-ODg" secondAttribute="leading" id="HHA-nu-gbv"/>
                                     <constraint firstItem="6jW-L3-sCF" firstAttribute="leading" secondItem="pfx-73-ODg" secondAttribute="leading" id="JUg-Od-H9h"/>
                                     <constraint firstAttribute="trailing" secondItem="6jW-L3-sCF" secondAttribute="trailing" id="M8F-vz-OxN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z2M-N6-dLK" secondAttribute="trailing" id="kEQ-wW-CBQ"/>
+                                    <constraint firstItem="Z2M-N6-dLK" firstAttribute="leading" secondItem="pfx-73-ODg" secondAttribute="leading" id="zcw-bo-5uW"/>
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="HdM-dA-uvp">
@@ -227,13 +256,29 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="feedbackAreaStackView" destination="6jW-L3-sCF" id="5yj-Js-sqR"/>
+                        <outlet property="contactUsAreaStackView" destination="6jW-L3-sCF" id="5yj-Js-sqR"/>
+                        <outlet property="shareAppAreaStackView" destination="Z2M-N6-dLK" id="kTZ-4E-gdy"/>
                         <outlet property="tutorialAreaStackView" destination="7Mj-63-wKA" id="mIO-Qa-ca5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOP-4D-3nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="843.32833583208401"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dyx-lo-Xx6">
+            <objects>
+                <viewController id="lk7-Xb-1Zf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lgt-OF-LSG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ycd-0u-RBQ"/>
+                        <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDX-ve-JBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879" y="843"/>
         </scene>
         <!--Send Feedback View Controller-->
         <scene sceneID="c5b-T4-sie">
@@ -355,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRy-cj-13Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881" y="844"/>
+            <point key="canvasLocation" x="1879" y="1571"/>
         </scene>
         <!--Preparation-->
         <scene sceneID="MR4-ia-MqF">
@@ -1297,7 +1342,7 @@
             <size key="intrinsicContentSize" width="50" height="42"/>
         </designable>
         <designable name="zMq-gq-Yq4">
-            <size key="intrinsicContentSize" width="50" height="42"/>
+            <size key="intrinsicContentSize" width="58" height="42"/>
         </designable>
         <designable name="zcv-UV-2zJ">
             <size key="intrinsicContentSize" width="74" height="42"/>

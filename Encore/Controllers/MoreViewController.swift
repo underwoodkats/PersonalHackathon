@@ -1,5 +1,5 @@
 //
-//  HelpViewController.swift
+//  MoreViewController.swift
 //  Encore
 //
 //  Created by Katselenbogen, Igor | Rogi | MESD on 2021/01/06.
@@ -7,17 +7,21 @@
 
 import UIKit
 
-class HelpViewController: UIViewController {
+class MoreViewController: UIViewController {
+    
+    // TODO: Level 1 - Send analytics on all actions that are pressed here
     
     // MARK: - IBOutlets
     
     @IBOutlet weak var tutorialAreaStackView: UIStackView!
-    @IBOutlet weak var feedbackAreaStackView: UIStackView!
+    @IBOutlet weak var contactUsAreaStackView: UIStackView!
+    @IBOutlet weak var shareAppAreaStackView: UIStackView!
     
     // MARK: - Private Variables
     
     private let tutorialGradientLayer = CAGradientLayer()
-    private let feedbackGradientLayer = CAGradientLayer()
+    private let contactGradientLayer = CAGradientLayer()
+    private let shareAppGradientLayer = CAGradientLayer()
 
     // MARK: - Life Cycles
 
@@ -35,14 +39,27 @@ class HelpViewController: UIViewController {
         let colorTop = K.Colors.gradientYellowTop
         let colorBottom = K.Colors.gradientYellowBottom
         
-        tutorialGradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
-        feedbackGradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
+        let commonColorList = [colorTop.cgColor, colorBottom.cgColor]
+        
+        tutorialGradientLayer.colors = commonColorList
+        contactGradientLayer.colors = commonColorList
+        shareAppGradientLayer.colors = commonColorList
         
         tutorialGradientLayer.frame = tutorialAreaStackView.bounds
-        feedbackGradientLayer.frame = feedbackAreaStackView.bounds
+        contactGradientLayer.frame = contactUsAreaStackView.bounds
+        shareAppGradientLayer.frame = shareAppAreaStackView.bounds
         
         tutorialAreaStackView.layer.insertSublayer(tutorialGradientLayer, at: 0)
-        feedbackAreaStackView.layer.insertSublayer(feedbackGradientLayer, at: 0)
+        contactUsAreaStackView.layer.insertSublayer(contactGradientLayer, at: 0)
+        shareAppAreaStackView.layer.insertSublayer(shareAppGradientLayer, at: 0)
+    }
+    
+    private func share() {
+        let activityViewController = UIActivityViewController(
+            activityItems: [K.URLs.productURL!],
+            applicationActivities: nil)
+        
+        present(activityViewController, animated: true, completion: nil)
     }
     
     // MARK: - IBActions
@@ -52,7 +69,7 @@ class HelpViewController: UIViewController {
     }
     
     @IBAction func openTutorialPressed(_ sender: UIButton) {
-        AnalyticsManager.logEvent("Tutorial_Clicked")
+        AnalyticsManager.logEvent("Tutorial_Pressed")
         
         let transition = CATransition()
         transition.duration = 0.30
@@ -66,7 +83,12 @@ class HelpViewController: UIViewController {
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
-    @IBAction func giveUsFeedbackPressed(_ sender: UIButton) {
+    @IBAction func shareAppPressed(_ sender: UIButton) {
+        AnalyticsManager.logEvent("Share_Pressed")
+        share()
+    }
+    
+    @IBAction func contactUsPressed(_ sender: UIButton) {
         goTo(screen: K.StoryBoard.sendFeedbackViewController)
     }
 }

@@ -31,7 +31,7 @@ struct K {
         static let goalsForDayViewController = "GoalsForDayViewController"
         static let congratulationsViewController = "CongratulationsViewController"
         static let goalsReviewViewController = "GoalsReviewViewController"
-        static let helpViewController = "HelpViewController"
+        static let moreViewController = "MoreViewController"
         static let sendFeedbackViewController = "SendFeedbackViewController"
     }
     
@@ -142,5 +142,10 @@ struct K {
         // Congratulations Screen
         static let callToReviewText = "Check the review to evaluate your results!"
         static let noGoalsToReviewText = "Reward yourself with a treat! And rest well until the next time"
+    }
+    
+    struct URLs {
+        static let appStoreProductPageURL = "https://apps.apple.com/us/app/encore-personal-growth/id1548470945"
+        static let productURL = URL(string: appStoreProductPageURL)
     }
 }

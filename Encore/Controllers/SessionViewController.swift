@@ -258,7 +258,7 @@ class SessionViewController: UIViewController {
     }
     
     private func sendInfoAnalytics() {
-        let eventName = "Info_Clicked"
+        let eventName = "Info_Pressed"
         let stageName = model.getCurrentStage()?.name ?? ""
         
         let eventParams = ["Stage_Name": stageName]
