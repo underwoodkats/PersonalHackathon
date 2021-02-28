@@ -9,8 +9,6 @@ import UIKit
 
 class MoreViewController: UIViewController {
     
-    // TODO: Level 1 - Send analytics on all actions that are pressed here
-    
     // MARK: - IBOutlets
     
     @IBOutlet weak var tutorialAreaStackView: UIStackView!
@@ -62,7 +60,7 @@ class MoreViewController: UIViewController {
     }
     
     private func writeReview() {
-        var components = URLComponents(url: K.URLs.productURL!, resolvingAgainstBaseURL: false)
+        var components = URLComponents(url: K.ExternalLinks.productURL!, resolvingAgainstBaseURL: false)
         
         components?.queryItems = [
             URLQueryItem(name: "action", value: "write-review")
@@ -77,7 +75,7 @@ class MoreViewController: UIViewController {
     
     private func share() {
         let activityViewController = UIActivityViewController(
-            activityItems: [K.URLs.productURL!],
+            activityItems: [K.ExternalLinks.productURL!],
             applicationActivities: nil)
         
         present(activityViewController, animated: true, completion: nil)
@@ -111,8 +109,8 @@ class MoreViewController: UIViewController {
     }
     
     @IBAction func contactUsPressed(_ sender: UIButton) {
-        goTo(screen: K.StoryBoard.sendFeedbackViewController)
-//        sendEmail()
+        AnalyticsManager.logEvent(K.AnalyticsEvents.contactUsPressed)
+        goTo(screen: K.StoryBoard.contactsViewController)
     }
     
     @IBAction func shareAppPressed(_ sender: UIButton) {

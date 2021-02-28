@@ -317,20 +317,138 @@
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="843.32833583208401"/>
         </scene>
-        <!--View Controller-->
+        <!--Contacts View Controller-->
         <scene sceneID="Dyx-lo-Xx6">
             <objects>
-                <viewController id="lk7-Xb-1Zf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactsViewController" id="lk7-Xb-1Zf" customClass="ContactsViewController" customModule="Encore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lgt-OF-LSG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9i-vc-2fr">
+                                <rect key="frame" x="25" y="25" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="0nb-pe-APx"/>
+                                    <constraint firstAttribute="width" constant="24" id="5nh-6k-hPL"/>
+                                </constraints>
+                                <state key="normal" image="BackArrow"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="lk7-Xb-1Zf" eventType="touchUpInside" id="dwA-k0-FrX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EncoreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-fI-jyB">
+                                <rect key="frame" x="110" y="23" width="155" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="45f-vo-ZbA"/>
+                                    <constraint firstAttribute="height" constant="28" id="MS2-op-9Ft"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1s-dO-VCV">
+                                <rect key="frame" x="113.5" y="76" width="148.5" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" red="0.35294118520000001" green="0.34901961679999999" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UMD-0Y-1Fi">
+                                <rect key="frame" x="35" y="140" width="305" height="353"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="yQk-dz-mVV">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="161.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SMS-uy-KlW">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="161.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSy-NC-mio">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="bSy-NC-mio" secondAttribute="height" multiplier="1:1" id="gpG-yC-v1p"/>
+                                                        </constraints>
+                                                        <state key="normal" image="FeedbackButton"/>
+                                                        <connections>
+                                                            <action selector="sendFeedbackPressed:" destination="lk7-Xb-1Zf" eventType="touchUpInside" id="Tov-TE-y2O"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG1-ta-WuY">
+                                                        <rect key="frame" x="19.5" y="135.5" width="88.5" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" red="0.35294118520000001" green="0.34901961679999999" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ubG-QJ-NQ6">
+                                                <rect key="frame" x="177.5" y="0.0" width="127.5" height="161.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zh-Oa-y6g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="5Zh-Oa-y6g" secondAttribute="height" multiplier="1:1" id="QQp-KG-st7"/>
+                                                        </constraints>
+                                                        <state key="normal" image="InstaButton"/>
+                                                        <connections>
+                                                            <action selector="openInstaPressed:" destination="lk7-Xb-1Zf" eventType="touchUpInside" id="P24-m6-Fzb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-EZ-fao">
+                                                        <rect key="frame" x="19" y="135.5" width="90" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" red="0.35294118520000001" green="0.34901961679999999" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="5Zh-Oa-y6g" firstAttribute="width" secondItem="bSy-NC-mio" secondAttribute="width" id="fam-e8-0gs"/>
+                                            <constraint firstItem="5Zh-Oa-y6g" firstAttribute="height" secondItem="bSy-NC-mio" secondAttribute="height" id="rTI-pk-va4"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gDo-5V-e18">
+                                        <rect key="frame" x="0.0" y="191.5" width="127.5" height="161.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2C-p2-A9B">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="N2C-p2-A9B" secondAttribute="height" multiplier="1:1" id="w7s-M8-V3w"/>
+                                                </constraints>
+                                                <state key="normal" image="WebsiteButton"/>
+                                                <connections>
+                                                    <action selector="openWebsitePressed:" destination="lk7-Xb-1Zf" eventType="touchUpInside" id="P6M-GD-fed"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mY9-cs-VZo">
+                                                <rect key="frame" x="27.5" y="135.5" width="73" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                <color key="textColor" red="0.35294118520000001" green="0.34901961679999999" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="N2C-p2-A9B" firstAttribute="height" secondItem="bSy-NC-mio" secondAttribute="height" id="QFW-MO-XM7"/>
+                                    <constraint firstItem="N2C-p2-A9B" firstAttribute="width" secondItem="bSy-NC-mio" secondAttribute="width" id="bbN-31-Yo8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ycd-0u-RBQ"/>
                         <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="gTD-fI-jyB" firstAttribute="centerX" secondItem="Lgt-OF-LSG" secondAttribute="centerX" id="1TA-Sj-lk4"/>
+                            <constraint firstItem="x9i-vc-2fr" firstAttribute="leading" secondItem="ycd-0u-RBQ" secondAttribute="leading" constant="25" id="G2W-d8-jBP"/>
+                            <constraint firstItem="UMD-0Y-1Fi" firstAttribute="top" secondItem="Q1s-dO-VCV" secondAttribute="bottom" constant="25" id="GZS-c8-TrL"/>
+                            <constraint firstItem="gTD-fI-jyB" firstAttribute="centerY" secondItem="x9i-vc-2fr" secondAttribute="centerY" id="Ped-7y-O31"/>
+                            <constraint firstItem="x9i-vc-2fr" firstAttribute="top" secondItem="ycd-0u-RBQ" secondAttribute="top" constant="25" id="YfL-pS-2Tk"/>
+                            <constraint firstItem="UMD-0Y-1Fi" firstAttribute="leading" secondItem="Lgt-OF-LSG" secondAttribute="leading" constant="35" id="ZFw-Sb-dqV"/>
+                            <constraint firstItem="Q1s-dO-VCV" firstAttribute="centerX" secondItem="Lgt-OF-LSG" secondAttribute="centerX" id="dDe-4e-M4m"/>
+                            <constraint firstItem="Q1s-dO-VCV" firstAttribute="top" secondItem="gTD-fI-jyB" secondAttribute="bottom" constant="25" id="dRP-cO-ShP"/>
+                            <constraint firstItem="ycd-0u-RBQ" firstAttribute="trailing" secondItem="UMD-0Y-1Fi" secondAttribute="trailing" constant="35" id="kyN-e7-s2Z"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDX-ve-JBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="843"/>
+            <point key="canvasLocation" x="1877.5999999999999" y="842.42878560719646"/>
         </scene>
         <!--Send Feedback View Controller-->
         <scene sceneID="c5b-T4-sie">
@@ -1405,12 +1523,15 @@
         <image name="CongratulatingCat" width="286" height="341.5"/>
         <image name="DecidingCat" width="172.5" height="233.5"/>
         <image name="EncoreLogo" width="638.5" height="115"/>
+        <image name="FeedbackButton" width="146" height="146"/>
         <image name="FullEncore" width="90" height="90"/>
         <image name="GoalsList" width="76" height="76"/>
         <image name="HalfEncore" width="90" height="90"/>
         <image name="Info" width="56" height="58"/>
+        <image name="InstaButton" width="146" height="146"/>
         <image name="MiniEncore" width="90" height="90"/>
         <image name="Schedule" width="82" height="86"/>
+        <image name="WebsiteButton" width="146" height="146"/>
         <image name="WelcomingCat" width="213" height="256"/>
         <image name="WorkingCat" width="252.5" height="245"/>
         <image name="Сross" width="54" height="54"/>

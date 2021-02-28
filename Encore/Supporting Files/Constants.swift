@@ -33,6 +33,7 @@ struct K {
         static let goalsReviewViewController = "GoalsReviewViewController"
         static let moreViewController = "MoreViewController"
         static let sendFeedbackViewController = "SendFeedbackViewController"
+        static let contactsViewController = "ContactsViewController"
     }
     
     struct Colors {
@@ -142,11 +143,14 @@ struct K {
         // Congratulations Screen
         static let callToReviewText = "Check the review to evaluate your results!"
         static let noGoalsToReviewText = "Reward yourself with a treat! And rest well until the next time"
+        
+        static let feedbackEmailSubject = "User Feedback"
     }
     
-    struct URLs {
+    struct ExternalLinks {
         static let appStoreProductPageURL = "https://apps.apple.com/us/app/encore-personal-growth/id1548470945"
         static let productURL = URL(string: appStoreProductPageURL)
+        static let encoreEmail = "encore.cat.app@gmail.com"
     }
     
     struct AnalyticsEvents {
@@ -156,8 +160,10 @@ struct K {
         static let sessionEnd = "Session_End"
         static let infoPressed = "Info_Pressed"
         static let tutorialPressed = "Tutorial_Pressed"
+        static let contactUsPressed = "Contact_Us_Pressed"
         static let shareAppPressed = "Share_Pressed"
         static let writeReviewPressed = "Write_Review_Pressed"
+        static let sendFeedbackPressed = "Send_Feedback_Pressed"
     }
     
     struct AnalyticsParams {
@@ -171,5 +177,6 @@ struct K {
     
     struct ErrorsMessages {
         static let notificationSchedulingErrorMessage = "An error occured with scheduling notification."
+        static let sendingFeedbackErrorMessage = "An error occured during sending email"
     }
 }
