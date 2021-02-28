@@ -151,6 +151,8 @@ struct K {
         static let appStoreProductPageURL = "https://apps.apple.com/us/app/encore-personal-growth/id1548470945"
         static let productURL = URL(string: appStoreProductPageURL)
         static let encoreEmail = "encore.cat.app@gmail.com"
+        static let encoreInstaAppLink = "instagram://user?username=encore.app"
+        static let encoreInstaWebLink = "https://instagram.com/encore.app"
     }
     
     struct AnalyticsEvents {
@@ -164,6 +166,7 @@ struct K {
         static let shareAppPressed = "Share_Pressed"
         static let writeReviewPressed = "Write_Review_Pressed"
         static let sendFeedbackPressed = "Send_Feedback_Pressed"
+        static let openInstaPressed = "Open_Insta_Pressed"
     }
     
     struct AnalyticsParams {

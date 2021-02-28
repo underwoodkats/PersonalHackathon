@@ -40,6 +40,19 @@ class ContactsViewController: UIViewController {
         present(composer, animated: true)
     }
     
+    private func openInsta() {
+        let appURL = URL(string: K.ExternalLinks.encoreInstaAppLink)!
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        } else {
+            // Open in web browser if user doesn't have instagram
+            let webURL = URL(string: K.ExternalLinks.encoreInstaWebLink)!
+            application.open(webURL)
+        }
+    }
+    
     // MARK: - IBActions
     
     @IBAction func backPressed(_ sender: UIButton) {
@@ -52,7 +65,8 @@ class ContactsViewController: UIViewController {
     }
     
     @IBAction func openInstaPressed(_ sender: UIButton) {
-        
+        AnalyticsManager.logEvent(K.AnalyticsEvents.openInstaPressed)
+        openInsta()
     }
     
     @IBAction func openWebsitePressed(_ sender: UIButton) {
