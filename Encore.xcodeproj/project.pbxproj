@@ -28,7 +28,6 @@
 		7D00DCAD259483FD006965A8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DCAC259483FD006965A8 /* UIColor+Extension.swift */; };
 		7D00DCB32594BDDB006965A8 /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00DCB22594BDDB006965A8 /* PreparationViewController.swift */; };
 		7D0D5DE525A9707300A5E004 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D5DE425A9707300A5E004 /* UIViewController+Extension.swift */; };
-		7D0D5DE825A977C300A5E004 /* SendFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D5DE725A977C300A5E004 /* SendFeedbackViewController.swift */; };
 		7D0D5DEE25A9886B00A5E004 /* FeedbackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D5DED25A9886B00A5E004 /* FeedbackTextView.swift */; };
 		7D0D5DF825AB083700A5E004 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D0D5DF725AB083700A5E004 /* Walkthrough.storyboard */; };
 		7D0D5DFC25AB0D2300A5E004 /* WalkthroughFirstContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D5DFB25AB0D2300A5E004 /* WalkthroughFirstContentViewController.swift */; };
@@ -84,7 +83,6 @@
 		7D00DCAC259483FD006965A8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7D00DCB22594BDDB006965A8 /* PreparationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationViewController.swift; sourceTree = "<group>"; };
 		7D0D5DE425A9707300A5E004 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		7D0D5DE725A977C300A5E004 /* SendFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackViewController.swift; sourceTree = "<group>"; };
 		7D0D5DED25A9886B00A5E004 /* FeedbackTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTextView.swift; sourceTree = "<group>"; };
 		7D0D5DF725AB083700A5E004 /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		7D0D5DFB25AB0D2300A5E004 /* WalkthroughFirstContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughFirstContentViewController.swift; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				7DA4F81F25A4B40000FE8537 /* GoalsReviewViewController.swift */,
 				7DA4F82325A5FC4100FE8537 /* MoreViewController.swift */,
 				78A7F60225EBB15B00223B90 /* ContactsViewController.swift */,
-				7D0D5DE725A977C300A5E004 /* SendFeedbackViewController.swift */,
 				7DBC31DF25AB5B5C00C9F75B /* Walkthrough */,
 			);
 			path = Controllers;
@@ -446,7 +443,6 @@
 				7DAD5B4C2594CF6300C902EE /* Session.swift in Sources */,
 				7DBC31E825AB5BDB00C9F75B /* WalkthroughThirdContentViewController.swift in Sources */,
 				78E4AFB025DAEADD000266EC /* AppStoreReviewManager.swift in Sources */,
-				7D0D5DE825A977C300A5E004 /* SendFeedbackViewController.swift in Sources */,
 				7838C57C25E57BCF00786E7A /* AnalyticsManager.swift in Sources */,
 				7DBC31D925AB202100C9F75B /* WalkthroughPageViewController.swift in Sources */,
 				7DCF0CE0259F391000FC25CB /* Int+Extension.swift in Sources */,

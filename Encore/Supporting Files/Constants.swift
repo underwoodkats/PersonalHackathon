@@ -32,7 +32,6 @@ struct K {
         static let congratulationsViewController = "CongratulationsViewController"
         static let goalsReviewViewController = "GoalsReviewViewController"
         static let moreViewController = "MoreViewController"
-        static let sendFeedbackViewController = "SendFeedbackViewController"
         static let contactsViewController = "ContactsViewController"
     }
     
