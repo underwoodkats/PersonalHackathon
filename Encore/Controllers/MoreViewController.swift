@@ -17,12 +17,14 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var contactUsAreaStackView: UIStackView!
     @IBOutlet weak var shareAppAreaStackView: UIStackView!
     @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var writeReviewAreaStackView: UIStackView!
     
     // MARK: - Private Variables
     
     private let tutorialGradientLayer = CAGradientLayer()
     private let contactGradientLayer = CAGradientLayer()
     private let shareAppGradientLayer = CAGradientLayer()
+    private let writeReviewGradientLayer = CAGradientLayer()
 
     // MARK: - Life Cycles
 
@@ -46,14 +48,31 @@ class MoreViewController: UIViewController {
         tutorialGradientLayer.colors = commonColorList
         contactGradientLayer.colors = commonColorList
         shareAppGradientLayer.colors = commonColorList
+        writeReviewGradientLayer.colors = commonColorList
         
         tutorialGradientLayer.frame = tutorialAreaStackView.bounds
         contactGradientLayer.frame = contactUsAreaStackView.bounds
         shareAppGradientLayer.frame = shareAppAreaStackView.bounds
+        writeReviewGradientLayer.frame = writeReviewAreaStackView.bounds
         
         tutorialAreaStackView.layer.insertSublayer(tutorialGradientLayer, at: 0)
         contactUsAreaStackView.layer.insertSublayer(contactGradientLayer, at: 0)
         shareAppAreaStackView.layer.insertSublayer(shareAppGradientLayer, at: 0)
+        writeReviewAreaStackView.layer.insertSublayer(writeReviewGradientLayer, at: 0)
+    }
+    
+    private func writeReview() {
+        var components = URLComponents(url: K.URLs.productURL!, resolvingAgainstBaseURL: false)
+        
+        components?.queryItems = [
+            URLQueryItem(name: "action", value: "write-review")
+        ]
+        
+        guard let writeReviewURL = components?.url else {
+            return
+        }
+        
+        UIApplication.shared.open(writeReviewURL)
     }
     
     private func share() {
@@ -91,12 +110,18 @@ class MoreViewController: UIViewController {
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
+    @IBAction func contactUsPressed(_ sender: UIButton) {
+        goTo(screen: K.StoryBoard.sendFeedbackViewController)
+//        sendEmail()
+    }
+    
     @IBAction func shareAppPressed(_ sender: UIButton) {
         AnalyticsManager.logEvent(K.AnalyticsEvents.shareAppPressed)
         share()
     }
     
-    @IBAction func contactUsPressed(_ sender: UIButton) {
-        goTo(screen: K.StoryBoard.sendFeedbackViewController)
+    @IBAction func writeReviewPressed(_ sender: UIButton) {
+        AnalyticsManager.logEvent(K.AnalyticsEvents.writeReviewPressed)
+        writeReview()
     }
 }

@@ -157,6 +157,7 @@ struct K {
         static let infoPressed = "Info_Pressed"
         static let tutorialPressed = "Tutorial_Pressed"
         static let shareAppPressed = "Share_Pressed"
+        static let writeReviewPressed = "Write_Review_Pressed"
     }
     
     struct AnalyticsParams {
