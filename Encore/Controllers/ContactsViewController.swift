@@ -10,9 +10,6 @@ import MessageUI
 
 class ContactsViewController: UIViewController {
     
-    // TODO: Level 1 - Remove Feedback Screen
-    // TODO: Level 1 - Send analytics on all actions that are pressed here
-    
     // MARK: - Life Cycles
     
     override func viewDidLoad() {
@@ -70,7 +67,9 @@ class ContactsViewController: UIViewController {
     }
     
     @IBAction func openWebsitePressed(_ sender: UIButton) {
-        
+        AnalyticsManager.logEvent(K.AnalyticsEvents.openWebsitePressed)
+        let webURL = URL(string: K.ExternalLinks.encoreWebsiteLink)!
+        UIApplication.shared.open(webURL)
     }
 }
 

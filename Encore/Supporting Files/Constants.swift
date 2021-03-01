@@ -152,6 +152,7 @@ struct K {
         static let encoreEmail = "encore.cat.app@gmail.com"
         static let encoreInstaAppLink = "instagram://user?username=encore.app"
         static let encoreInstaWebLink = "https://instagram.com/encore.app"
+        static let encoreWebsiteLink = "https://www.myencore.xyz/"
     }
     
     struct AnalyticsEvents {
@@ -166,6 +167,7 @@ struct K {
         static let writeReviewPressed = "Write_Review_Pressed"
         static let sendFeedbackPressed = "Send_Feedback_Pressed"
         static let openInstaPressed = "Open_Insta_Pressed"
+        static let openWebsitePressed = "Open_Website_Pressed"
     }
     
     struct AnalyticsParams {
