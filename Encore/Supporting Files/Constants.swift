@@ -125,6 +125,8 @@ struct K {
     }
     
     struct Strings {
+        // Walkthrough Screen
+        static let homeButtonTitle = "Home"
         
         // Input Goals Screen
         static let alertTitle = "Add a new goal"
