@@ -83,7 +83,7 @@ class MoreViewController: UIViewController {
     
     private func setVersionLabel() {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            self.versionLabel.text = "Encore \(version)"
+            self.versionLabel.text = "Version \(version)"
         }
     }
     
