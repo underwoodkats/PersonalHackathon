@@ -24,8 +24,7 @@ class ContactsViewController: UIViewController {
     
     private func showMailComposer() {
         guard MFMailComposeViewController.canSendMail() else {
-            // TODO: Level 2 - Add toaster if user can't send email
-            // Show alert informing user
+            showSendMailErrorAlert()
             return
         }
         
@@ -35,6 +34,23 @@ class ContactsViewController: UIViewController {
         composer.setSubject(K.Strings.feedbackEmailSubject)
         
         present(composer, animated: true)
+    }
+    
+    private func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertController(title: K.Strings.cantSendMailAlertTitle, message: K.Strings.cantSendMailAlertMessage, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "OK", style: .default)
+        sendMailErrorAlert.addAction(cancelAction)
+        
+        present(sendMailErrorAlert, animated: true) {
+            // This code helps us dismiss alert when a user tap outside
+            sendMailErrorAlert.view.superview?.isUserInteractionEnabled = true
+            sendMailErrorAlert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside)))
+        }
+    }
+    
+    @objc func dismissOnTapOutside(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     private func openInsta() {

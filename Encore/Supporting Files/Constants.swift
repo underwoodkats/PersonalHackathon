@@ -145,6 +145,10 @@ struct K {
         static let callToReviewText = "Check the review to evaluate your results!"
         static let noGoalsToReviewText = "Reward yourself with a treat! And rest well until the next time"
         
+        // Can't Send Email Alert
+        static let cantSendMailAlertTitle = "Whoops"
+        static let cantSendMailAlertMessage = "Please add a default mail account in the phone settings and try again!\n\n Or you can email us directly at \(K.ExternalLinks.encoreEmail).\n That works too 😌"
+
         static let feedbackEmailSubject = "User Feedback"
     }
     
