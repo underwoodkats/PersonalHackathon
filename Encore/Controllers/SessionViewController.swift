@@ -308,7 +308,7 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func schedulePressed(_ sender: UIButton) {
-        goTo(screen: K.StoryBoard.scheduleViewController)
+        goTo(screen: K.StoryBoard.scheduleViewController, fromLeft: true)
     }
     
     @IBAction func goalsPressed(_ sender: UIButton) {

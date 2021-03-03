@@ -10,25 +10,20 @@ import UIKit
 extension UIViewController {
     
     @objc func hideKeyboardWhenTappedAround() {
-          let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:    #selector(UIViewController.dismissKeyboard))
-          tap.cancelsTouchesInView = false
-          view.addGestureRecognizer(tap)
-      }
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:    #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
 
-      @objc func dismissKeyboard() {
-          view.endEditing(true)
-      }
-   
-    func goTo(screen name: String, isFading: Bool = false) {
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func goTo(screen name: String, isFading: Bool = false, fromLeft: Bool = false) {
         let transition = CATransition()
         transition.duration = 0.30
-        
-        transition.type = CATransitionType.moveIn
-        if isFading {
-            transition.type = CATransitionType.fade
-        }
-        
-        transition.subtype = CATransitionSubtype.fromRight
+        transition.type = isFading ? CATransitionType.fade : CATransitionType.moveIn
+        transition.subtype = fromLeft ? CATransitionSubtype.fromLeft : CATransitionSubtype.fromRight
         view.window!.layer.add(transition, forKey: kCATransition)
         
         let storyBoard: UIStoryboard = UIStoryboard(name: K.StoryBoard.mainStoryBoardName, bundle: nil)
@@ -37,11 +32,11 @@ extension UIViewController {
         self.present(viewController, animated: false)
     }
     
-    func goToPreviousScreen() {
+    func goToPreviousScreen(fromRight: Bool = false) {
         let transition = CATransition()
         transition.duration = 0.25
         transition.type = CATransitionType.reveal
-        transition.subtype = CATransitionSubtype.fromLeft
+        transition.subtype = fromRight ? CATransitionSubtype.fromRight : CATransitionSubtype.fromLeft
         self.view.window!.layer.add(transition, forKey: kCATransition)
         
         dismiss(animated: false)
@@ -56,4 +51,4 @@ extension UIViewController {
         
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
-  }
+}
