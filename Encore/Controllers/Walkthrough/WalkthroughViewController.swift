@@ -23,6 +23,28 @@ class WalkthroughViewController: UIViewController {
     
     var walkthroughPageViewController: WalkthroughPageViewController?
     
+    // MARK: - Life Cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        // Making page control dots bigger
+        pageControl.subviews.forEach {
+            $0.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination
+        if let pageViewController = destination as? WalkthroughPageViewController {
+            walkthroughPageViewController = pageViewController
+            walkthroughPageViewController?.walkthroughDelegate = self
+        }
+    }
+    
     // MARK: - IBActions
     
     @IBAction func skipButtonPressed(sender: UIButton) {
@@ -46,6 +68,10 @@ class WalkthroughViewController: UIViewController {
     // MARK: - Private Methods
 
     private func updateUI() {
+        if UserDefaults.standard.bool(forKey: K.UserDefaultsKey.hasViewedWalkthrough) {
+            startButton.setTitle(K.Strings.homeButtonTitle, for: .normal)
+        }
+        
         if let index = walkthroughPageViewController?.currentIndex {
             switch index {
             case 0:
@@ -94,28 +120,6 @@ class WalkthroughViewController: UIViewController {
     
     private func setDefaultsKey() {
         UserDefaults.standard.set(true, forKey: K.UserDefaultsKey.hasViewedWalkthrough)
-    }
-    
-    // MARK: - Life Cycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateUI()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        // Making page control dots bigger
-        pageControl.subviews.forEach {
-            $0.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination
-        if let pageViewController = destination as? WalkthroughPageViewController {
-            walkthroughPageViewController = pageViewController
-            walkthroughPageViewController?.walkthroughDelegate = self
-        }
     }
 }
 

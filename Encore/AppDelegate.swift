@@ -7,7 +7,7 @@
 
 import UIKit
 import IQKeyboardManager
-@_exported import BugfenderSDK
+import Flurry_iOS_SDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let notificationManager = NotificationManager.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setBugfender()
         configureInitialViewController()
         setIQKeyboardManager()
+        configureFlurry()
         notificationManager.notificationCenter.delegate = notificationManager
         
         return true
@@ -48,14 +48,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
     }
     
-    private func setBugfender() {
-        Bugfender.activateLogger("PUT-YOUR-KEY")
-        Bugfender.enableCrashReporting()
-//        Bugfender.enableUIEventLogging()
-    }
-    
     private func setIQKeyboardManager() {
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().isEnableAutoToolbar = false
+    }
+    
+    private func configureFlurry() {
+        Flurry.startSession("PUT-YOUR-KEY", with: FlurrySessionBuilder
+              .init()
+              .withCrashReporting(true)
+              .withLogLevel(FlurryLogLevelAll))
     }
 }

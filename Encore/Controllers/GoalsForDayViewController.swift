@@ -82,12 +82,12 @@ extension GoalsForDayViewController: UITableViewDataSource {
 // MARK: - Table View Delegate
 extension GoalsForDayViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // TODO: Level 2 - Make limits for the words
+        // TODO: Level 3 - Make limits for the words
         return Metrics.goalsTableViewRowHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Level 2 -Make the text be crossed
+        // TODO: Level 3 - Make the text be crossed
         if let goalPart = model.getGoalPart(index: indexPath.row) {
             model.changeGoalStatus(id: goalPart.goalId)
             tableView.reloadData()

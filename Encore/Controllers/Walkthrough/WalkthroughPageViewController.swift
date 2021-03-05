@@ -20,10 +20,10 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     let pages: [UIViewController] = {
         let storyboard = UIStoryboard(name: K.StoryBoard.walkthroughStoryBoardName, bundle: nil)
         
-        let firstPage = storyboard.instantiateViewController(identifier: K.StoryBoard.walkthroughFirstContentViewController)
-        let secondPage = storyboard.instantiateViewController(identifier: K.StoryBoard.walkthroughSecondContentViewController)
-        let thirdPage = storyboard.instantiateViewController(identifier: K.StoryBoard.walkthroughThirdContentViewController)
-        let fourthPage = storyboard.instantiateViewController(identifier: K.StoryBoard.walkthroughFourthContentViewController)
+        let firstPage = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.walkthroughFirstContentViewController)
+        let secondPage = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.walkthroughSecondContentViewController)
+        let thirdPage = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.walkthroughThirdContentViewController)
+        let fourthPage = storyboard.instantiateViewController(withIdentifier: K.StoryBoard.walkthroughFourthContentViewController)
         
         return [firstPage, secondPage, thirdPage, fourthPage ]
     }()

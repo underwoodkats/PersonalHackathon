@@ -35,7 +35,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func helpPressed(_ sender: EncoreButton) {
-        goTo(screen: K.StoryBoard.helpViewController)
+        goTo(screen: K.StoryBoard.moreViewController)
     }
 }
-

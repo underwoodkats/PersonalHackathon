@@ -21,7 +21,13 @@ class CongratulationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        adjustUI()
+        sendAnalytics()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func adjustUI() {
         // Can't go to the review if a user
         // doesn't have any goals
         if model.goalsCount == 0 {
@@ -32,9 +38,26 @@ class CongratulationsViewController: UIViewController {
         }
     }
     
+    private func sendAnalytics() {
+        let eventName = K.AnalyticsEvents.sessionEnd
+        let sessionVolume = model.currentSession?.stages.count ?? 0
+        let goalsCount = model.goals.count
+        let goalsAchiviedCount = model.getGoalsAchivedCount()
+        
+        var eventParams = [K.AnalyticsParams.sessionVolume: sessionVolume, K.AnalyticsParams.goalsCount: goalsCount, K.AnalyticsParams.goalsAchievedCount: goalsAchiviedCount]
+        
+        if goalsCount != 0 {
+            let percentageOfCompletion = Int(Double(goalsAchiviedCount) / Double(goalsCount) * 100)
+            eventParams[K.AnalyticsParams.percentageOfCompletion] = percentageOfCompletion
+        }
+        
+        AnalyticsManager.logEvent(eventName, eventParams)
+    }
+    
     // MARK: - IBActions
     
      @IBAction func finishPressed(_ sender: EncoreButton) {
+        AppStoreReviewManager.requestReviewIfAppropriate()
         goToHomeScreen()
     }
     

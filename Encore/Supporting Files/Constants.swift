@@ -26,12 +26,13 @@ struct K {
         static let preparationViewController = "PreparationViewController"
         static let inputGoalsViewController = "InputGoalsViewController"
         static let sessionViewController = "SessionViewController"
+        static let countdownViewController = "CountdownViewController"
         static let scheduleViewController = "ScheduleViewController"
         static let goalsForDayViewController = "GoalsForDayViewController"
         static let congratulationsViewController = "CongratulationsViewController"
         static let goalsReviewViewController = "GoalsReviewViewController"
-        static let helpViewController = "HelpViewController"
-        static let sendFeedbackViewController = "SendFeedbackViewController"
+        static let moreViewController = "MoreViewController"
+        static let contactsViewController = "ContactsViewController"
     }
     
     struct Colors {
@@ -112,6 +113,8 @@ struct K {
         static let hasViewedWalkthrough = "hasViewedWalkthrough"
         
         static let hasOpenedInputGoals = "hasOpenedInputGoals"
+        
+        static let lastReviewRequestAppVersion = "lastReviewRequestAppVersion"
     }
     
     struct Notifications {
@@ -122,6 +125,8 @@ struct K {
     }
     
     struct Strings {
+        // Walkthrough Screen
+        static let homeButtonTitle = "Home"
         
         // Input Goals Screen
         static let alertTitle = "Add a new goal"
@@ -139,5 +144,49 @@ struct K {
         // Congratulations Screen
         static let callToReviewText = "Check the review to evaluate your results!"
         static let noGoalsToReviewText = "Reward yourself with a treat! And rest well until the next time"
+        
+        // Can't Send Email Alert
+        static let cantSendMailAlertTitle = "Whoops"
+        static let cantSendMailAlertMessage = "Please add a default mail account in the phone settings and try again!\n\n Or you can email us directly at \(K.ExternalLinks.encoreEmail).\n That works too 😌"
+
+        static let feedbackEmailSubject = "User Feedback"
+    }
+    
+    struct ExternalLinks {
+        static let appStoreProductPageURL = "https://apps.apple.com/us/app/encore-personal-growth/id1548470945"
+        static let productURL = URL(string: appStoreProductPageURL)
+        static let encoreEmail = "encore.cat.app@gmail.com"
+        static let encoreInstaAppLink = "instagram://user?username=encore.app"
+        static let encoreInstaWebLink = "https://instagram.com/encore.app"
+        static let encoreWebsiteLink = "https://www.myencore.xyz/"
+    }
+    
+    struct AnalyticsEvents {
+        static let notificationPersmission = "Notification_Persmission"
+        
+        static let sessionStart = "Session_Start"
+        static let sessionEnd = "Session_End"
+        static let infoPressed = "Info_Pressed"
+        static let tutorialPressed = "Tutorial_Pressed"
+        static let contactUsPressed = "Contact_Us_Pressed"
+        static let shareAppPressed = "Share_Pressed"
+        static let writeReviewPressed = "Write_Review_Pressed"
+        static let sendFeedbackPressed = "Send_Feedback_Pressed"
+        static let openInstaPressed = "Open_Insta_Pressed"
+        static let openWebsitePressed = "Open_Website_Pressed"
+    }
+    
+    struct AnalyticsParams {
+        static let notificationAllowed = "Notification_Allowed"
+        static let sessionVolume = "Session_Volume"
+        static let goalsCount = "Goals_Count"
+        static let stageName = "Stage_Name"
+        static let goalsAchievedCount = "Goals_Achived_Count"
+        static let percentageOfCompletion = "Percentage_Of_Completion_%"
+    }
+    
+    struct ErrorsMessages {
+        static let notificationSchedulingErrorMessage = "An error occured with scheduling notification."
+        static let sendingFeedbackErrorMessage = "An error occured during sending email"
     }
 }

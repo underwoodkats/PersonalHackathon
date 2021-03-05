@@ -49,7 +49,8 @@ class GoalsReviewViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func finishPressed(_ sender: Any) {
-        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+        AppStoreReviewManager.requestReviewIfAppropriate()
+        goToHomeScreen()
     }
     @IBAction func backPressed(_ sender: UIButton) {
         goToPreviousScreen()

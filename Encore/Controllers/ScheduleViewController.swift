@@ -32,7 +32,7 @@ class ScheduleViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func backPressed(_ sender: UIButton) {
-        goToPreviousScreen()
+        goToPreviousScreen(fromRight: true)
     }
 }
 
