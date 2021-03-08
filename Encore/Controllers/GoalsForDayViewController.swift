@@ -66,9 +66,8 @@ extension GoalsForDayViewController: UITableViewDataSource {
         if indexPath.row < model.totalGoalsPartsCount {
             if let currentPart = model.getGoalPart(index: indexPath.row) {
                 cell.goalLabel.text = currentPart.text
-                if currentPart.isFirstPart, let relatedGoal = model.getGoal(by: currentPart.goalId) {
-                    cell.goalCompletedImage.isHidden = !relatedGoal.isAchieved
-                    cell.goalInProcessImage.isHidden = relatedGoal.isAchieved
+                if let relatedGoal = model.getGoal(by: currentPart.goalId) {
+                    cell.setCorrectCellRepresentation(relatedGoal.isAchieved, currentPart.isFirstPart)
                 }
             }
         } else {

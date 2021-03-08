@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E57D07893B690799E6B06AC /* Pods_Encore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA84D7E2E458383C9D985 /* Pods_Encore.framework */; };
 		7809950D25BF9BF800E539CA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809950C25BF9BF800E539CA /* NotificationManager.swift */; };
+		78346BE625F24E4800EE5FBF /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78346BE525F24E4800EE5FBF /* UILabel+Extension.swift */; };
 		7838C57C25E57BCF00786E7A /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838C57B25E57BCF00786E7A /* AnalyticsManager.swift */; };
 		78A7F60325EBB15B00223B90 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A7F60225EBB15B00223B90 /* ContactsViewController.swift */; };
 		78E4AFB025DAEADD000266EC /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E4AFAF25DAEADD000266EC /* AppStoreReviewManager.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		7809950C25BF9BF800E539CA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		78346BE525F24E4800EE5FBF /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		7838C57B25E57BCF00786E7A /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		78A7F60225EBB15B00223B90 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		78E4AFAF25DAEADD000266EC /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				7D68A73125987EA80073E5EE /* String+Extension.swift */,
 				7DCF0CDF259F391000FC25CB /* Int+Extension.swift */,
 				7D0D5DE425A9707300A5E004 /* UIViewController+Extension.swift */,
+				78346BE525F24E4800EE5FBF /* UILabel+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				7DAD5B522594D04D00C902EE /* EncoreBrain.swift in Sources */,
 				7DCF0CDD259F0D1700FC25CB /* SessionViewController.swift in Sources */,
 				7DA7860A25AECA520008DE05 /* Metrics.swift in Sources */,
+				78346BE625F24E4800EE5FBF /* UILabel+Extension.swift in Sources */,
 				78E6F71825E0144400648BB0 /* RotationAnimation.swift in Sources */,
 				7DBC31DC25AB298400C9F75B /* WalkthroughViewController.swift in Sources */,
 				78E6F70E25DEF33800648BB0 /* CountdownViewController.swift in Sources */,

@@ -29,6 +29,15 @@ class GoalCell: UITableViewCell {
         removeButton.isHidden = true
     }
     
+    func setCorrectCellRepresentation(_ isAchieved: Bool,_ isFirstGoalPart: Bool) {
+        if isFirstGoalPart {
+            goalCompletedImage.isHidden = !isAchieved
+            goalInProcessImage.isHidden = isAchieved
+        }
+        
+        goalLabel.strikeThrough(isAchieved)
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         prepareInitialPresentation()
