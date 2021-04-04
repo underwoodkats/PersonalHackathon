@@ -22,4 +22,6 @@ struct Metrics {
         static let mediumTimerFontSize: CGFloat = 166.0
         static let largeTimerFontSize: CGFloat = 185.0
     }
+    
+    static let alertContainerCornerRadius: CGFloat = 14.0
 }

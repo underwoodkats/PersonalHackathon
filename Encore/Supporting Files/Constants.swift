@@ -33,6 +33,7 @@ struct K {
         static let goalsReviewViewController = "GoalsReviewViewController"
         static let moreViewController = "MoreViewController"
         static let contactsViewController = "ContactsViewController"
+        static let closeSessoinAlertViewController = "CloseSessoinAlertViewController"
     }
     
     struct Colors {
@@ -57,6 +58,9 @@ struct K {
         static let mealBreakBackgroundColor = UIColor(hexString: "#DBEBFF")
         static let stretchingBackgroundColor = UIColor(hexString: "#E6BEE2")
         static let meditationBackgroundColor = UIColor(hexString: "#C9BEE6")
+        
+        // Colors for Alerts
+        static let alertUnderlinedWordColor = UIColor(hexString: "#FA6160")
     }
     
     struct Images {
@@ -76,8 +80,6 @@ struct K {
                                                  "But remember to make sure that they are doable within the current session 😺 (2/2)"]
         
         static let insertGoalScreenWarningTip = ["Are you sure? You won’t be able to change them later"]
-        
-        static let sessionScreenClosingWarningTip = ["Are you sure you want to stop? Tap again to force finish the session"]
         
 //         Session Stages
         static let focusedWorkHints = ["Remove all distractions and dive deep into your goals. (1/2)\n",
@@ -150,6 +152,8 @@ struct K {
         static let cantSendMailAlertMessage = "Please add a default mail account in the phone settings and try again!\n\n Or you can email us directly at \(K.ExternalLinks.encoreEmail).\n That works too 😌"
 
         static let feedbackEmailSubject = "User Feedback"
+        
+        static let alertUnderlinedWord = "stop"
     }
     
     struct ExternalLinks {

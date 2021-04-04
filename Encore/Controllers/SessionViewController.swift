@@ -43,7 +43,6 @@ class SessionViewController: UIViewController {
     private var model = EncoreBrain.shared
     private var toolTipManager: ToolTipManager?
     private var currentTipsArray: [String]?
-    private var hasPressedClose = false
     private var isDoneAllowed = false
     private var hasSkipStageWarningBeenShown = false
     
@@ -62,6 +61,8 @@ class SessionViewController: UIViewController {
     private var counter = 0.0
     private var currentStageTimeStart: Date?
     private var currentStageDurationInSeconds = 0.0
+    
+    private let alertManager = AlertManager.shared
     
     // MARK: - Life Cycles
 
@@ -279,12 +280,8 @@ class SessionViewController: UIViewController {
     // MARK: - IBActions
 
     @IBAction func closePressed(_ sender: UIButton) {
-        if hasPressedClose {
-            goToHomeScreen()
-        } else {
-            hasPressedClose = true
-            toolTipManager?.showToolTip(attachTo: sender, textArray: K.ToolTips.sessionScreenClosingWarningTip, toolTipType: .Warning)
-        }
+        let closingSessionAlert = alertManager.getClosingSessionAlert()
+        present(closingSessionAlert, animated: true)
     }
     
     @IBAction func nextStageButtonPressed(_ sender: Any) {
